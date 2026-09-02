@@ -350,27 +350,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ---------- WORK ---------- */
   .work-featured{
-    display:grid; grid-template-columns:1.1fr 1fr;
     border:1px solid var(--line);
     margin-bottom:1.4rem;
   }
-  .work-featured-media{
-    min-height:320px;
-    background-color:#000;
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position:center;
-  }
   .work-featured-body{
     padding:2.8rem;
-    border-left:1px solid var(--line);
     display:flex; flex-direction:column; justify-content:center;
   }
   .work-featured-body .num{
     color:var(--accent); font-weight:700; font-size:.85rem;
     display:block; margin-bottom:1rem;
   }
-  .work-featured-body h3{font-size:clamp(1.8rem,3.6vw,2.6rem); margin-bottom:.9rem;}
+  .work-featured-body h3{font-size:clamp(1.8rem,3.6vw,2.6rem); margin-bottom:1.2rem;}
+  .work-featured-body .brief{
+    color:var(--ink-dim); font-size:1rem; line-height:1.65;
+    max-width:66ch; margin-bottom:1.6rem;
+  }
+  .work-featured-body .brief strong{color:var(--ink); font-weight:700;}
   .work-featured-body .tags{
     display:block; color:var(--ink-faint); font-size:.85rem; margin-bottom:.5rem;
   }
@@ -506,9 +502,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .burger{display:block;}
     .hero{padding-top:150px;}
     .section{padding:90px var(--pad);}
-    .work-featured{grid-template-columns:1fr;}
-    .work-featured-media{min-height:220px;}
-    .work-featured-body{border-left:none; border-top:1px solid var(--line);}
     .work-next{flex-direction:column; align-items:flex-start; gap:.6rem; text-align:left;}
     .section-head{grid-template-columns:1fr;}
   }
@@ -556,7 +549,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="hero-grid">
       <div>
         <h1>Growth that matters.</h1>
-        <p class="hero-sub">I'm Felix Manu — a Growth Marketer focused on Paid Social, SEO and Performance Marketing. I combine creative thinking with data to build, test and optimize digital growth.</p>
+        <p class="hero-sub">I'm Felix Manu  — a Growth Marketer focused on Paid Social, SEO and Performance Marketing. I combine creative thinking with data to build, test and optimize digital growth.</p>
         <div class="hero-cta">
           <a href="#work" class="btn btn-primary">View my work ↗</a>
           <a href="#contact" class="btn btn-ghost">Let's talk ↗</a>
@@ -646,21 +639,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="work-featured">
-        <!-- Bild: /images/kungliga-operan.png -->
-        <div class="work-featured-media" style="background-image:url('images/kungliga-operan.png');"></div>
         <div class="work-featured-body">
           <span class="num">01</span>
           <h3>Kungliga Operan</h3>
-          <span class="tags">Insights · Positioning</span>
-          <span class="meta">Strategic Marketing · 2026</span>
-        </div>
-      </div>
-
-      <div class="work-next">
-        <span class="num">02</span>
-        <div>
-          <h3>Next case study</h3>
-          <p>In progress — more case studies are on the way as I build out my portfolio during my studies.</p>
+          <p class="brief">Working in a team, the brief was to bring a new audience segment to Kungliga Operan (The Royal Swedish Opera) — people who don't yet see opera as something for them. We built the campaign concept <strong>&ldquo;G&aring;shud f&ouml;r 65 kr&rdquo;</strong> (&ldquo;Goosebumps for 65 SEK&rdquo;), reframing the emotional peak of a live performance as a low-cost, low-commitment first experience — designed to lower the barrier to walking through the door.</p>
+          <span class="tags">Campaign concept: &ldquo;G&aring;shud f&ouml;r 65 kr&rdquo;</span>
+          <span class="meta">Strategic Marketing · Team Project · 2026</span>
         </div>
       </div>
     </div>
@@ -747,7 +731,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="eyebrow"><span class="num">07</span> Let's build something <span class="rule"></span></div>
       <h2>Let's grow.</h2>
       <p class="lede">Need help or just want to say hi? Don't be shy.</p>
-      <a href="mailto:hello@felixmanu.com" class="contact-email">hello@felixmanu.com ↗</a>
+      <a href="mailto:felix.manu.irankunda@student.berghs.se" class="contact-email">hello@felixmanu.com ↗</a>
     </div>
   </section>
 

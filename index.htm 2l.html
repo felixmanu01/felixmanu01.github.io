@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Felix Manu — Growth Marketer</title>
+<meta name="description" content="Portfolio of Felix Manu, a Growth Marketing student at Berghs School of Communication in Stockholm — expertise, process, toolkit and case work.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* ---------- Tokens ---------- */
+  :root{
+    --paper: #EFEAE0;
+    --paper-raised: #F7F4EC;
+    --ink: #171C1A;
+    --ink-soft: #232925;
+    --ink-raised: #2B322D;
+    --accent: #FF5B33;
+    --accent-deep: #C23F1E;
+    --growth: #2F6B4A;
+    --growth-bright: #4B9169;
+    --line: #CBC3AC;
+    --line-dark: #3A423C;
+    --muted: #625C4E;
+    --muted-on-ink: #9CA39D;
+    --text-on-paper: #171C1A;
+    --text-on-ink: #F2EEE2;
+
+    --fs-hero: clamp(2.6rem, 6.6vw, 5.4rem);
+    --fs-h1: clamp(2.1rem, 4.6vw, 3.6rem);
+    --fs-h2: clamp(1.4rem, 2.6vw, 2rem);
+    --fs-eyebrow: 0.78rem;
+    --fs-body: 1.05rem;
+    --fs-small: 0.86rem;
+
+    --maxw: 1180px;
+    --pad: clamp(1.25rem, 4vw, 3.25rem);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text-on-paper);
+    font-family:"Work Sans", -apple-system, "Segoe UI", sans-serif;
+    font-size:var(--fs-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:"Big Shoulders Display","Arial Narrow",sans-serif;
+    text-transform:uppercase;
+    text-wrap:balance;
+    margin:0;
+    line-height:0.94;
+    letter-spacing:0.005em;
+  }
+  p{ margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; }
+  ::selection{ background:var(--accent); color:var(--ink); }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+
+  .mono{
+    font-family:"IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+    letter-spacing:0.02em;
+  }
+  .eyebrow{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:var(--fs-eyebrow);
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    color:var(--accent);
+    display:flex;
+    align-items:center;
+    gap:0.6em;
+  }
+  .eyebrow::before{
+    content:"";
+    width:0.55em;
+    height:0.55em;
+    background:var(--accent);
+    display:inline-block;
+    flex:none;
+  }
+  section.on-ink .eyebrow{ color:var(--accent); }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding-left:var(--pad);
+    padding-right:var(--pad);
+  }
+
+  /* ---------- Nav ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:40;
+    background:rgba(239,234,224,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--maxw); margin:0 auto;
+    padding:0.85rem var(--pad);
+    display:flex; align-items:center; justify-content:space-between;
+    gap:1rem;
+  }
+  .wordmark{
+    font-family:"Big Shoulders Display",sans-serif;
+    font-size:1.35rem;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+  }
+  .wordmark sup{ font-size:0.55em; color:var(--accent); }
+  nav.links{ display:flex; gap:clamp(0.9rem,2.4vw,1.9rem); }
+  nav.links a{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    text-decoration:none;
+    color:var(--text-on-paper);
+    padding-bottom:2px;
+    border-bottom:1px solid transparent;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  nav.links a:hover{ border-color:var(--accent); color:var(--accent-deep); }
+  .nav-status{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--growth);
+    display:flex; align-items:center; gap:0.5em;
+  }
+  .nav-status::before{
+    content:"";
+    width:7px; height:7px; border-radius:50%;
+    background:var(--growth-bright);
+    box-shadow:0 0 0 3px rgba(75,145,105,0.18);
+  }
+  @media (max-width: 720px){
+    nav.links{ display:none; }
+    .nav-status{ display:none; }
+  }
+
+  /* ---------- Section shells ---------- */
+  section{ padding:clamp(3rem,8vw,6.5rem) 0; }
+  section.on-ink{ background:var(--ink); color:var(--text-on-ink); }
+  section.on-ink h1, section.on-ink h2, section.on-ink h3{ color:var(--text-on-ink); }
+  section.on-ink .muted{ color:var(--muted-on-ink); }
+  .muted{ color:var(--muted); }
+  section.tight{ padding-top:clamp(2.25rem,5vw,3.5rem); padding-bottom:clamp(2.25rem,5vw,3.5rem); }
+  .rule{ border:none; border-top:1px solid var(--line); margin:0; }
+  section.on-ink + section.on-ink{ border-top:1px solid var(--line-dark); }
+
+  /* ---------- Hero ---------- */
+  .hero{ padding-top:clamp(3.5rem,9vw,5.5rem); padding-bottom:clamp(2.5rem,6vw,4rem); }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2.5rem;
+    align-items:end;
+  }
+  .hero h1{
+    font-size:var(--fs-hero);
+    max-width:16ch;
+  }
+  .hero-sub{
+    display:flex; flex-direction:column; gap:1.5rem;
+    max-width:520px;
+  }
+  .hero-sub p{ font-size:1.08rem; color:var(--muted-on-ink); }
+  .cta-row{ display:flex; gap:0.9rem; flex-wrap:wrap; }
+  .btn{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:0.82rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    text-decoration:none;
+    padding:0.85em 1.4em;
+    border:1px solid var(--text-on-ink);
+    display:inline-flex; align-items:center; gap:0.6em;
+    transition:background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
+  }
+  .btn.solid{ background:var(--accent); border-color:var(--accent); color:var(--ink); }
+  .btn.solid:hover{ background:var(--text-on-ink); border-color:var(--text-on-ink); transform:translateY(-2px); }
+  .btn.ghost{ color:var(--text-on-ink); }
+  .btn.ghost:hover{ background:var(--text-on-ink); color:var(--ink); transform:translateY(-2px); }
+
+  .growth-chart{ width:100%; max-width:560px; height:auto; }
+  .growth-chart .gline{ fill:none; stroke:var(--accent); stroke-width:2.5; }
+  .growth-chart .gdot{ fill:var(--accent); }
+  .growth-chart .gaxis{ stroke:var(--line-dark); stroke-width:1; }
+  .growth-chart text{ font-family:"IBM Plex Mono",monospace; fill:var(--muted-on-ink); font-size:9px; }
+
+  /* ---------- Marquee ---------- */
+  .marquee{
+    background:var(--accent);
+    color:var(--ink);
+    overflow:hidden;
+    white-space:nowrap;
+    border-top:1px solid var(--ink);
+    border-bottom:1px solid var(--ink);
+  }
+  .marquee-track{
+    display:inline-flex;
+    animation:scroll-left 26s linear infinite;
+  }
+  .marquee-track span{
+    font-family:"IBM Plex Mono",monospace;
+    text-transform:uppercase;
+    font-size:0.95rem;
+    letter-spacing:0.06em;
+    padding:0.75rem 1.4rem;
+    display:inline-flex; align-items:center; gap:1.4rem;
+  }
+  @keyframes scroll-left{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .marquee-track{ animation:none; }
+  }
+
+  /* ---------- Philosophy ---------- */
+  .philosophy-quote{
+    font-family:"Big Shoulders Display",sans-serif;
+    text-transform:uppercase;
+    font-size:clamp(1.6rem,3.6vw,2.7rem);
+    line-height:1.12;
+    max-width:22ch;
+    text-wrap:balance;
+  }
+  .philosophy-quote em{ font-style:normal; color:var(--accent-deep); }
+
+  .steps{
+    margin-top:clamp(2.5rem,5vw,3.5rem);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+  .step{
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:1.25rem 1.1rem 1.5rem;
+  }
+  .step .num{ font-family:"IBM Plex Mono",monospace; color:var(--accent-deep); font-size:0.85rem; }
+  .step h3{ font-size:1.2rem; margin-top:0.5rem; }
+  .step p{ margin-top:0.5rem; font-size:0.92rem; color:var(--muted); }
+  @media (max-width:760px){
+    .steps{ grid-template-columns:repeat(2,1fr); }
+  }
+
+  /* ---------- Expertise (index rows) ---------- */
+  .index-row{
+    display:grid;
+    grid-template-columns:3.5rem minmax(0,1fr) minmax(0,1.4fr);
+    gap:1.5rem;
+    padding:1.6rem 0;
+    border-top:1px solid var(--line);
+    align-items:baseline;
+  }
+  .expertise .index-row:last-child{ border-bottom:1px solid var(--line); }
+  .index-row .num{ font-family:"IBM Plex Mono",monospace; color:var(--accent-deep); font-size:0.9rem; }
+  .index-row h3{ font-size:clamp(1.3rem,2.6vw,1.9rem); }
+  .index-row p{ color:var(--muted); font-size:0.98rem; max-width:52ch; }
+  @media (max-width:700px){
+    .index-row{ grid-template-columns:2.5rem 1fr; }
+    .index-row p{ grid-column:2; }
+  }
+
+  /* ---------- Work / case files ---------- */
+  .work-intro{ max-width:62ch; }
+
+  .case-featured{
+    margin-top:2.5rem;
+    border:1px solid var(--line);
+    background:var(--paper-raised);
+    padding:clamp(1.8rem,4vw,2.6rem) clamp(1.6rem,4vw,2.4rem) clamp(2rem,4vw,2.6rem);
+    display:flex;
+    flex-direction:column;
+    gap:1.1rem;
+  }
+  .case-featured .tag{ font-family:"IBM Plex Mono",monospace; font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; }
+  .case-featured h3{ font-size:clamp(1.8rem,4vw,2.6rem); color:var(--ink); }
+  .case-featured .brief{ max-width:66ch; color:var(--muted); font-size:1rem; line-height:1.6; }
+  .concept-badge{
+    align-self:flex-start;
+    border:1px solid var(--accent-deep);
+    color:var(--accent-deep);
+    font-family:"IBM Plex Mono",monospace;
+    font-size:0.8rem;
+    letter-spacing:0.03em;
+    padding:0.5em 0.9em;
+  }
+  .case-featured .meta-row{
+    display:flex; flex-wrap:wrap; gap:0.5rem 1.3rem;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:0.76rem;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:var(--muted);
+    border-top:1px solid var(--line);
+    padding-top:1rem;
+    margin-top:0.3rem;
+  }
+
+  /* ---------- Toolkit ---------- */
+  .tool-pills{ display:flex; flex-wrap:wrap; gap:0.7rem; margin-top:2rem; }
+  .tool-pill{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:0.82rem;
+    letter-spacing:0.03em;
+    padding:0.55em 1em;
+    border:1px solid var(--line-dark);
+    color:var(--text-on-ink);
+  }
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2.5rem;
+  }
+  .about-copy{ max-width:62ch; }
+  .about-copy p + p{ margin-top:1rem; }
+  .credential{
+    margin-top:2rem;
+    border-top:1px solid var(--line);
+    padding-top:1.2rem;
+    display:flex; flex-wrap:wrap; gap:0.5rem 1.2rem;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:0.82rem;
+    color:var(--muted);
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-inner{ display:flex; flex-direction:column; gap:2rem; }
+  .contact h2{ font-size:var(--fs-hero); max-width:14ch; }
+  .contact-links{ display:flex; flex-wrap:wrap; gap:1rem 2rem; align-items:baseline; }
+  .contact-links a{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:1rem;
+    text-decoration:none;
+    border-bottom:1px solid var(--line-dark);
+    padding-bottom:2px;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .contact-links a:hover{ color:var(--accent); border-color:var(--accent); }
+
+  footer{
+    background:var(--ink);
+    color:var(--muted-on-ink);
+    border-top:1px solid var(--line-dark);
+    padding:1.4rem 0;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+  .footer-row{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.6rem; }
+
+  @media (min-width:860px){
+    .hero-grid{ grid-template-columns:1.15fr 0.85fr; align-items:start; }
+    .about-grid{ grid-template-columns:1.3fr 0.7fr; }
+  }
+  .hero-grid > *, .about-grid > *, .steps > *{ min-width:0; }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="wordmark">FELIX MANU<sup>&reg;</sup></div>
+    <nav class="links" aria-label="Section navigation">
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-status">Open to work</div>
+  </div>
+</header>
+
+<section class="on-ink hero">
+  <div class="wrap">
+    <div class="eyebrow">Growth Marketer &mdash; Stockholm, SE</div>
+    <div class="hero-grid" style="margin-top:1.4rem;">
+      <h1>Growth that matters.</h1>
+      <div class="hero-sub">
+        <p>I'm Felix Manu, a Growth Marketing student at Berghs School of Communication. I combine a creative production background with a growing, tested toolkit in SEO, paid media, performance marketing and analytics &mdash; building toward measurable, repeatable growth.</p>
+        <div class="cta-row">
+          <a class="btn solid" href="#work">View my work &#8599;</a>
+          <a class="btn ghost" href="#contact">Let's talk &#8599;</a>
+        </div>
+        <svg class="growth-chart" viewBox="0 0 400 130" role="img" aria-label="Illustrative upward growth curve">
+          <line class="gaxis" x1="0" y1="112" x2="400" y2="112"></line>
+          <polyline class="gline" points="0,100 60,96 110,84 150,88 190,64 230,68 270,42 310,46 350,16 398,10"></polyline>
+          <circle class="gdot" cx="398" cy="10" r="4"></circle>
+          <text x="4" y="128">Q1</text>
+          <text x="370" y="128">Now</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Paid Social &nbsp;&bull;&nbsp; SEO &nbsp;&bull;&nbsp; Performance Marketing &nbsp;&bull;&nbsp; Analytics &nbsp;&bull;&nbsp; CRO &nbsp;&bull;&nbsp; Growth Strategy &nbsp;&bull;&nbsp;</span>
+    <span>Paid Social &nbsp;&bull;&nbsp; SEO &nbsp;&bull;&nbsp; Performance Marketing &nbsp;&bull;&nbsp; Analytics &nbsp;&bull;&nbsp; CRO &nbsp;&bull;&nbsp; Growth Strategy &nbsp;&bull;&nbsp;</span>
+  </div>
+</div>
+
+<section id="approach" class="tight">
+  <div class="wrap">
+    <div class="eyebrow">Approach</div>
+    <p class="philosophy-quote" style="margin-top:1.1rem;">Great marketing isn't about getting more attention. It's about earning <em>the right</em> attention &mdash; and turning it into measurable growth.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Research</h3>
+        <p>Understand the audience, the market and where the current funnel leaks.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Strategy</h3>
+        <p>Turn findings into a plan with clear channels, goals and hypotheses.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Test</h3>
+        <p>Ship small, measure fast, and let the data decide what scales.</p>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <h3>Optimize</h3>
+        <p>Double down on what works, cut what doesn't, repeat the loop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expertise" class="expertise">
+  <div class="wrap">
+    <div class="eyebrow">Expertise</div>
+    <div style="margin-top:1.5rem;">
+      <div class="index-row">
+        <div class="num">01</div>
+        <h3>Paid Social</h3>
+        <p>Planning, launching and optimizing paid campaigns across Meta and other social platforms, tied to clear acquisition goals.</p>
+      </div>
+      <div class="index-row">
+        <div class="num">02</div>
+        <h3>SEO</h3>
+        <p>Growing organic visibility through search-intent research, on-page optimization and content strategy.</p>
+      </div>
+      <div class="index-row">
+        <div class="num">03</div>
+        <h3>Performance Marketing</h3>
+        <p>Connecting channels into one measurable system, so budget moves toward what actually converts.</p>
+      </div>
+      <div class="index-row">
+        <div class="num">04</div>
+        <h3>Analytics &amp; CRO</h3>
+        <p>Reading the data behind the funnel &mdash; GA4, GTM and Looker Studio &mdash; to find where growth is leaking, and fix it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="eyebrow">Case Files</div>
+    <p class="work-intro" style="margin-top:1.1rem; font-size:1.05rem;">More case studies are in progress as part of Berghs' Growth Toolbox program &mdash; check back soon, or get in touch to see current work as it develops.</p>
+
+    <div class="case-featured">
+      <div class="tag">Case&nbsp;01 &mdash; Strategic Marketing &middot; Team Project</div>
+      <h3>Kungliga Operan</h3>
+      <p class="brief">Working in a team, the brief was to bring a new audience segment to Kungliga Operan (The Royal Swedish Opera) &mdash; people who don't yet see opera as something for them. We built the campaign concept <strong>&ldquo;G&aring;shud f&ouml;r 65 kr&rdquo;</strong> (&ldquo;Goosebumps for 65 SEK&rdquo;), reframing the emotional peak of a live performance as a low-cost, low-commitment first experience &mdash; designed to lower the barrier to walking through the door.</p>
+      <div class="concept-badge">Concept: &ldquo;G&aring;shud f&ouml;r 65 kr&rdquo;</div>
+      <div class="meta-row">
+        <span>Team project</span>
+        <span>Strategic marketing</span>
+        <span>Berghs coursework</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-ink">
+  <div class="wrap">
+    <div class="eyebrow">Toolkit</div>
+    <div class="tool-pills">
+      <span class="tool-pill">Meta Ads</span>
+      <span class="tool-pill">Google Ads</span>
+      <span class="tool-pill">GA4</span>
+      <span class="tool-pill">Google Tag Manager</span>
+      <span class="tool-pill">Search Console</span>
+      <span class="tool-pill">Looker Studio</span>
+      <span class="tool-pill">Excel / Sheets</span>
+      <span class="tool-pill">A/B Testing</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <div class="about-grid" style="margin-top:1.4rem;">
+      <div>
+        <h2 class="philosophy-quote" style="max-width:14ch;">Data meets creativity.</h2>
+        <div class="about-copy" style="margin-top:1.6rem;">
+          <p>I'm a Growth Marketing student at Berghs School of Communication in Stockholm, building a broad foundation across SEO, paid media, performance marketing and analytics before specializing further.</p>
+          <p>My background is in content creation and visual production, which shapes how I approach growth &mdash; I care as much about why a message resonates as I do about the number it moves. Right now that means getting fluent in Google Analytics and Google Tag Manager, and turning coursework into a track record I can show.</p>
+        </div>
+        <div class="credential">
+          <span>Berghs School of Communication</span>
+          <span>&mdash;</span>
+          <span>Growth Marketing</span>
+          <span>&mdash;</span>
+          <span>Stockholm</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="on-ink contact">
+  <div class="wrap contact-inner">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2 style="margin-top:1rem;">Let's grow<br>something.</h2>
+    </div>
+    <p class="muted" style="max-width:46ch; font-size:1.05rem;">Open to internships and junior growth marketing roles. Reach out if you're looking for someone who tests, measures and learns fast.</p>
+    <div class="contact-links">
+      <a href="mailto:hello@felixmanu.com">hello@felixmanu.com &#8599;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>&copy; 2026 Felix Manu</span>
+    <span>Stockholm, Sweden</span>
+  </div>
+</footer>
+
+</body>
+</html>
