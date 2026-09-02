@@ -1,18 +1,24 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Felix Manu — Growth Marketer & Creator</title>
+    <title>Felix Manu — Growth Marketer</title>
 
-    <meta name="description"
-          content="Felix Manu — Growth marketer, digital creator and creative strategist.">
+    <meta
+        name="description"
+        content="Felix Manu — Growth Marketer specializing in Paid Social, SEO, Performance Marketing, Analytics and digital growth."
+    >
 
     <style>
-        /* =========================
+
+        /* =========================================================
            RESET
-        ========================= */
+        ========================================================= */
 
         * {
             margin: 0;
@@ -25,10 +31,19 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f3ed;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f4f1e8;
             color: #111;
+
             overflow-x: hidden;
+        }
+
+        body.menu-open {
+            overflow: hidden;
         }
 
         a {
@@ -36,1010 +51,3754 @@
             text-decoration: none;
         }
 
-        /* =========================
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        ::selection {
+            background: #d8ff38;
+            color: #111;
+        }
+
+
+        /* =========================================================
+           VARIABLES
+        ========================================================= */
+
+        :root {
+
+            --black: #111111;
+
+            --cream: #f4f1e8;
+
+            --green: #d8ff38;
+
+            --orange: #ff603d;
+
+            --purple: #675cff;
+
+            --grey: #8e8e8e;
+
+            --border: rgba(17,17,17,0.25);
+
+        }
+
+
+        /* =========================================================
+           CUSTOM CURSOR
+        ========================================================= */
+
+        .cursor {
+
+            position: fixed;
+
+            width: 14px;
+            height: 14px;
+
+            border-radius: 50%;
+
+            background: #111;
+
+            pointer-events: none;
+
+            z-index: 9999;
+
+            transform:
+                translate(-50%, -50%);
+
+            transition:
+                width .2s ease,
+                height .2s ease,
+                background .2s ease;
+
+            mix-blend-mode: difference;
+
+        }
+
+        .cursor.active {
+
+            width: 55px;
+            height: 55px;
+
+            background: white;
+
+        }
+
+
+        /* =========================================================
            NAVIGATION
-        ========================= */
+        ========================================================= */
 
         nav {
+
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
+
             z-index: 1000;
 
             display: flex;
-            justify-content: space-between;
+
             align-items: center;
 
-            padding: 25px 5vw;
+            justify-content: space-between;
+
+            padding: 24px 5vw;
+
+            color: white;
 
             mix-blend-mode: difference;
-            color: white;
+
         }
+
 
         .logo {
-            font-size: 22px;
-            font-weight: 800;
+
+            font-size: 21px;
+
+            font-weight: 900;
+
             letter-spacing: -1px;
+
+            white-space: nowrap;
+
         }
+
+
+        .nav-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 45px;
+
+        }
+
 
         .nav-links {
-            display: flex;
-            gap: 30px;
+
             list-style: none;
-            font-size: 14px;
-            font-weight: 600;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
         }
+
 
         .nav-links a {
-            transition: opacity 0.3s ease;
+
+            position: relative;
+
+            font-size: 13px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
         }
 
-        .nav-links a:hover {
-            opacity: 0.5;
+
+        .nav-links a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -6px;
+
+            width: 0;
+            height: 1px;
+
+            background: currentColor;
+
+            transition: width .3s ease;
+
         }
 
-        /* =========================
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        .nav-contact {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-size: 13px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        /* =========================================================
            HERO
-        ========================= */
+        ========================================================= */
 
         .hero {
+
             min-height: 100vh;
-            padding: 150px 5vw 70px;
+
+            padding:
+
+                145px 5vw
+                60px;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: space-between;
+
+            position: relative;
+
         }
+
+
+        .hero-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
 
         .hero-small {
-            font-size: 14px;
+
+            font-size: 12px;
+
             text-transform: uppercase;
+
             letter-spacing: 2px;
-            font-weight: 600;
+
+            line-height: 1.5;
+
         }
 
-        .hero-title {
-            font-size: clamp(70px, 12vw, 190px);
-            line-height: 0.82;
-            letter-spacing: -8px;
-            font-weight: 900;
-            max-width: 1300px;
+
+        .available {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
         }
+
+
+        .available-dot {
+
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: #38d66b;
+
+            animation: pulse 2s infinite;
+
+        }
+
+
+        @keyframes pulse {
+
+            0% {
+                box-shadow:
+                    0 0 0 0
+                    rgba(56,214,107,.5);
+            }
+
+            70% {
+                box-shadow:
+                    0 0 0 10px
+                    rgba(56,214,107,0);
+            }
+
+            100% {
+                box-shadow:
+                    0 0 0 0
+                    rgba(56,214,107,0);
+            }
+
+        }
+
+
+        .hero-title {
+
+            font-size:
+                clamp(
+                    72px,
+                    13vw,
+                    210px
+                );
+
+            line-height: .78;
+
+            letter-spacing: -.075em;
+
+            font-weight: 900;
+
+            max-width: 1500px;
+
+            margin-top: 60px;
+
+        }
+
 
         .hero-title span {
             display: block;
         }
 
+
         .hero-title .outline {
+
             color: transparent;
-            -webkit-text-stroke: 2px #111;
+
+            -webkit-text-stroke:
+                2px #111;
+
         }
+
+
+        .hero-title .indent {
+            margin-left: 13vw;
+        }
+
 
         .hero-bottom {
+
             display: flex;
+
             justify-content: space-between;
-            align-items: end;
-            margin-top: 80px;
+
+            align-items: flex-end;
+
+            gap: 80px;
+
+            margin-top: 85px;
+
         }
+
 
         .hero-description {
-            max-width: 430px;
-            font-size: 20px;
-            line-height: 1.35;
-        }
 
-        .scroll {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+            max-width: 520px;
 
-        /* =========================
-           INTRO
-        ========================= */
+            font-size:
+                clamp(
+                    18px,
+                    1.5vw,
+                    23px
+                );
 
-        .intro {
-            background: #111;
-            color: #f5f3ed;
-
-            padding: 150px 5vw;
-        }
-
-        .intro-label {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 50px;
-        }
-
-        .intro-text {
-            font-size: clamp(42px, 6vw, 90px);
-            line-height: 0.98;
-            letter-spacing: -4px;
-            max-width: 1250px;
-            font-weight: 700;
-        }
-
-        .intro-text span {
-            color: #777;
-        }
-
-        /* =========================
-           SERVICES
-        ========================= */
-
-        .services {
-            padding: 150px 5vw;
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-
-            border-bottom: 2px solid #111;
-
-            padding-bottom: 20px;
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            font-size: clamp(50px, 8vw, 110px);
-            line-height: 0.9;
-            letter-spacing: -5px;
-        }
-
-        .section-number {
-            font-size: 14px;
-        }
-
-        .service {
-            display: grid;
-            grid-template-columns: 80px 1fr 1fr;
-            gap: 30px;
-
-            padding: 35px 0;
-            border-bottom: 1px solid #aaa;
-
-            transition: padding 0.4s ease;
-        }
-
-        .service:hover {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .service-number {
-            font-size: 14px;
-        }
-
-        .service-name {
-            font-size: clamp(30px, 4vw, 55px);
-            font-weight: 700;
-            letter-spacing: -2px;
-        }
-
-        .service-description {
-            font-size: 17px;
             line-height: 1.4;
-            max-width: 450px;
+
+            letter-spacing: -.02em;
+
         }
 
-        /* =========================
-           WORK / CASE STUDIES
-        ========================= */
 
-        .work {
-            background: #d8ff38;
-            padding: 150px 5vw;
-        }
-
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .project {
-            min-height: 500px;
-
-            background: #111;
-            color: white;
-
-            padding: 35px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            transition:
-                transform 0.4s ease,
-                border-radius 0.4s ease;
-        }
-
-        .project:hover {
-            transform: translateY(-10px);
-            border-radius: 25px;
-        }
-
-        .project:nth-child(2) {
-            background: #ff5a36;
-            color: #111;
-        }
-
-        .project:nth-child(3) {
-            background: #ffffff;
-            color: #111;
-        }
-
-        .project:nth-child(4) {
-            background: #635bff;
-        }
-
-        .project-top {
-            display: flex;
-            justify-content: space-between;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .project-title {
-            font-size: clamp(45px, 6vw, 85px);
-            line-height: 0.85;
-            letter-spacing: -4px;
+        .hero-description strong {
             font-weight: 800;
         }
 
-        .project-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
-        }
 
-        .project-tag {
-            font-size: 14px;
-        }
-
-        .arrow {
-            font-size: 40px;
-        }
-
-        /* =========================
-           PROCESS
-        ========================= */
-
-        .process {
-            padding: 150px 5vw;
-        }
-
-        .process-intro {
-            font-size: clamp(35px, 5vw, 70px);
-            max-width: 1000px;
-            line-height: 1;
-            letter-spacing: -3px;
-            margin-bottom: 100px;
-        }
-
-        .process-list {
-            border-top: 2px solid #111;
-        }
-
-        .process-item {
-            display: grid;
-            grid-template-columns: 100px 1fr 1fr;
-            gap: 30px;
-
-            padding: 40px 0;
-            border-bottom: 1px solid #aaa;
-        }
-
-        .process-number {
-            font-size: 14px;
-        }
-
-        .process-name {
-            font-size: 35px;
-            font-weight: 700;
-        }
-
-        .process-description {
-            font-size: 17px;
-            line-height: 1.5;
-            max-width: 450px;
-        }
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-            background: #111;
-            color: #f5f3ed;
-            padding: 150px 5vw;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-        }
-
-        .about-title {
-            font-size: clamp(60px, 9vw, 130px);
-            line-height: 0.85;
-            letter-spacing: -7px;
-        }
-
-        .about-text {
-            font-size: 24px;
-            line-height: 1.35;
-            max-width: 550px;
-        }
-
-        .about-text p {
-            margin-bottom: 30px;
-        }
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            padding: 150px 5vw;
-            min-height: 80vh;
+        .hero-actions {
 
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
 
-        .contact-label {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .contact-title {
-            font-size: clamp(60px, 12vw, 180px);
-            line-height: 0.8;
-            letter-spacing: -8px;
-            font-weight: 900;
-        }
-
-        .contact-email {
-            font-size: clamp(25px, 4vw, 55px);
-            text-decoration: underline;
-            text-underline-offset: 8px;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #111;
-            color: white;
-
-            padding: 35px 5vw;
-
-            display: flex;
-            justify-content: space-between;
             align-items: center;
 
-            font-size: 13px;
+            gap: 14px;
+
+            flex-wrap: wrap;
+
         }
+
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .btn {
+
+            min-height: 56px;
+
+            padding: 0 25px;
+
+            border-radius: 100px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 30px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: .8px;
+
+            border: 1px solid #111;
+
+            transition:
+
+                background .3s ease,
+                color .3s ease,
+                transform .3s ease;
+
+        }
+
+
+        .btn:hover {
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        .btn-dark {
+
+            background: #111;
+
+            color: white;
+
+        }
+
+
+        .btn-dark:hover {
+
+            background: #d8ff38;
+
+            color: #111;
+
+        }
+
+
+        .btn-light {
+
+            background: transparent;
+
+            color: #111;
+
+        }
+
+
+        .btn-light:hover {
+
+            background: #111;
+
+            color: white;
+
+        }
+
+
+        .btn-arrow {
+
+            display: inline-block;
+
+            transition:
+                transform .3s ease;
+
+        }
+
+
+        .btn:hover .btn-arrow {
+
+            transform:
+                translate(4px,-4px);
+
+        }
+
+
+        /* =========================================================
+           MARQUEE
+        ========================================================= */
+
+        .marquee {
+
+            background: #111;
+
+            color: #f4f1e8;
+
+            overflow: hidden;
+
+            padding: 20px 0;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.2);
+
+        }
+
+
+        .marquee-track {
+
+            display: flex;
+
+            width: max-content;
+
+            animation:
+                marquee 25s linear infinite;
+
+        }
+
+
+        .marquee-content {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 45px;
+
+            padding-right: 45px;
+
+            white-space: nowrap;
+
+            font-size: 17px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-weight: 700;
+
+        }
+
+
+        .marquee-dot {
+            color: #d8ff38;
+        }
+
+
+        @keyframes marquee {
+
+            from {
+                transform:
+                    translateX(0);
+            }
+
+            to {
+                transform:
+                    translateX(-50%);
+            }
+
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .intro {
+
+            background: #111;
+
+            color: #f4f1e8;
+
+            padding: 155px 5vw;
+
+        }
+
+
+        .eyebrow {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .eyebrow-line {
+
+            width: 35px;
+
+            height: 1px;
+
+            background: currentColor;
+
+        }
+
+
+        .intro-text {
+
+            max-width: 1300px;
+
+            font-size:
+                clamp(
+                    43px,
+                    6.5vw,
+                    100px
+                );
+
+            font-weight: 700;
+
+            letter-spacing: -.06em;
+
+            line-height: .98;
+
+        }
+
+
+        .intro-text .muted {
+            color: #777;
+        }
+
+
+        /* =========================================================
+           METRICS
+        ========================================================= */
+
+        .metrics {
+
+            background: #111;
+
+            color: #f4f1e8;
+
+            padding:
+                20px 5vw
+                130px;
+
+        }
+
+
+        .metrics-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            border-top:
+                1px solid #555;
+
+            border-bottom:
+                1px solid #555;
+
+        }
+
+
+        .metric {
+
+            padding: 35px 25px;
+
+            border-right:
+                1px solid #555;
+
+        }
+
+
+        .metric:first-child {
+            padding-left: 0;
+        }
+
+
+        .metric:last-child {
+            border-right: 0;
+        }
+
+
+        .metric-number {
+
+            display: block;
+
+            font-size:
+                clamp(
+                    45px,
+                    6vw,
+                    80px
+                );
+
+            font-weight: 800;
+
+            letter-spacing: -.06em;
+
+        }
+
+
+        .metric-label {
+
+            margin-top: 12px;
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            color: #999;
+
+        }
+
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        .services,
+        .work,
+        .process,
+        .about,
+        .tools,
+        .contact {
+
+            padding:
+                145px
+                5vw;
+
+        }
+
+
+        .section-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            gap: 30px;
+
+            border-bottom:
+                2px solid currentColor;
+
+            padding-bottom: 22px;
+
+            margin-bottom: 60px;
+
+        }
+
+
+        .section-title {
+
+            font-size:
+                clamp(
+                    55px,
+                    8.5vw,
+                    135px
+                );
+
+            line-height: .82;
+
+            letter-spacing: -.07em;
+
+            font-weight: 900;
+
+        }
+
+
+        .section-number {
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            white-space: nowrap;
+
+        }
+
+
+        /* =========================================================
+           SERVICES
+        ========================================================= */
+
+        .services {
+
+            background: #f4f1e8;
+
+        }
+
+
+        .service {
+
+            display: grid;
+
+            grid-template-columns:
+                70px
+                minmax(280px, .9fr)
+                1fr
+                50px;
+
+            align-items: center;
+
+            gap: 35px;
+
+            padding: 38px 0;
+
+            border-bottom:
+                1px solid rgba(17,17,17,.3);
+
+            transition:
+                padding .35s ease,
+                background .35s ease;
+
+        }
+
+
+        .service:hover {
+
+            padding-left: 25px;
+
+            padding-right: 25px;
+
+            background: #d8ff38;
+
+        }
+
+
+        .service-number {
+
+            font-size: 12px;
+
+            color: #777;
+
+        }
+
+
+        .service-name {
+
+            font-size:
+                clamp(
+                    28px,
+                    3.8vw,
+                    58px
+                );
+
+            line-height: .95;
+
+            letter-spacing: -.045em;
+
+        }
+
+
+        .service-description {
+
+            max-width: 520px;
+
+            font-size: 17px;
+
+            line-height: 1.5;
+
+        }
+
+
+        .service-arrow {
+
+            font-size: 25px;
+
+            transition:
+                transform .3s ease;
+
+        }
+
+
+        .service:hover .service-arrow {
+
+            transform:
+                translate(5px,-5px);
+
+        }
+
+
+        /* =========================================================
+           WORK
+        ========================================================= */
+
+        .work {
+
+            background: #d8ff38;
+
+        }
+
+
+        .work-intro {
+
+            max-width: 680px;
+
+            font-size: 20px;
+
+            line-height: 1.45;
+
+            margin-bottom: 60px;
+
+        }
+
+
+        .work-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 22px;
+
+        }
+
+
+        .project {
+
+            min-height: 590px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: #111;
+
+            color: white;
+
+            padding: 34px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            transition:
+
+                transform .45s
+                cubic-bezier(.2,.8,.2,1),
+
+                border-radius .45s ease;
+
+            isolation: isolate;
+
+        }
+
+
+        .project:hover {
+
+            transform:
+                translateY(-10px);
+
+            border-radius: 28px;
+
+        }
+
+
+        .project-image {
+
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            z-index: -2;
+
+            transform: scale(1.01);
+
+            transition:
+                transform .7s
+                cubic-bezier(.2,.8,.2,1);
+
+        }
+
+
+        .project::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,.2),
+                    rgba(0,0,0,.15) 40%,
+                    rgba(0,0,0,.8)
+                );
+
+            z-index: -1;
+
+        }
+
+
+        .project:hover .project-image {
+
+            transform:
+                scale(1.07);
+
+        }
+
+
+        .project-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+        }
+
+
+        .project-label {
+
+            padding: 8px 12px;
+
+            background: rgba(255,255,255,.14);
+
+            backdrop-filter: blur(12px);
+
+            border-radius: 100px;
+
+        }
+
+
+        .project-title {
+
+            font-size:
+                clamp(
+                    50px,
+                    7vw,
+                    100px
+                );
+
+            line-height: .83;
+
+            letter-spacing: -.065em;
+
+            margin-top: auto;
+
+            max-width: 750px;
+
+        }
+
+
+        .project-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            gap: 30px;
+
+            margin-top: 35px;
+
+        }
+
+
+        .project-info {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+
+        }
+
+
+        .project-tag {
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.3px;
+
+        }
+
+
+        .project-role {
+
+            font-size: 14px;
+
+            opacity: .7;
+
+        }
+
+
+        .project-arrow {
+
+            width: 58px;
+
+            height: 58px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255,255,255,.5);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 25px;
+
+            transition:
+
+                background .3s ease,
+                color .3s ease,
+                transform .3s ease;
+
+        }
+
+
+        .project:hover .project-arrow {
+
+            background: #d8ff38;
+
+            color: #111;
+
+            transform:
+                rotate(45deg);
+
+        }
+
+
+        .project.featured {
+
+            grid-column:
+                span 2;
+
+            min-height: 720px;
+
+        }
+
+
+        /* =========================================================
+           PROCESS
+        ========================================================= */
+
+        .process {
+
+            background: #f4f1e8;
+
+        }
+
+
+        .process-intro {
+
+            max-width: 1000px;
+
+            margin-bottom: 90px;
+
+            font-size:
+                clamp(
+                    35px,
+                    5vw,
+                    72px
+                );
+
+            line-height: 1;
+
+            letter-spacing: -.055em;
+
+        }
+
+
+        .process-intro span {
+            color: #8d8a83;
+        }
+
+
+        .process-list {
+
+            border-top:
+                2px solid #111;
+
+        }
+
+
+        .process-item {
+
+            display: grid;
+
+            grid-template-columns:
+                80px
+                .7fr
+                1fr
+                50px;
+
+            gap: 30px;
+
+            align-items: start;
+
+            padding: 42px 0;
+
+            border-bottom:
+                1px solid rgba(17,17,17,.28);
+
+            transition:
+                padding .35s ease;
+
+        }
+
+
+        .process-item:hover {
+
+            padding-left: 20px;
+
+            padding-right: 20px;
+
+        }
+
+
+        .process-number {
+
+            font-size: 12px;
+
+        }
+
+
+        .process-name {
+
+            font-size:
+                clamp(
+                    27px,
+                    3vw,
+                    45px
+                );
+
+            line-height: 1;
+
+            letter-spacing: -.04em;
+
+        }
+
+
+        .process-description {
+
+            max-width: 520px;
+
+            font-size: 17px;
+
+            line-height: 1.5;
+
+        }
+
+
+        .process-icon {
+
+            font-size: 25px;
+
+        }
+
+
+        /* =========================================================
+           TOOLS
+        ========================================================= */
+
+        .tools {
+
+            background: #675cff;
+
+            color: white;
+
+        }
+
+
+        .tools-intro {
+
+            max-width: 750px;
+
+            font-size: 20px;
+
+            line-height: 1.5;
+
+            margin-bottom: 65px;
+
+        }
+
+
+        .tool-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            border-top:
+                1px solid rgba(255,255,255,.5);
+
+        }
+
+
+        .tool {
+
+            padding:
+                32px 25px
+                32px 0;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.5);
+
+            font-size:
+                clamp(
+                    22px,
+                    2.5vw,
+                    38px
+                );
+
+            font-weight: 700;
+
+            letter-spacing: -.035em;
+
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about {
+
+            background: #111;
+
+            color: #f4f1e8;
+
+        }
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 100px;
+
+            align-items: start;
+
+        }
+
+
+        .about-title {
+
+            position: sticky;
+
+            top: 130px;
+
+            font-size:
+                clamp(
+                    70px,
+                    10vw,
+                    150px
+                );
+
+            line-height: .8;
+
+            letter-spacing: -.075em;
+
+        }
+
+
+        .about-content {
+
+            max-width: 650px;
+
+        }
+
+
+        .about-lead {
+
+            font-size:
+                clamp(
+                    26px,
+                    3vw,
+                    42px
+                );
+
+            line-height: 1.15;
+
+            letter-spacing: -.045em;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .about-text {
+
+            font-size: 18px;
+
+            line-height: 1.55;
+
+            color: #c0c0c0;
+
+        }
+
+
+        .about-text p {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .about-details {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 35px;
+
+            margin-top: 60px;
+
+            padding-top: 35px;
+
+            border-top:
+                1px solid #555;
+
+        }
+
+
+        .about-detail small {
+
+            display: block;
+
+            color: #777;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .about-detail span {
+
+            font-size: 17px;
+
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+
+            min-height: 90vh;
+
+            background: #ff603d;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+        }
+
+
+        .contact-label {
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .contact-title {
+
+            font-size:
+                clamp(
+                    75px,
+                    14vw,
+                    220px
+                );
+
+            font-weight: 900;
+
+            line-height: .75;
+
+            letter-spacing: -.08em;
+
+            margin:
+                100px 0;
+
+        }
+
+
+        .contact-title span {
+            display: block;
+        }
+
+
+        .contact-bottom {
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 50px;
+
+        }
+
+
+        .contact-email {
+
+            font-size:
+                clamp(
+                    25px,
+                    4vw,
+                    60px
+                );
+
+            font-weight: 700;
+
+            letter-spacing: -.04em;
+
+            position: relative;
+
+        }
+
+
+        .contact-email::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -10px;
+
+            width: 100%;
+
+            height: 3px;
+
+            background: #111;
+
+            transform-origin: left;
+
+            transition:
+                transform .35s ease;
+
+        }
+
+
+        .contact-email:hover::after {
+
+            transform:
+                scaleX(.35);
+
+        }
+
+
+        .contact-circle {
+
+            width: 120px;
+
+            height: 120px;
+
+            border-radius: 50%;
+
+            background: #111;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 35px;
+
+            transition:
+
+                transform .4s ease,
+                background .4s ease,
+                color .4s ease;
+
+        }
+
+
+        .contact-circle:hover {
+
+            transform:
+                rotate(45deg)
+                scale(1.08);
+
+            background: #d8ff38;
+
+            color: #111;
+
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+
+            background: #111;
+
+            color: white;
+
+            padding:
+                40px 5vw;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 40px;
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+        }
+
 
         .socials {
+
             display: flex;
-            gap: 25px;
+
+            gap: 30px;
+
         }
 
-        .socials a:hover {
-            opacity: 0.5;
+
+        .socials a {
+
+            position: relative;
+
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
 
-        @media (max-width: 800px) {
+        .socials a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -5px;
+
+            width: 0;
+
+            height: 1px;
+
+            background: white;
+
+            transition:
+                width .3s ease;
+
+        }
+
+
+        .socials a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================= */
+
+        .back-top {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            border: 1px solid #111;
+
+            background: #f4f1e8;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            z-index: 500;
+
+            font-size: 18px;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transform:
+                translateY(15px);
+
+            transition:
+                all .3s ease;
+
+        }
+
+
+        .back-top.show {
+
+            opacity: 1;
+
+            pointer-events: auto;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        .back-top:hover {
+
+            background: #111;
+
+            color: white;
+
+        }
+
+
+        /* =========================================================
+           REVEALS
+        ========================================================= */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(45px);
+
+            transition:
+
+                opacity .8s ease,
+                transform .8s
+                cubic-bezier(.2,.8,.2,1);
+
+        }
+
+
+        .reveal.visible {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .cursor {
+                display: none;
+            }
+
 
             nav {
                 padding: 20px;
             }
 
+
             .nav-links {
-                gap: 15px;
-                font-size: 12px;
+                display: none;
             }
+
 
             .hero {
-                padding: 130px 20px 50px;
+
+                padding:
+                    130px 20px
+                    50px;
+
             }
+
 
             .hero-title {
-                letter-spacing: -5px;
+
+                font-size:
+                    clamp(
+                        64px,
+                        20vw,
+                        115px
+                    );
+
+                letter-spacing:
+                    -.075em;
+
             }
 
-            .hero-bottom {
-                flex-direction: column;
-                align-items: start;
-                gap: 40px;
+
+            .hero-title .indent {
+                margin-left: 0;
             }
+
+
+            .hero-top {
+
+                align-items:
+                    flex-start;
+
+                gap: 25px;
+
+            }
+
+
+            .hero-bottom {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap: 45px;
+
+            }
+
+
+            .marquee-content {
+                font-size: 13px;
+            }
+
 
             .intro,
             .services,
             .work,
             .process,
+            .tools,
             .about,
             .contact {
-                padding: 100px 20px;
+
+                padding:
+                    100px
+                    20px;
+
             }
+
+
+            .intro-text {
+
+                font-size:
+                    clamp(
+                        38px,
+                        11vw,
+                        70px
+                    );
+
+            }
+
+
+            .metrics {
+
+                padding:
+                    0 20px
+                    90px;
+
+            }
+
+
+            .metrics-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+
+            .metric {
+
+                border-bottom:
+                    1px solid #555;
+
+            }
+
+
+            .section-title {
+
+                font-size:
+                    clamp(
+                        52px,
+                        17vw,
+                        95px
+                    );
+
+            }
+
 
             .service {
-                grid-template-columns: 40px 1fr;
+
+                grid-template-columns:
+                    40px 1fr 30px;
+
+                gap: 15px;
+
             }
+
 
             .service-description {
-                grid-column: 2;
+
+                grid-column: 2 / 4;
+
+                padding-top: 10px;
+
             }
+
 
             .work-grid {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+
             }
 
-            .project {
-                min-height: 400px;
+
+            .project,
+            .project.featured {
+
+                grid-column:
+                    auto;
+
+                min-height: 520px;
+
             }
+
+
+            .project-title {
+
+                font-size:
+                    clamp(
+                        50px,
+                        15vw,
+                        90px
+                    );
+
+            }
+
 
             .process-item {
-                grid-template-columns: 50px 1fr;
+
+                grid-template-columns:
+                    40px 1fr 30px;
+
             }
+
 
             .process-description {
-                grid-column: 2;
+
+                grid-column:
+                    2 / 4;
+
             }
+
+
+            .tool-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
 
             .about-grid {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+
+                gap: 60px;
+
             }
 
-            footer {
-                flex-direction: column;
-                gap: 20px;
-                align-items: start;
+
+            .about-title {
+
+                position: static;
+
             }
+
+
+            .contact-bottom {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+            }
+
+
+            .contact-circle {
+
+                width: 90px;
+                height: 90px;
+
+            }
+
+
+            footer {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+            }
+
         }
+
+
+        @media (max-width: 550px) {
+
+            .hero-title {
+
+                font-size:
+                    clamp(
+                        55px,
+                        20vw,
+                        90px
+                    );
+
+            }
+
+
+            .available {
+                display: none;
+            }
+
+
+            .btn {
+
+                width: 100%;
+
+                justify-content:
+                    space-between;
+
+            }
+
+
+            .hero-actions {
+
+                width: 100%;
+
+            }
+
+
+            .metrics-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .metric {
+
+                padding-left: 0;
+
+                border-right: 0;
+
+            }
+
+
+            .tool-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .project {
+
+                min-height: 460px;
+
+                padding: 25px;
+
+            }
+
+
+            .about-details {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- =========================
+
+<!-- =========================================================
+     CUSTOM CURSOR
+========================================================= -->
+
+<div class="cursor"></div>
+
+
+<!-- =========================================================
      NAVIGATION
-========================= -->
+========================================================= -->
 
 <nav>
-    <a href="#" class="logo">FELIX MANU®</a>
 
-    <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#top" class="logo">
+        FELIX MANU®
+    </a>
+
+
+    <div class="nav-right">
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#services">
+                    Expertise
+                </a>
+            </li>
+
+            <li>
+                <a href="#work">
+                    Work
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a
+            href="#contact"
+            class="nav-contact"
+        >
+
+            Contact
+
+            <span>
+                ↗
+            </span>
+
+        </a>
+
+    </div>
+
 </nav>
 
 
-<!-- =========================
+
+<!-- =========================================================
      HERO
-========================= -->
+========================================================= -->
 
-<section class="hero">
+<section
+    class="hero"
+    id="top"
+>
 
-    <div class="hero-small">
-        Stockholm · Sweden · 2026
-    </div>
 
-    <h1 class="hero-title">
-        <span>GROW</span>
-        <span class="outline">DIGITAL</span>
-        <span>IMPACT.</span>
-    </h1>
+    <div class="hero-top">
 
-    <div class="hero-bottom">
 
-        <p class="hero-description">
-            I'm Felix Manu — a growth marketer and
-            digital strategist that works with building ideas that people
-            actually want to engage with.
-        </p>
+        <div class="hero-small">
 
-        <div class="scroll">
-            ↓ Scroll to explore
+            Growth Marketer<br>
+
+            Stockholm · Sweden
+
+        </div>
+
+
+        <div class="available">
+
+            <span class="available-dot"></span>
+
+            Available for opportunities
+
         </div>
 
     </div>
 
+
+
+    <h1 class="hero-title">
+
+        <span>
+            GROWTH
+        </span>
+
+        <span class="outline indent">
+            THAT
+        </span>
+
+        <span>
+            MATTERS.
+        </span>
+
+    </h1>
+
+
+
+    <div class="hero-bottom">
+
+
+        <p class="hero-description">
+
+            I'm Felix Manu — a
+
+            <strong>
+                Growth Marketer
+            </strong>
+
+            focused on Paid Social, SEO and Performance Marketing.
+
+            I combine creative thinking with data to build,
+            test and optimize digital growth.
+
+        </p>
+
+
+
+        <div class="hero-actions">
+
+
+            <a
+                href="#work"
+                class="btn btn-dark"
+            >
+
+                View my work
+
+                <span class="btn-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <a
+                href="#contact"
+                class="btn btn-light"
+            >
+
+                Let's talk
+
+                <span class="btn-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
+     MARQUEE
+========================================================= -->
+
+<div class="marquee">
+
+
+    <div class="marquee-track">
+
+
+        <div class="marquee-content">
+
+            <span>Paid Social</span>
+
+            <span class="marquee-dot">●</span>
+
+            <span>SEO</span>
+
+            <span class="marquee-dot">●</span>
+
+            <span>Performance Marketing</span>
+
+            <span class="marquee-dot">●</span>
+
+            <span>Analytics</span>
+
+            <span class="marquee-dot">●</span>
+
+            <span>CRO</span>
+
+            <span class="marquee-dot">●</span>
+
+            <span>Growth Strategy</span>
+
+            <span class="marquee-dot">●</span>
+
+        </div>
+
+
+        <div class="marquee-content">
+
+            <span>Paid Social</span>
+
+            <span class="marquee-dot">●</span>
+
+            <span>SEO</span>
+
+            <span class="marquee-dot">●</span>
+
+            <span>Performance Marketing</span>
+
+            <span class="marquee-dot">●</span>
+
+            <span>Analytics</span>
+
+            <span class="marquee-dot">●</span>
+
+            <span>CRO</span>
+
+            <span class="marquee-dot">●</span>
+
+            <span>Growth Strategy</span>
+
+            <span class="marquee-dot">●</span>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
      INTRO
-========================= -->
+========================================================= -->
 
 <section class="intro">
 
-    <div class="intro-label">
-        01 — Who I am
+
+    <div class="eyebrow">
+
+        <span class="eyebrow-line"></span>
+
+        01 — Approach
+
     </div>
 
-    <p class="intro-text">
-        I combine <span>creativity</span>,
-        culture and <span>data</span> to create
-        digital experiences, campaigns and
-        content that <span>move people.</span>
+
+    <p class="intro-text reveal">
+
+        Great marketing isn't about getting
+
+        <span class="muted">
+            more attention.
+        </span>
+
+        It's about getting
+
+        <span class="muted">
+            the right attention
+        </span>
+
+        and turning it into
+
+        measurable growth.
+
     </p>
 
+
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
+     METRICS / DISCIPLINES
+========================================================= -->
+
+<section class="metrics">
+
+
+    <div class="metrics-grid">
+
+
+        <div class="metric reveal">
+
+            <span class="metric-number">
+                01
+            </span>
+
+            <p class="metric-label">
+                Strategy
+            </p>
+
+        </div>
+
+
+        <div class="metric reveal">
+
+            <span class="metric-number">
+                02
+            </span>
+
+            <p class="metric-label">
+                Acquisition
+            </p>
+
+        </div>
+
+
+        <div class="metric reveal">
+
+            <span class="metric-number">
+                03
+            </span>
+
+            <p class="metric-label">
+                Optimization
+            </p>
+
+        </div>
+
+
+        <div class="metric reveal">
+
+            <span class="metric-number">
+                04
+            </span>
+
+            <p class="metric-label">
+                Measurement
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
      SERVICES
-========================= -->
+========================================================= -->
 
-<section class="services" id="services">
+<section
+    class="services"
+    id="services"
+>
 
-    <div class="section-header">
-        <h2 class="section-title">What I do.</h2>
-        <span class="section-number">02</span>
-    </div>
-
-
-    <div class="service">
-
-        <span class="service-number">01</span>
-
-        <h3 class="service-name">
-            Growth Marketing
-        </h3>
-
-        <p class="service-description">
-            Turning attention into measurable growth through
-            paid media, funnels, analytics and experimentation.
-        </p>
-
-    </div>
-
-
-    <div class="service">
-
-        <span class="service-number">02</span>
-
-        <h3 class="service-name">
-            Digital Strategy
-        </h3>
-
-        <p class="service-description">
-            Researching audiences, identifying opportunities
-            and building strategies around what people actually do.
-        </p>
-
-    </div>
-
-
-    <div class="service">
-
-        <span class="service-number">03</span>
-
-        <h3 class="service-name">
-            Content
-        </h3>
-
-        <p class="service-description">
-            Combining storytelling, video, music and visual
-            communication to make brands impossible to ignore.
-        </p>
-
-    </div>
-
-
-    <div class="service">
-
-        <span class="service-number">04</span>
-
-        <h3 class="service-name">
-            Creative Concepts
-        </h3>
-
-        <p class="service-description">
-            Developing ideas that connect culture, creativity
-            and business into campaigns people remember.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     WORK
-========================= -->
-
-<section class="work" id="work">
 
     <div class="section-header">
 
         <h2 class="section-title">
-            Selected work.
+            Expertise.
         </h2>
 
         <span class="section-number">
-            03
+            02 / What I do
         </span>
 
     </div>
+
+
+
+    <div class="service reveal">
+
+        <span class="service-number">
+            01
+        </span>
+
+
+        <h3 class="service-name">
+
+            Paid Social
+
+        </h3>
+
+
+        <p class="service-description">
+
+            Planning, launching and optimizing
+            performance-driven campaigns across
+            social platforms — from targeting
+            and creative testing to measurement.
+
+        </p>
+
+
+        <span class="service-arrow">
+            ↗
+        </span>
+
+    </div>
+
+
+
+    <div class="service reveal">
+
+        <span class="service-number">
+            02
+        </span>
+
+
+        <h3 class="service-name">
+
+            SEO
+
+        </h3>
+
+
+        <p class="service-description">
+
+            Building sustainable organic growth
+            through search intent, keyword research,
+            content strategy and technical fundamentals.
+
+        </p>
+
+
+        <span class="service-arrow">
+            ↗
+        </span>
+
+    </div>
+
+
+
+    <div class="service reveal">
+
+        <span class="service-number">
+            03
+        </span>
+
+
+        <h3 class="service-name">
+
+            Performance Marketing
+
+        </h3>
+
+
+        <p class="service-description">
+
+            Connecting channels, audiences,
+            funnels and business objectives to
+            create measurable and scalable growth.
+
+        </p>
+
+
+        <span class="service-arrow">
+            ↗
+        </span>
+
+    </div>
+
+
+
+    <div class="service reveal">
+
+        <span class="service-number">
+            04
+        </span>
+
+
+        <h3 class="service-name">
+
+            Analytics & CRO
+
+        </h3>
+
+
+        <p class="service-description">
+
+            Turning behavioural data into
+            actionable insights, experiments
+            and improvements across the customer journey.
+
+        </p>
+
+
+        <span class="service-arrow">
+            ↗
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     WORK
+========================================================= -->
+
+<section
+    class="work"
+    id="work"
+>
+
+
+    <div class="section-header">
+
+        <h2 class="section-title">
+            Selected<br>
+            work.
+        </h2>
+
+        <span class="section-number">
+            03 / Case studies
+        </span>
+
+    </div>
+
+
+    <p class="work-intro reveal">
+
+        A selection of strategy,
+        growth and marketing projects focused on
+        solving real communication and business problems.
+
+    </p>
+
 
 
     <div class="work-grid">
 
 
-        <a href="#" class="project">
+        <!-- PROJECT 1 -->
+
+        <a
+            href="#"
+            class="project featured reveal"
+        >
+
+
+            <img
+                src="images/jernhusen.jpg"
+                alt="Jernhusen campaign project"
+                class="project-image"
+            >
+
 
             <div class="project-top">
-                <span>01 / Campaign</span>
-                <span>2026</span>
+
+                <span class="project-label">
+                    01 / Campaign Strategy
+                </span>
+
+                <span>
+                    2026
+                </span>
+
             </div>
 
+
+
             <h3 class="project-title">
-                Jernhusen
+
+                JERNHUSEN
+
             </h3>
+
+
 
             <div class="project-bottom">
 
-                <span class="project-tag">
-                    Digital Campaign · OOH
-                </span>
 
-                <span class="arrow">
+                <div class="project-info">
+
+                    <span class="project-tag">
+
+                        Strategy · Audience · Campaign
+
+                    </span>
+
+
+                    <span class="project-role">
+
+                        Growth Marketing Case
+
+                    </span>
+
+                </div>
+
+
+                <span class="project-arrow">
                     ↗
                 </span>
 
+
             </div>
+
 
         </a>
 
 
-        <a href="#" class="project">
+
+        <!-- PROJECT 2 -->
+
+        <a
+            href="#"
+            class="project reveal"
+        >
+
+
+            <img
+                src="images/opera.jpg"
+                alt="Opera campaign project"
+                class="project-image"
+            >
+
 
             <div class="project-top">
-                <span>02 / Strategy</span>
-                <span>2026</span>
+
+                <span class="project-label">
+
+                    02 / Strategy
+
+                </span>
+
+                <span>
+                    2026
+                </span>
+
             </div>
 
+
+
             <h3 class="project-title">
-                Opera
+
+                OPERA
+
             </h3>
+
+
 
             <div class="project-bottom">
 
-                <span class="project-tag">
-                    Culture · Campaign
-                </span>
 
-                <span class="arrow">
+                <div class="project-info">
+
+
+                    <span class="project-tag">
+
+                        Insights · Positioning
+
+                    </span>
+
+
+                    <span class="project-role">
+
+                        Strategic Marketing
+
+                    </span>
+
+
+                </div>
+
+
+                <span class="project-arrow">
                     ↗
                 </span>
 
+
             </div>
+
 
         </a>
 
 
-        <a href="#" class="project">
+
+        <!-- PROJECT 3 -->
+
+        <a
+            href="#"
+            class="project reveal"
+        >
+
+
+            <img
+                src="images/paid-social.jpg"
+                alt="Paid Social performance project"
+                class="project-image"
+            >
+
 
             <div class="project-top">
-                <span>03 / Growth</span>
-                <span>2026</span>
+
+                <span class="project-label">
+
+                    03 / Acquisition
+
+                </span>
+
+                <span>
+                    2026
+                </span>
+
             </div>
 
+
+
             <h3 class="project-title">
-                Growth
+
+                PAID<br>
+                SOCIAL
+
             </h3>
+
+
 
             <div class="project-bottom">
 
-                <span class="project-tag">
-                    Paid Media · Analytics
-                </span>
 
-                <span class="arrow">
+                <div class="project-info">
+
+
+                    <span class="project-tag">
+
+                        Paid Media · Testing
+
+                    </span>
+
+
+                    <span class="project-role">
+
+                        Performance Marketing
+
+                    </span>
+
+
+                </div>
+
+
+                <span class="project-arrow">
                     ↗
                 </span>
 
+
             </div>
+
 
         </a>
 
 
-        <a href="#" class="project">
+
+        <!-- PROJECT 4 -->
+
+        <a
+            href="#"
+            class="project featured reveal"
+        >
+
+
+            <img
+                src="images/seo.jpg"
+                alt="SEO growth project"
+                class="project-image"
+            >
+
 
             <div class="project-top">
-                <span>04 / Creative</span>
-                <span>2026</span>
+
+                <span class="project-label">
+
+                    04 / Organic Growth
+
+                </span>
+
+                <span>
+                    2026
+                </span>
+
             </div>
 
+
+
             <h3 class="project-title">
-                Creator
+
+                SEARCH<br>
+                GROWTH
+
             </h3>
+
+
 
             <div class="project-bottom">
 
-                <span class="project-tag">
-                    Music · Content
-                </span>
 
-                <span class="arrow">
+                <div class="project-info">
+
+
+                    <span class="project-tag">
+
+                        SEO · Search Intent · Content
+
+                    </span>
+
+
+                    <span class="project-role">
+
+                        Organic Growth
+
+                    </span>
+
+
+                </div>
+
+
+                <span class="project-arrow">
                     ↗
                 </span>
 
+
             </div>
 
+
         </a>
+
 
     </div>
+
 
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
      PROCESS
-========================= -->
+========================================================= -->
 
 <section class="process">
+
 
     <div class="section-header">
 
         <h2 class="section-title">
-            My process.
+            Process.
         </h2>
 
         <span class="section-number">
-            04
+            04 / How I work
         </span>
 
     </div>
 
 
-    <p class="process-intro">
-        Good marketing doesn't start with
-        content. It starts with understanding
-        the problem.
+
+    <p class="process-intro reveal">
+
+        Growth doesn't start with ads.
+
+        <span>
+
+            It starts with understanding
+            the problem, the audience
+            and what needs to change.
+
+        </span>
+
     </p>
+
 
 
     <div class="process-list">
 
-        <div class="process-item">
 
-            <span class="process-number">01</span>
+        <div class="process-item reveal">
+
+            <span class="process-number">
+                01
+            </span>
+
 
             <h3 class="process-name">
                 Research
             </h3>
 
+
             <p class="process-description">
-                Audience research, market analysis,
-                competitors, trends and cultural insights.
+
+                Understand the market,
+                customer behaviour, competitors,
+                search demand and current performance.
+
             </p>
+
+
+            <span class="process-icon">
+                ↓
+            </span>
 
         </div>
 
 
-        <div class="process-item">
 
-            <span class="process-number">02</span>
+        <div class="process-item reveal">
+
+            <span class="process-number">
+                02
+            </span>
+
 
             <h3 class="process-name">
                 Strategy
             </h3>
 
+
             <p class="process-description">
-                Turning insights into a clear strategy
-                with measurable objectives.
+
+                Turn insights into clear priorities,
+                channels, hypotheses, messaging
+                and measurable objectives.
+
             </p>
+
+
+            <span class="process-icon">
+                ↓
+            </span>
 
         </div>
 
 
-        <div class="process-item">
 
-            <span class="process-number">03</span>
+        <div class="process-item reveal">
+
+            <span class="process-number">
+                03
+            </span>
+
 
             <h3 class="process-name">
-                Creation
+                Test
             </h3>
 
+
             <p class="process-description">
-                Building campaigns, content and creative
-                concepts designed to capture attention.
+
+                Launch campaigns and experiments
+                across audiences, creative,
+                landing pages and acquisition channels.
+
             </p>
+
+
+            <span class="process-icon">
+                ↓
+            </span>
 
         </div>
 
 
-        <div class="process-item">
 
-            <span class="process-number">04</span>
+        <div class="process-item reveal">
+
+            <span class="process-number">
+                04
+            </span>
+
 
             <h3 class="process-name">
-                Optimization
+                Optimize
             </h3>
 
+
             <p class="process-description">
-                Measuring performance, learning from the data
-                and continuously improving the outcome.
+
+                Measure what happened,
+                identify opportunities and continuously
+                improve performance based on data.
+
             </p>
 
+
+            <span class="process-icon">
+                ↗
+            </span>
+
         </div>
+
 
     </div>
+
 
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
 
-<section class="about" id="about">
+<!-- =========================================================
+     TOOLS
+========================================================= -->
+
+<section class="tools">
+
+
+    <div class="section-header">
+
+        <h2 class="section-title">
+            Toolkit.
+        </h2>
+
+        <span class="section-number">
+            05 / Platforms
+        </span>
+
+    </div>
+
+
+    <p class="tools-intro reveal">
+
+        Tools and platforms I use to understand
+        audiences, measure performance and create
+        stronger digital growth strategies.
+
+    </p>
+
+
+
+    <div class="tool-grid">
+
+
+        <div class="tool reveal">
+            Meta Ads
+        </div>
+
+
+        <div class="tool reveal">
+            Google Ads
+        </div>
+
+
+        <div class="tool reveal">
+            GA4
+        </div>
+
+
+        <div class="tool reveal">
+            Google Search Console
+        </div>
+
+
+        <div class="tool reveal">
+            SEO
+        </div>
+
+
+        <div class="tool reveal">
+            Looker Studio
+        </div>
+
+
+        <div class="tool reveal">
+            Excel
+        </div>
+
+
+        <div class="tool reveal">
+            A/B Testing
+        </div>
+
+
+        <div class="tool reveal">
+            AI Tools
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+    class="about"
+    id="about"
+>
+
 
     <div class="about-grid">
 
+
         <h2 class="about-title">
-            CREATIVE<br>
-            THINKER.
+
+            DATA<br>
+
+            MEETS<br>
+
+            CREATIVITY.
+
         </h2>
 
 
-        <div class="about-text">
 
-            <p>
-                I'm Felix Manu, a growth marketer with a background in
-                music, content creation and digital media.
+        <div class="about-content">
+
+
+            <p class="about-lead reveal">
+
+                Growth marketing sits
+                somewhere between creativity,
+                psychology, strategy and numbers.
+
+                That's exactly why I like it.
+
             </p>
 
-            <p>
-                My advantage is the combination of
-                creative thinking and analytical curiosity.
-                I don't just want to make things look good.
-                I want to understand why they work.
-            </p>
 
-            <p>
-                Currently focused on growth marketing,
-                digital strategy, paid media and building
-                brands that people actually care about.
-            </p>
+
+            <div class="about-text reveal">
+
+
+                <p>
+
+                    I'm Felix Manu,
+                    a Growth Marketer based in Stockholm
+                    focused on understanding why people
+                    discover, engage with and convert
+                    through digital experiences.
+
+                </p>
+
+
+                <p>
+
+                    My approach combines creative thinking
+                    with analytical decision-making.
+                    The objective isn't simply to make
+                    marketing look good — it's to understand
+                    why something performs and how it can
+                    perform better.
+
+                </p>
+
+
+                <p>
+
+                    My main areas of focus are
+                    Paid Social, SEO,
+                    Performance Marketing,
+                    Analytics and Conversion Optimization.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="about-details reveal">
+
+
+                <div class="about-detail">
+
+                    <small>
+                        Based in
+                    </small>
+
+                    <span>
+                        Stockholm, Sweden
+                    </span>
+
+                </div>
+
+
+                <div class="about-detail">
+
+                    <small>
+                        Role
+                    </small>
+
+                    <span>
+                        Growth Marketer
+                    </span>
+
+                </div>
+
+
+                <div class="about-detail">
+
+                    <small>
+                        Focus
+                    </small>
+
+                    <span>
+                        Performance Growth
+                    </span>
+
+                </div>
+
+
+                <div class="about-detail">
+
+                    <small>
+                        Available
+                    </small>
+
+                    <span>
+                        Opportunities & Projects
+                    </span>
+
+                </div>
+
+
+            </div>
+
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
 
-<section class="contact" id="contact">
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+    class="contact"
+    id="contact"
+>
+
 
     <span class="contact-label">
-        05 — Let's work together
+
+        06 — Let's build something
+
     </span>
 
 
-    <h2 class="contact-title">
-        LET'S<br>
-        TALK.
+
+    <h2 class="contact-title reveal">
+
+        <span>
+            LET'S
+        </span>
+
+        <span>
+            GROW.
+        </span>
+
     </h2>
 
 
-    <a
-        class="contact-email"
-        href="mailto:hello@felixmanu.com"
-    >
-        hello@felixmanu.com ↗
-    </a>
+
+    <div class="contact-bottom">
+
+
+        <a
+            class="contact-email"
+            href="mailto:hello@felixmanu.com"
+        >
+
+            hello@felixmanu.com
+
+        </a>
+
+
+        <a
+            href="mailto:hello@felixmanu.com"
+            class="contact-circle"
+            aria-label="Send Felix an email"
+        >
+
+            ↗
+
+        </a>
+
+
+    </div>
+
 
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
+
     <span>
+
         © 2026 Felix Manu
+
     </span>
+
+
 
     <div class="socials">
 
-        <a href="#" target="_blank">
-            LinkedIn
-        </a>
-
-        <a href="#" target="_blank">
-            Instagram
-        </a>
 
         <a
+            href="#"
+            target="_blank"
+            rel="noopener"
+        >
+
+            LinkedIn
+
         </a>
 
+
+        <a
+            href="#"
+            target="_blank"
+            rel="noopener"
+        >
+
+            GitHub
+
+        </a>
+
+
     </div>
+
+
+
+    <span>
+
+        Growth Marketing · Stockholm
+
+    </span>
+
 
 </footer>
 
 
-<!-- =========================
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<a
+    href="#top"
+    class="back-top"
+    aria-label="Back to top"
+>
+
+    ↑
+
+</a>
+
+
+
+<!-- =========================================================
      JAVASCRIPT
-========================= -->
+========================================================= -->
 
 <script>
 
-    // Simple reveal animation
 
-    const elements = document.querySelectorAll(
-        '.service, .project, .process-item'
-    );
-
-    const observer = new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.15
-        }
-    );
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
 
 
-    elements.forEach(element => {
+    const revealElements =
+        document.querySelectorAll('.reveal');
 
-        element.style.opacity = "0";
-        element.style.transform = "translateY(40px)";
-        element.style.transition =
-            "opacity 0.8s ease, transform 0.8s ease";
 
-        observer.observe(element);
+    const revealObserver =
+        new IntersectionObserver(
+
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target
+                            .classList
+                            .add('visible');
+
+                        revealObserver
+                            .unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+    revealElements.forEach(element => {
+
+        revealObserver.observe(element);
 
     });
 
+
+
+    /* =========================================================
+       CUSTOM CURSOR
+    ========================================================= */
+
+
+    const cursor =
+        document.querySelector('.cursor');
+
+
+    if (window.matchMedia("(pointer: fine)").matches) {
+
+
+        window.addEventListener(
+
+            'mousemove',
+
+            e => {
+
+                cursor.style.left =
+                    e.clientX + 'px';
+
+                cursor.style.top =
+                    e.clientY + 'px';
+
+            }
+
+        );
+
+
+        const interactiveElements =
+            document.querySelectorAll(
+
+                'a, .service, .project, .process-item'
+
+            );
+
+
+        interactiveElements.forEach(element => {
+
+
+            element.addEventListener(
+
+                'mouseenter',
+
+                () => {
+
+                    cursor.classList.add('active');
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                'mouseleave',
+
+                () => {
+
+                    cursor.classList.remove('active');
+
+                }
+
+            );
+
+
+        });
+
+
+    }
+
+
+
+    /* =========================================================
+       BACK TO TOP
+    ========================================================= */
+
+
+    const backTop =
+        document.querySelector('.back-top');
+
+
+    window.addEventListener(
+
+        'scroll',
+
+        () => {
+
+
+            if (window.scrollY > 700) {
+
+                backTop
+                    .classList
+                    .add('show');
+
+            }
+
+            else {
+
+                backTop
+                    .classList
+                    .remove('show');
+
+            }
+
+
+        }
+
+    );
+
+
+
+    /* =========================================================
+       HERO PARALLAX
+    ========================================================= */
+
+
+    const heroTitle =
+        document.querySelector('.hero-title');
+
+
+    window.addEventListener(
+
+        'scroll',
+
+        () => {
+
+
+            const scrollPosition =
+                window.scrollY;
+
+
+            if (scrollPosition < window.innerHeight) {
+
+
+                heroTitle.style.transform =
+
+                    `translateY(${scrollPosition * 0.06}px)`;
+
+
+            }
+
+
+        }
+
+    );
+
+
 </script>
 
+
 </body>
+
 </html>
-```
-felixmanu.github.io/
-│
-├── index.html
-│
-└── images/
-    ├── jernhusen.jpg
-    ├── opera.jpg
-    ├── paid-social.jpg
-    └── seo.jpg
