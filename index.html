@@ -435,6 +435,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .info-list .k{color:var(--ink-faint);}
   .info-list .v{font-weight:600; text-align:right;}
 
+  .work-media-grid{
+    display:grid; grid-template-columns:repeat(3,1fr);
+    gap:1px; background:var(--line);
+    border-top:1px solid var(--line);
+  }
+  .work-media-grid div{
+    aspect-ratio:4/3;
+    background-color:var(--surface-2);
+    background-size:cover; background-position:center;
+  }
+
   /* ---------- CONTACT ---------- */
   .contact{
     background:var(--surface);
@@ -511,6 +522,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .hero{padding-top:150px;}
     .section{padding:90px var(--pad);}
     .work-next{flex-direction:column; align-items:flex-start; gap:.6rem; text-align:left;}
+    .work-media-grid{grid-template-columns:repeat(2,1fr);}
     .section-head{grid-template-columns:1fr;}
   }
 </style>
@@ -653,6 +665,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="brief">Working in a team of four, the brief was to make the case for why opera and ballet still matter. The Royal Opera's own audience data pointed to the real problem: a third of Swedes aged 18-84 want to visit but never do. The barrier isn't price, it's perception. We built the campaign concept <strong>"Gåshud för 65 kr"</strong> ("Goosebumps for 65 SEK"), translating the physical sensations of live performance (a racing pulse, dilated pupils, goosebumps) into a five-poster outdoor series, each pairing a macro shot of the body's reaction with the actual ticket price. We planned the rollout across Stockholm's everyday neighborhoods, not just the city center, to make the point that the experience belongs to everyone.</p>
           <span class="tags">Audience Insight · Campaign Concept · OOH</span>
           <span class="meta">Strategic Marketing · Team Project · 2026</span>
+        </div>
+        <div class="work-media-grid">
+          <div style="background-image:url('images/operan-1.jpg');"></div>
+          <div style="background-image:url('images/operan-2.jpg');"></div>
+          <div style="background-image:url('images/operan-3.jpg');"></div>
         </div>
       </div>
     </div>
