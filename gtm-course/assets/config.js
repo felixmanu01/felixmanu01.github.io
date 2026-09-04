@@ -13,7 +13,8 @@
 
 window.GTM_COURSE_CONFIG = {
 
-    containerId: '',
+    containerId: '
+GTM-N2KX3NPH',
 
     /* Optional. Set to true to hide the "paste your container ID" box on every
        page, once you have set the ID above and do not want students changing it. */
