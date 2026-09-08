@@ -496,7 +496,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .to-top:hover{border-color:var(--accent); transform:translateY(-3px);}
 
+  /* ---------- SCROLL REVEAL ---------- */
+  /* Sätts bara när JS är igång, så innehållet aldrig fastnar osynligt */
+  .js .reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity .7s ease, transform .7s cubic-bezier(.16,.8,.28,1);
+  }
+  .js .reveal.in{opacity:1; transform:none;}
+
+  /* Förskjuten intoning för kort i rad */
+  .js .stagger > *{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .6s ease, transform .6s cubic-bezier(.16,.8,.28,1);
+  }
+  .js .stagger.in > *{opacity:1; transform:none;}
+  .js .stagger.in > *:nth-child(1){transition-delay:.05s;}
+  .js .stagger.in > *:nth-child(2){transition-delay:.14s;}
+  .js .stagger.in > *:nth-child(3){transition-delay:.23s;}
+  .js .stagger.in > *:nth-child(4){transition-delay:.32s;}
+
+  /* Case-bilder: mjuk inzoomning vid hover */
+  .work-media-grid{overflow:hidden;}
+  .work-media-grid div{
+    transition:transform .6s cubic-bezier(.2,.7,.3,1), filter .4s ease;
+  }
+  .work-media-grid:hover div{filter:brightness(.72);}
+  .work-media-grid div:hover{transform:scale(1.04); filter:brightness(1);}
+
+  /* Marquee pausar när man hovrar, så man hinner läsa */
+  .marquee-band:hover .marquee-track{animation-play-state:paused;}
+
+  /* Sektionsrubrikens linje växer ut */
+  .js .reveal .eyebrow .rule{
+    transform:scaleX(0); transform-origin:left;
+    transition:transform .9s cubic-bezier(.16,.8,.28,1) .2s;
+  }
+  .js .reveal.in .eyebrow .rule{transform:scaleX(1);}
+
   @media (prefers-reduced-motion: reduce){
+    .js .reveal, .js .stagger > *{opacity:1 !important; transform:none !important;}
+    .js .reveal .eyebrow .rule{transform:scaleX(1) !important;}
     *, *::before, *::after{
       animation-duration:.001ms !important;
       animation-iteration-count:1 !important;
@@ -600,9 +641,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section id="approach" class="section">
     <div class="section-inner">
-      <div class="eyebrow"><span class="num">01</span> Approach <span class="rule"></span></div>
-      <p class="approach-statement">Great marketing isn't about getting more attention. It's about getting <em>the right</em> attention.</p>
-      <div class="approach-row">
+      <div class="reveal"><div class="eyebrow"><span class="num">01</span> Approach <span class="rule"></span></div></div>
+      <p class="approach-statement reveal">Great marketing isn't about getting more attention. It's about getting <em>the right</em> attention.</p>
+      <div class="approach-row stagger">
         <div><span class="num">01</span><span class="label">Strategy</span></div>
         <div><span class="num">02</span><span class="label">Acquisition</span></div>
         <div><span class="num">03</span><span class="label">Optimization</span></div>
@@ -613,13 +654,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section id="services" class="section" style="padding-top:0;">
     <div class="section-inner">
-      <div class="section-head">
+      <div class="section-head reveal">
         <div>
           <div class="eyebrow"><span class="num">02</span> What I do <span class="rule"></span></div>
           <h2>Expertise.</h2>
         </div>
       </div>
-      <div class="expertise-grid">
+      <div class="expertise-grid stagger">
         <div class="expertise-card">
           <span class="num">01</span>
           <h3>Paid Social</h3>
@@ -650,7 +691,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section id="work" class="section">
     <div class="section-inner">
-      <div class="section-head">
+      <div class="section-head reveal">
         <div>
           <div class="eyebrow"><span class="num">03</span> Case studies <span class="rule"></span></div>
           <h2>Selected work.</h2>
@@ -658,7 +699,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="section-lede">Currently studying Growth Marketing at Berghs School of Communication. This portfolio grows case by case.</p>
       </div>
 
-      <div class="work-featured">
+      <div class="work-featured reveal">
         <div class="work-featured-body">
           <span class="num">01</span>
           <h3>Kungliga Operan</h3>
@@ -676,7 +717,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section id="process" class="section">
     <div class="section-inner">
-      <div class="section-head">
+      <div class="section-head reveal">
         <div>
           <div class="eyebrow"><span class="num">04</span> How I work <span class="rule"></span></div>
           <h2>Process.</h2>
@@ -684,7 +725,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="section-lede">Growth doesn't start with ads. It starts with understanding the problem, the audience and what needs to change.</p>
       </div>
 
-      <div class="process-row">
+      <div class="process-row stagger">
         <div class="process-item">
           <div class="num-circle">01</div>
           <h3>Research</h3>
@@ -711,14 +752,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section id="toolkit" class="section">
     <div class="section-inner">
-      <div class="section-head">
+      <div class="section-head reveal">
         <div>
           <div class="eyebrow"><span class="num">05</span> Platforms <span class="rule"></span></div>
           <h2>Toolkit.</h2>
         </div>
         <p class="section-lede">Tools and platforms I use to understand audiences, measure performance and create stronger digital growth strategies.</p>
       </div>
-      <div class="tag-cloud">
+      <div class="tag-cloud reveal">
         <span>Meta Ads</span>
         <span>Google Ads</span>
         <span>GA4</span>
@@ -729,7 +770,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <section id="about" class="section">
-    <div class="section-inner about-grid">
+    <div class="section-inner about-grid reveal">
       <div>
         <div class="eyebrow"><span class="num">06</span> About <span class="rule"></span></div>
         <h2>Data meets creativity.</h2>
@@ -749,7 +790,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <section id="contact" class="section contact">
-    <div class="section-inner contact-inner">
+    <div class="section-inner contact-inner reveal">
       <div class="eyebrow"><span class="num">07</span> Let's build something <span class="rule"></span></div>
       <h2>Let's grow.</h2>
       <a href="mailto:felix.manu.irankunda@student.berghs.se" class="contact-email">felix.manu.irankunda@student.berghs.se ↗</a>
@@ -780,6 +821,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     burger.classList.remove('open');
     panel.classList.remove('open');
   }));
+
+  // Scroll reveal
+  // 'js'-klassen sätts först här, så innehållet syns även om JS inte kör
+  document.documentElement.classList.add('js');
+
+  const revealTargets = document.querySelectorAll('.reveal, .stagger');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target); // körs bara en gång
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  revealTargets.forEach(el => revealObserver.observe(el));
 
   // Scrollspy for nav active state
   const navLinks = document.querySelectorAll('.nav-links a');
