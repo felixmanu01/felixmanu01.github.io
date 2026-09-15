@@ -384,6 +384,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color:var(--ink-dim); margin-bottom:.3rem;
   }
   .work-next p{color:var(--ink-faint); font-size:.85rem; max-width:46ch;}
+  a.work-next{
+    transition:border-color .2s ease, background .2s ease;
+    text-decoration:none;
+  }
+  a.work-next:hover{border-color:var(--accent); background:var(--surface);}
+  a.work-next:hover h3{color:var(--ink);}
+  a.work-next .go{margin-left:auto; color:var(--accent); font-weight:700; white-space:nowrap;}
+  @media (max-width:760px){
+    a.work-next .go{margin-left:0;}
+  }
 
   /* ---------- PROCESS ---------- */
   .process-row{
@@ -583,6 +593,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#services">Expertise</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
+      <a href="data.html">Data report</a>
     </nav>
     <a href="#contact" class="nav-cta">Contact ↗</a>
     <button class="burger" id="burger" aria-label="Open menu">
@@ -595,6 +606,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#services">Expertise</a>
   <a href="#work">Work</a>
   <a href="#about">About</a>
+  <a href="data.html">Data report</a>
   <a href="#contact">Contact</a>
 </div>
 
@@ -712,6 +724,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div style="background-image:url('Case/images/operan-2.jpg');"></div>
         </div>
       </div>
+
+      <a href="data.html" class="work-next reveal" id="caseDataLink">
+        <span class="num">02</span>
+        <div>
+          <h3>Heat and Stockholm Marathon</h3>
+          <p>A self collected dataset on drop out rates in one of Europe's warmest big city marathons.</p>
+        </div>
+        <span class="go">Open report &#8599;</span>
+      </a>
     </div>
   </section>
 
@@ -821,6 +842,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     burger.classList.remove('open');
     panel.classList.remove('open');
   }));
+
+  // dataLayer event när någon öppnar datarapporten
+  const caseLink = document.getElementById('caseDataLink');
+  if (caseLink) {
+    caseLink.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'case_open', case_name: 'heat_stockholm_marathon' });
+    });
+  }
 
   // Scroll reveal
   // 'js'-klassen sätts först här, så innehållet syns även om JS inte kör
