@@ -351,7 +351,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ---------- WORK ---------- */
   .work-featured{
     border:1px solid var(--line);
-    margin-bottom:1.4rem;
+    margin-bottom:2.2rem;
   }
   .work-featured-body{
     padding:2.8rem;
@@ -372,28 +372,90 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .work-featured-body .meta{color:var(--ink-dim); font-size:.85rem;}
 
-  .work-next{
-    display:flex; align-items:center; gap:1.6rem;
-    border:1px dashed var(--line-strong);
-    padding:1.8rem 2rem;
+  /* ---------- CASE CARDS ---------- */
+  .work-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1.3rem;
   }
-  .work-next .num{color:var(--ink-faint); font-weight:700; font-size:.85rem;}
-  .work-next h3{
-    font-family:'Anton',sans-serif; text-transform:uppercase;
-    font-size:1.05rem; letter-spacing:.02em;
-    color:var(--ink-dim); margin-bottom:.3rem;
+  .case-card{
+    position:relative;
+    display:flex; flex-direction:column;
+    padding:2.1rem 2rem 1.8rem;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    isolation:isolate;
+    transition:transform .35s cubic-bezier(.16,.8,.28,1),
+               border-color .3s ease,
+               background .3s ease,
+               box-shadow .35s ease;
   }
-  .work-next p{color:var(--ink-faint); font-size:.85rem; max-width:46ch;}
-  a.work-next{
-    transition:border-color .2s ease, background .2s ease;
-    text-decoration:none;
+  /* Glödande linje som ritas ut i toppen vid hover */
+  .case-card::before{
+    content:''; position:absolute; top:0; left:0; right:0; height:3px;
+    background:var(--accent);
+    transform:scaleX(0); transform-origin:left;
+    transition:transform .5s cubic-bezier(.16,.8,.28,1);
   }
-  a.work-next:hover{border-color:var(--accent); background:var(--surface);}
-  a.work-next:hover h3{color:var(--ink);}
-  a.work-next .go{margin-left:auto; color:var(--accent); font-weight:700; white-space:nowrap;}
-  @media (max-width:760px){
-    a.work-next .go{margin-left:0;}
+  /* Mjuk ljusgloria i hörnet */
+  .case-card::after{
+    content:''; position:absolute; top:-40%; right:-30%;
+    width:280px; height:280px; border-radius:50%;
+    background:radial-gradient(circle, rgba(246,196,69,.18), rgba(246,196,69,0) 70%);
+    opacity:0; transition:opacity .45s ease;
+    z-index:-1; pointer-events:none;
   }
+  .case-card:hover{
+    transform:translateY(-5px);
+    border-color:var(--line-strong);
+    background:var(--surface-2);
+    box-shadow:0 18px 40px rgba(0,0,0,.35);
+  }
+  .case-card:hover::before{transform:scaleX(1);}
+  .case-card:hover::after{opacity:1;}
+
+  .case-top{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:1rem; margin-bottom:1.8rem;
+  }
+  .case-card .num{
+    font-family:'Anton',sans-serif;
+    font-size:2.6rem; line-height:1;
+    color:var(--accent);
+    opacity:.3;
+    transition:opacity .3s ease, transform .3s ease;
+  }
+  .case-card:hover .num{opacity:1; transform:translateY(-2px);}
+  .case-card .chip{
+    border:1px solid var(--line-strong);
+    border-radius:100px;
+    padding:.38rem .85rem;
+    font-size:.68rem; font-weight:700;
+    letter-spacing:.12em; text-transform:uppercase;
+    color:var(--ink-faint);
+    white-space:nowrap;
+    transition:color .25s ease, border-color .25s ease;
+  }
+  .case-card:hover .chip{color:var(--ink); border-color:var(--accent);}
+  .case-card h3{
+    font-size:1.5rem; line-height:1.05;
+    margin-bottom:.8rem;
+  }
+  .case-card p{
+    color:var(--ink-dim); font-size:.93rem; line-height:1.6;
+    max-width:42ch; margin-bottom:1.8rem;
+  }
+  .case-card .go{
+    margin-top:auto;
+    display:inline-flex; align-items:center; gap:.5em;
+    font-size:.78rem; font-weight:700;
+    letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink);
+  }
+  .case-card .go .arr{color:var(--accent); transition:transform .25s ease;}
+  .case-card:hover .go .arr{transform:translate(4px,-4px);}
 
   /* ---------- PROCESS ---------- */
   .process-row{
@@ -526,6 +588,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .js .stagger.in > *:nth-child(2){transition-delay:.14s;}
   .js .stagger.in > *:nth-child(3){transition-delay:.23s;}
   .js .stagger.in > *:nth-child(4){transition-delay:.32s;}
+  .js .stagger.in > *:nth-child(5){transition-delay:.41s;}
+  .js .stagger.in > *:nth-child(6){transition-delay:.50s;}
 
   /* Case-bilder: mjuk inzoomning vid hover */
   .work-media-grid{overflow:hidden;}
@@ -572,7 +636,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .burger{display:block;}
     .hero{padding-top:150px;}
     .section{padding:90px var(--pad);}
-    .work-next{flex-direction:column; align-items:flex-start; gap:.6rem; text-align:left;}
+    .work-grid{grid-template-columns:1fr;}
+    .case-card{padding:1.8rem 1.6rem 1.5rem;}
     .work-media-grid{grid-template-columns:1fr;}
     .section-head{grid-template-columns:1fr;}
   }
@@ -727,50 +792,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <a href="data.html" class="work-next reveal" id="caseDataLink">
-        <span class="num">02</span>
-        <div>
+      <div class="work-grid stagger">
+
+        <a href="data.html" class="case-card" id="caseDataLink">
+          <div class="case-top">
+            <span class="num">02</span>
+            <span class="chip">Data analysis</span>
+          </div>
           <h3>Heat and Stockholm Marathon</h3>
           <p>A self collected dataset on drop out rates in one of Europe's warmest big city marathons.</p>
-        </div>
-        <span class="go">Open report &#8599;</span>
-      </a>
+          <span class="go">Open report <span class="arr">&#8599;</span></span>
+        </a>
 
-      <a href="scraping/" class="work-next reveal" id="caseScrapingLink">
-        <span class="num">03</span>
-        <div>
+        <a href="scraping/" class="case-card" id="caseScrapingLink">
+          <div class="case-top">
+            <span class="num">03</span>
+            <span class="chip">Web scraping</span>
+          </div>
           <h3>Debaser web scraping</h3>
-          <p>A Node.js scraping exercise that collects public concert listings from Debaser and saves the result as a text file.</p>
-        </div>
-        <span class="go">Open scraping &#8599;</span>
-      </a>
+          <p>A Node.js exercise that collects public concert listings from Debaser and saves the result as a text file.</p>
+          <span class="go">Open scraping <span class="arr">&#8599;</span></span>
+        </a>
 
-      <a href="gigradar.html" class="work-next reveal" id="caseGigLink">
-        <span class="num">04</span>
-        <div>
+        <a href="gigradar.html" class="case-card" id="caseGigLink">
+          <div class="case-top">
+            <span class="num">04</span>
+            <span class="chip">Data and API</span>
+          </div>
           <h3>Gig Radar Stockholm</h3>
-          <p>Scraped concert data combined with live music API data to explore artist discovery signals and create a stronger foundation for marketing decisions.</p>
-        </div>
-        <span class="go">Open case &#8599;</span>
-      </a>
+          <p>Scraped concert data combined with live music API data to explore artist discovery signals and build a stronger foundation for marketing decisions.</p>
+          <span class="go">Open case <span class="arr">&#8599;</span></span>
+        </a>
 
-      <a href="api_mashup.html" class="work-next reveal" id="caseApiMashupLink">
-        <span class="num">05</span>
-        <div>
+        <a href="api_mashup.html" class="case-card" id="caseApiMashupLink">
+          <div class="case-top">
+            <span class="num">05</span>
+            <span class="chip">Prototype</span>
+          </div>
           <h3>Gig Radar API Mashup</h3>
           <p>A paper prototype showing how concert data and artist data from two APIs can be combined into one discovery experience.</p>
-        </div>
-        <span class="go">Open prototype &#8599;</span>
-      </a>
+          <span class="go">Open prototype <span class="arr">&#8599;</span></span>
+        </a>
 
-      <a href="content_plan.html" class="work-next reveal" id="caseContentPlanLink">
-        <span class="num">06</span>
-        <div>
+        <a href="content_plan.html" class="case-card" id="caseContentPlanLink">
+          <div class="case-top">
+            <span class="num">06</span>
+            <span class="chip">Content strategy</span>
+          </div>
           <h3>Stockholm Marathon Content Plan</h3>
           <p>Turning one data insight into a consistent story for LinkedIn, short video, press and web.</p>
-        </div>
-        <span class="go">Open content plan &#8599;</span>
-      </a>
+          <span class="go">Open content plan <span class="arr">&#8599;</span></span>
+        </a>
+
+      </div>
     </div>
   </section>
 
