@@ -1,515 +1,186 @@
-DEBASER KONSERTER
-
-Källa: https://debaser.se/konserter
-Insamlad: 2026-09-18T12:47:11.718Z
-Antal event: 102
-
-1. Fre18Sep2026Velveteen QueenKonsertDebaser NovaRock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/velveteen-queen
-
-2. Lör19Sep2026Satan Takes A HolidaySUPPORT: The GristleKonsertDebaser NovaRock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/satan-takes-a-holiday
-
-3. Lör19Sep2026The Lemon Twigs SUPPORT: Plastic FamilyKonsertDebaser StrandPowerpop
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/the-lemon-twigs
-
-4. Mån21Sep2026Mulaa JoansSUPPORT: OrlandoKonsertDebaser Nova
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/mulaa-joans
-
-5. Tis22Sep2026The Amity AfflictionSUPPORT: Silent Planet + Varials + OrthodoxKonsertDebaser StrandMetalcore
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/the-amity-affliction
-
-6. Ons23Sep2026The Longest JohnsSUPPORT: KonsertDebaser StrandFolk
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/the-longest-johns
-
-7. Fre25Sep2026The CourettesSUPPORT: Reverend Beat-Man & Milan Slick KonsertDebaser Novarock'n'roll
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/the-courettes-reverend-beat-man-milan-slick
-
-8. Lör26Sep2026Riga TigerSUPPORT: VurpaKonsertDebaser NovaPop
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/riga-tiger
-
-9. Lör26Sep2026RootvältaKonsertDebaser Strandreggae
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/rootvalta
-
-10. Tis29Sep2026Jared James NicholsKonsertDebaser NovaRock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/jared-james-nichols
-
-11. Ons30Sep2026Hoodoo GurusKonsertDebaser StrandRock
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/hoodoo-gurus
-
-12. Ons30Sep2026David Myhr (The Merrymakers)KonsertDebaser Nova
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/david-myhr-the-merrymakers
-
-13. Fre2Okt2026Black Sea DahuSUPPORT: Tal Arditi KonsertDebaser NovaIndiefolk
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/black-sea-dahu
-
-14. Fre2Okt2026Vesterinen YhtyeineenKonsertDebaser Strand
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/vesterinen-yhtyeineen
-
-15. Lör3Okt2026Sean KochKonsertDebaser NovaIndiefolk
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/sean-koch
-
-16. Lör3Okt2026Aterciopelados KonsertDebaser StrandRock
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/aterciopelados
-
-17. Sön4Okt2026Girl GroupKonsertDebaser Nova
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/girl-group
-
-18. Mån5Okt2026Ward Hayden & The OutliersKonsertDebaser NovaCountry
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/ward-hayden-the-outliers
-
-19. Tis6Okt2026Hot PropertyKonsertDebaser NovaRock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/hot-property
-
-20. Ons7Okt2026Bass Drum of DeathKonsertDebaser Novagaragerock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/bass-drum-of-death
-
-21. Tor8Okt2026GrommetKonsertDebaser NovaMetal
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/grommet
-
-22. Fre9Okt2026The Magic NumbersKonsertDebaser StrandIndie
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/the-magic-numbers
-
-23. Lör10Okt2026The DelinesKonsertDebaser NovaRoots
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/the-delines
-
-24. Lör10Okt2026Matt Maeson KonsertDebaser StrandAlternativ pop
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/matt-maeson
-
-25. Sön11Okt2026Kate Clover SUPPORT: The Manikins och The HideousKonsertDebaser NovaPunkrock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/kate-clover
-
-26. Sön11Okt2026KING DUDESPECIAL GUEST: Lamia VoxKonsertDebaser Stranddark folk
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/king-dude
-
-27. Mån12Okt2026Charlie JeerKonsertDebaser Nova
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/charlie-jeer
-
-28. Mån12Okt2026Haken KonsertDebaser StrandProgressiv metal
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/haken
-
-29. Tis13Okt2026Marko HietalaKonsertDebaser NovaMetal
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/marko-hietala
-
-30. Ons14Okt2026The Deep Dark WoodsKonsertDebaser NovaFolkroots
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/the-deep-dark-woods
-
-31. Tor15Okt2026HARTMANN | BLACK PAISLEYKonsertDebaser NovaRock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/hartmann-black-paisley
-
-32. Fre16Okt2026GraveSUPPORT: Disarray + ImperishableKonsertDebaser Stranddeath metal
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/grave
-
-33. Lör17Okt2026Dizzee RascalKonsertDebaser Strandgrimehiphop
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/dizzee-rascal
-
-34. Tor22Okt2026Klara HammarströmKonsertDebaser NovaPop
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/klara-hammarstrom
-
-35. Tor22Okt2026BCUC KonsertDebaser Strand
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/bcuc
-
-36. Fre23Okt2026Spiders + The DahmersKonsertDebaser Nova
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/spiders-the-dahmers
-
-37. Lör24Okt2026Junior BrielleKonsertDebaser StrandIndiesvensk pop
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/junior-brielle
-
-38. Sön25Okt2026Immortal TechniqueKonsertDebaser StrandHiphop
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/immortal-technique
-
-39. Ons28Okt2026Robyn HitchcockSUPPORT: Emma SwiftKonsertDebaser Strand
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/robyn-hitchcock
-
-40. Ons28Okt2026Bear GardenKonsertDebaser Nova
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/bear-garden
-
-41. Tor29Okt2026Mick Harvey & Amanda AcevedoSUPPORT: Moon MotherKonsertDebaser Nova
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/mick-harvey-amanda-acevedo
-
-42. Tor29Okt2026ZAN CODYKonsertDebaser Strand
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/zan-cody
-
-43. Fre30Okt2026Zimmer90 KonsertDebaser Strand
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/zimmer90-ffbe8
-
-44. Fre30Okt2026FaunaKonsertDebaser NovaPsykedeliskt
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/fauna
-
-45. Lör31Okt2026Dirty ThreeKonsertDebaser StrandPostrock
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/dirty-three
-
-46. Lör31Okt2026Olga MykoKonsertDebaser NovaAlternativ pop
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/olga-myko
-
-47. Sön1Nov2026Will HogeKonsertDebaser Nova
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/will-hoge
-
-48. Tis3Nov2026Westside CowboyKonsertDebaser StrandIndie
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/westside-cowboy
-
-49. Ons4Nov2026Benjamin Steer KonsertDebaser Nova
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/benjamin-steer
-
-50. Ons4Nov2026David Binney Action Trio ft. Louis Cole & Pera KrstajicKonsertDebaser StrandModern jazz
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/david-binney-action-trio-ft-louis-cole-peta-krstajic
-
-51. Tor5Nov2026Kristofer ÅströmKonsertDebaser Strandalt-country
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/kristofer-astrom
-
-52. Fre6Nov2026Tobias StenKonsertDebaser StrandCountry
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/tobias-sten
-
-53. Fre6Nov2026The Beat from Palookaville KonsertDebaser NovaR&BSKA
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/the-beat-from-palookaville
-
-54. Lör7Nov2026Josef Slunge KonsertDebaser Strand
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/josef-slunge
-
-55. Sön8Nov2026Ezhel KonsertDebaser StrandHiphopRap
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/ezhel
-
-56. Ons11Nov2026Josiah and the BonnevillesKonsertDebaser StrandAmericana
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/josiah-the-bonneville
-
-57. Tor12Nov2026Kyle AlessandroKonsertDebaser NovaPop
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/kyle-alessandro
-
-58. Fre13Nov2026Fuzz Festival 2026KonsertDebaser StrandFuzz
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/fuzz-festival-2026
-
-59. Lör14Nov2026Fuzz Festival 2026KonsertDebaser StrandFuzz
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/fuzz-festival-2026-c0c3e
-
-60. Mån16Nov2026Tinie TempahKonsertDebaser Strandhiphop
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/tinie-tempah
-
-61. Tis17Nov2026ElGrandeTotoKonsertDebaser StrandTrap
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/elgrandetoto
-
-62. Tis17Nov2026TophouseSUPPORT: RaynesKonsertDebaser NovaAmericana
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/tophouse
-
-63. Ons18Nov2026Benny Sings KonsertDebaser StrandIndiepop
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/benny-sings
-
-64. Fre20Nov2026MurdaKonsertDebaser Strandhiphoptrap
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/murda
-
-65. Sön22Nov2026Sofia HK KonsertDebaser NovaFolk
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/sofia-hk
-
-66. Ons25Nov2026C.O.F.F.I.NKonsertDebaser Novarock'n'rollpunkboogie
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/c-o-f-f-i-n
-
-67. Tor26Nov2026GurriersSUPPORT: Enola GayKonsertDebaser NovaIndie
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/gurriers
-
-68. Fre27Nov2026Florence Valentin KonsertDebaser StrandIndie
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/florence-valentin
-
-69. Fre27Nov2026Moon Walker KonsertDebaser NovaAlternativ rock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/moon-walker
-
-70. Lör28Nov2026TYSKE LUDDERKonsertDebaser NovaElektroniskt
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/klubb-dod-presenterar-tyske-ludder
-
-71. Lör28Nov2026Alice in VideolandSPECIAL GUEST: PRIESTKonsertDebaser StrandSynthpunk
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/alice-in-videoland
-
-72. Sön29Nov2026The HardkissSupport: FELINKonsertDebaser Strand
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/the-hardkiss
-
-73. Mån30Nov2026LavinaKonsertDebaser NovaMetal
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/lavina
-
-74. Ons2Dec2026The Last InternationaleKonsertDebaser NovaRock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/the-last-internationale
-
-75. Tor3Dec2026Nationalteaterns RockorkesterKonsertDebaser StrandProggrock
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/nationalteaterns-rockorkester
-
-76. Fre4Dec2026[ingenting]SUPPORT: Bunker2 + Molnet + isobelKonsertDebaser StrandIndie
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/ingenting
-
-77. Fre4Dec2026Crash Nomada + Big FishKonsertDebaser NovaPunkFolk
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/big-fish-crash-nomada
-
-78. Lör5Dec2026Dundertåget KonsertDebaser StrandRock
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/dundertaget
-
-79. Lör5Dec2026Goodnight, Texas KonsertDebaser NovaFolkrock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/goodnight-texas
-
-80. Sön6Dec2026AlltKonsertDebaser StrandMetalcore
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/allt
-
-81. Fre11Dec2026Debaser Selects 2026KonsertDebaser Strand
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/debaser-selects-2026
-
-82. Lör12Dec2026Jul med Franska TrionKonsertDebaser StrandJazzRockBlues
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/jul-med-franska-trion
-
-83. Lör12Dec2026MarsteinKonsertDebaser NovaHiphop
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/marstein
-
-84. Fre18Dec2026The Plan KonsertDebaser StrandIndie
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/the-plan
-
-85. Tor21Jan2027The Black Dahlia MurderSUPPORT: Fuming MouthKonsertDebaser Stranddeath metal
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/the-black-dahlia-murder
-
-86. Lör30Jan2027Hannes AitmanKonsertDebaser StrandAmericana
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/hannes-aitman-300c7
-
-87. Lör6Feb2027Almost Monday KonsertDebaser StrandIndie
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/almost-monday-29747
-
-88. Tor11Feb2027CATCH YOUR BREATHSupport: Ocean Sleeper + ElijahKonsertDebaser StrandMetalPost-hardcore
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/catch-your-breath
-
-89. Fre12Feb2027Klubb DÖD: Giftorm, Decibel Blonde & DepositPunkrockkväll med Giftorm, Decibel Blonde och Deposit!KonsertDebaser NovaPunkrock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/klubb-dod-giftorm-decibel-blonde-deposit
-
-90. Mån15Feb2027TX2KonsertDebaser Strandemoalt-rock
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/tx2
-
-91. Fre19Feb2027BernthKonsertDebaser Strand
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/bernth
-
-92. Fre26Feb2027RikasKonsertDebaser NovaRetropopmodern funk
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/rikas
-
-93. Lör27Feb2027Lee Rocker KonsertDebaser StrandRock'n'roll
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/lee-rocker
-
-94. Sön28Feb2027Dea Matrona KonsertDebaser NovaRock
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/dea-matrona-cb85a
-
-95. Ons3Mar2027Dead Poet Society KonsertDebaser StrandAlternativ rock
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/dead-poet-society
-
-96. Mån22Mar2027Saul WilliamsKonsertDebaser Strandhiphopjazzspoken word
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/saul-williams
-
-97. Tor1Apr2027Synne VoKonsertDebaser StrandPop
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/synne-vo
-
-98. Fre23Apr2027Jake BuggKonsertDebaser Strandindiefolkbluesrockamericana
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/jake-bugg
-
-99. Fre4Jun2027John Vincent IIIKonsertDebaser NovaFolksinger-songwriter
-Datum: Datum saknas
-Plats: Debaser Nova
-URL: https://debaser.se/events/john-vincent-iii-b24dc
-
-100. Fre20Aug2027Stockholm Roots FestivalKonsertDebaser StrandCountryamericanafolkrock
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/sthlm-roots
-
-101. Lör21Aug2027Stockholm Roots FestivalKonsertDebaser StrandCountryamericanafolkrock
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/stockholm-roots-festival
-
-102. Sön22Aug2027Stockholm Roots FestivalKonsertDebaser StrandCountryamericanafolkrock
-Datum: Datum saknas
-Plats: Debaser Strand
-URL: https://debaser.se/events/stockholm-roots-festival-30338
+DEBASER CONCERT SCRAPING
+
+Source: https://debaser.se/konserter
+Data retrieved: 2026-09-18
+Fields: date, artist, venue, genre
+Number of events in this sample: 30
+
+EVENT 1
+Date: 2026-09-18
+Artist: Velveteen Queen
+Venue: Debaser Nova
+Genre: Rock
+
+EVENT 2
+Date: 2026-09-19
+Artist: Satan Takes A Holiday SUPPORT: The Gristle
+Venue: Debaser Nova
+Genre: Rock
+
+EVENT 3
+Date: 2026-09-19
+Artist: The Lemon Twigs
+Venue: Debaser Strand
+Genre: Powerpop
+
+EVENT 4
+Date: 2026-09-21
+Artist: Mulaa Joans SUPPORT: Orlando
+Venue: Debaser Nova
+Genre: Not listed
+
+EVENT 5
+Date: 2026-09-22
+Artist: The Amity Affliction SUPPORT: Silent Planet + Varials + Orthodox
+Venue: Debaser Strand
+Genre: Metalcore
+
+EVENT 6
+Date: 2026-09-23
+Artist: The Longest Johns
+Venue: Debaser Strand
+Genre: Folk
+
+EVENT 7
+Date: 2026-09-25
+Artist: The Courettes SUPPORT: Reverend Beat Man & Milan Slick
+Venue: Debaser Nova
+Genre: rock'n'roll
+
+EVENT 8
+Date: 2026-09-26
+Artist: Riga Tiger
+Venue: Debaser Nova
+Genre: Pop
+
+EVENT 9
+Date: 2026-09-26
+Artist: Rootvälta
+Venue: Debaser Strand
+Genre: reggae
+
+EVENT 10
+Date: 2026-09-29
+Artist: Jared James Nichols
+Venue: Debaser Nova
+Genre: Rock
+
+EVENT 11
+Date: 2026-09-30
+Artist: Hoodoo Gurus
+Venue: Debaser Strand
+Genre: Rock
+
+EVENT 12
+Date: 2026-09-30
+Artist: David Myhr (The Merrymakers)
+Venue: Debaser Nova
+Genre: Not listed
+
+EVENT 13
+Date: 2026-10-02
+Artist: Black Sea Dahu
+Venue: Debaser Nova
+Genre: Indiefolk
+
+EVENT 14
+Date: 2026-10-02
+Artist: Vesterinen Yhtyeineen
+Venue: Debaser Strand
+Genre: Not listed
+
+EVENT 15
+Date: 2026-10-03
+Artist: Sean Koch
+Venue: Debaser Nova
+Genre: Indiefolk
+
+EVENT 16
+Date: 2026-10-03
+Artist: Aterciopelados
+Venue: Debaser Strand
+Genre: Rock
+
+EVENT 17
+Date: 2026-10-04
+Artist: Girl Group
+Venue: Debaser Nova
+Genre: Not listed
+
+EVENT 18
+Date: 2026-10-06
+Artist: Hot Property
+Venue: Debaser Nova
+Genre: Rock
+
+EVENT 19
+Date: 2026-10-09
+Artist: Donovan Woods
+Venue: Debaser Nova
+Genre: Not listed
+
+EVENT 20
+Date: 2026-10-09
+Artist: The Magic Numbers
+Venue: Debaser Strand
+Genre: Indie
+
+EVENT 21
+Date: 2026-10-10
+Artist: The Delines
+Venue: Debaser Nova
+Genre: Roots
+
+EVENT 22
+Date: 2026-10-10
+Artist: Matt Maeson
+Venue: Debaser Strand
+Genre: Alternativ pop
+
+EVENT 23
+Date: 2026-10-11
+Artist: Kate Clover
+Venue: Debaser Nova
+Genre: Punkrock
+
+EVENT 24
+Date: 2026-10-12
+Artist: Charlie Jeer
+Venue: Debaser Nova
+Genre: Not listed
+
+EVENT 25
+Date: 2026-10-13
+Artist: Marko Hietala
+Venue: Debaser Nova
+Genre: Metal
+
+EVENT 26
+Date: 2026-10-14
+Artist: The Deep Dark Woods
+Venue: Debaser Nova
+Genre: Folk, roots
+
+EVENT 27
+Date: 2026-10-15
+Artist: HARTMANN | BLACK PAISLEY
+Venue: Debaser Nova
+Genre: Rock
+
+EVENT 28
+Date: 2026-10-16
+Artist: Grave SUPPORT: Disarray + Imperishable
+Venue: Debaser Strand
+Genre: death metal
+
+EVENT 29
+Date: 2026-10-17
+Artist: Tennessee Tears
+Venue: Debaser Nova
+Genre: Country
+
+EVENT 30
+Date: 2026-10-17
+Artist: Dizzee Rascal
+Venue: Debaser Strand
+Genre: grime/hiphop
