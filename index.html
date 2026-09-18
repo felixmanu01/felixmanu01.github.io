@@ -762,6 +762,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <span class="go">Open prototype &#8599;</span>
       </a>
+
+      <a href="content_plan.html" class="work-next reveal" id="caseContentPlanLink">
+        <span class="num">06</span>
+        <div>
+          <h3>Stockholm Marathon Content Plan</h3>
+          <p>Turning one data insight into a consistent story for LinkedIn, short video, press and web.</p>
+        </div>
+        <span class="go">Open content plan &#8599;</span>
+      </a>
     </div>
   </section>
 
@@ -899,6 +908,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       window.dataLayer.push({
         event: 'case_open',
         case_name: 'gig_radar_api_mashup'
+      });
+    });
+  }
+
+  const contentPlanLink = document.getElementById('caseContentPlanLink');
+  if (contentPlanLink) {
+    contentPlanLink.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'case_open',
+        case_name: 'stockholm_marathon_content_plan'
       });
     });
   }

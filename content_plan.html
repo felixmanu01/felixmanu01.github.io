@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stockholm Marathon Content Plan | Felix Manu</title>
+<meta name="description" content="A content plan that turns one Stockholm Marathon data insight into formats for LinkedIn, short video, press and web.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0D0E0A;
+  --surface:#15160F;
+  --ink:#F4F1E4;
+  --dim:rgba(244,241,228,.64);
+  --faint:rgba(244,241,228,.35);
+  --accent:#F6C445;
+  --line:rgba(244,241,228,.14);
+  --strong:rgba(244,241,228,.24);
+  --pad:clamp(20px,5vw,64px);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+}
+a{color:inherit}
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(13,14,10,.86);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  max-width:var(--maxw);
+  margin:0 auto;
+  height:76px;
+  padding:0 var(--pad);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-family:'Anton',sans-serif;
+  text-decoration:none;
+  letter-spacing:.04em;
+}
+.back{
+  color:var(--dim);
+  text-decoration:none;
+  font-size:.88rem;
+  font-weight:600;
+}
+.back:hover{color:var(--accent)}
+main{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:100px var(--pad) 110px;
+}
+.kicker{
+  color:var(--accent);
+  font-size:.78rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  margin-bottom:18px;
+}
+h1,h2,h3{
+  font-family:'Anton',sans-serif;
+  font-weight:400;
+  text-transform:uppercase;
+  line-height:1;
+}
+h1{
+  font-size:clamp(3rem,8vw,6rem);
+  max-width:13ch;
+}
+.lede{
+  color:var(--dim);
+  font-size:1.08rem;
+  max-width:760px;
+  margin-top:28px;
+}
+.insight{
+  margin-top:54px;
+  border-left:3px solid var(--accent);
+  padding:10px 0 10px 24px;
+  max-width:850px;
+}
+.insight span{
+  display:block;
+  color:var(--faint);
+  font-size:.78rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  margin-bottom:10px;
+}
+.insight strong{
+  font-family:'Anton',sans-serif;
+  font-weight:400;
+  text-transform:uppercase;
+  font-size:clamp(1.7rem,4vw,2.8rem);
+  line-height:1.1;
+}
+.section{
+  padding-top:90px;
+}
+.sectionhead{
+  border-top:1px solid var(--line);
+  padding-top:24px;
+  margin-bottom:30px;
+}
+.sectionhead span{
+  color:var(--accent);
+  font-size:.78rem;
+  font-weight:700;
+}
+.sectionhead h2{
+  font-size:clamp(2rem,4vw,3rem);
+  margin-top:8px;
+}
+.formats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+.format{
+  background:var(--surface);
+  padding:30px;
+  min-height:190px;
+}
+.format .num{
+  color:var(--accent);
+  font-weight:800;
+  font-size:.82rem;
+}
+.format h3{
+  font-size:1.45rem;
+  margin:24px 0 12px;
+}
+.format p{
+  color:var(--dim);
+  max-width:50ch;
+}
+.principle{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.principle article{
+  border:1px solid var(--line);
+  padding:30px;
+  background:var(--surface);
+}
+.principle h3{
+  font-size:1.4rem;
+  margin-bottom:14px;
+}
+.principle p{
+  color:var(--dim);
+}
+.example{
+  border:1px solid var(--line);
+  background:var(--surface);
+  padding:34px;
+  max-width:780px;
+}
+.example .label{
+  color:var(--accent);
+  font-size:.8rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  margin-bottom:18px;
+}
+.example p{
+  color:var(--dim);
+  margin-bottom:16px;
+  max-width:62ch;
+}
+.example strong{color:var(--ink)}
+.pdfbox{
+  border:1px solid var(--line);
+  background:var(--surface);
+  padding:22px;
+}
+.pdfactions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+.btn{
+  display:inline-flex;
+  padding:12px 18px;
+  border:1px solid var(--strong);
+  text-decoration:none;
+  font-size:.88rem;
+  font-weight:700;
+}
+.btn.primary{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#15140A;
+}
+.btn:hover{border-color:var(--accent)}
+.pdfview{
+  width:100%;
+  min-height:760px;
+  border:0;
+  background:white;
+}
+.note{
+  color:var(--faint);
+  font-size:.88rem;
+  margin-top:18px;
+  max-width:760px;
+}
+footer{
+  margin-top:100px;
+  border-top:1px solid var(--line);
+  padding-top:28px;
+  color:var(--faint);
+  font-size:.84rem;
+}
+@media(max-width:800px){
+  .formats{grid-template-columns:1fr}
+  .principle{grid-template-columns:1fr}
+  .pdfview{min-height:560px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo">FELIX MANU</a>
+    <a href="index.html" class="back">Tillbaka till portfolion</a>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">Content Plan</p>
+  <h1>Stockholm Marathon.</h1>
+  <p class="lede">Målet med innehållsplanen är att göra samma datainsikt begriplig i flera format utan att förändra vad datan faktiskt visar.</p>
+
+  <div class="insight">
+    <span>Kärninsikt</span>
+    <strong>6,3 procent bryter under varma upplagor mot 3,4 procent under svala.</strong>
+  </div>
+
+  <section class="section">
+    <div class="sectionhead">
+      <span>01</span>
+      <h2>Fyra format, samma budskap.</h2>
+    </div>
+
+    <div class="formats">
+      <article class="format">
+        <span class="num">01</span>
+        <h3>LinkedIn</h3>
+        <p>En kort post med en tydlig siffra, graf och länk till hela analysen.</p>
+      </article>
+
+      <article class="format">
+        <span class="num">02</span>
+        <h3>Kortvideo</h3>
+        <p>Trettio sekunder. Börjar med starttiden 12.00 och går direkt till kontrasten mellan 6,3 och 3,4 procent.</p>
+      </article>
+
+      <article class="format">
+        <span class="num">03</span>
+        <h3>Pressutskick</h3>
+        <p>En journalistisk pitch med huvudresultat, metod och länk till underlaget.</p>
+      </article>
+
+      <article class="format">
+        <span class="num">04</span>
+        <h3>Webb</h3>
+        <p>Den fulla granskningen med data, källor och begränsningar.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sectionhead">
+      <span>02</span>
+      <h2>Kommunikationsprincip.</h2>
+    </div>
+
+    <div class="principle">
+      <article>
+        <h3>Samma kärna</h3>
+        <p>Budskapet ska vara konsekvent mellan kanalerna. Kärninsikten ändras inte när innehållet anpassas till olika format.</p>
+      </article>
+
+      <article>
+        <h3>Olika form</h3>
+        <p>Det som förändras mellan kanalerna är formen, tempot och detaljnivån. Analysen beskriver ett samband och inte en bevisad orsak.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sectionhead">
+      <span>03</span>
+      <h2>Exempel på LinkedIn copy.</h2>
+    </div>
+
+    <div class="example">
+      <div class="label">Exempel</div>
+      <p><strong>6,3 procent mot 3,4 procent.</strong></p>
+      <p>I mitt Stockholm Marathon case jämförde jag sex upplagor och såg att andelen som bryter är högre i de varma loppen i mitt dataset.</p>
+      <p>Det här är ett samband i materialet, inte bevis på att värmen ensam orsakar varje avbrutet lopp.</p>
+      <p><strong>CTA:</strong> Vill du se hela underlaget, metodvalen och källorna? Jag har lagt hela caset i min portfolio.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sectionhead">
+      <span>04</span>
+      <h2>Originalplan.</h2>
+    </div>
+
+    <div class="pdfbox">
+      <div class="pdfactions">
+        <a class="btn primary" href="stockholm_marathon_content_plan.pdf" target="_blank" rel="noopener">Öppna PDF ↗</a>
+        <a class="btn" href="data.html">Öppna data caset ↗</a>
+      </div>
+
+      <object class="pdfview" data="stockholm_marathon_content_plan.pdf" type="application/pdf">
+        <p>PDF förhandsvisning stöds inte i den här webbläsaren. <a href="stockholm_marathon_content_plan.pdf">Öppna PDF här.</a></p>
+      </object>
+    </div>
+
+    <p class="note">Innehållsplanen bygger vidare på samma Stockholm Marathon analys som finns i data caset. Syftet är att visa hur en analys kan översättas till olika kommunikationsformat utan att överdriva slutsatsen.</p>
+  </section>
+
+  <footer>© 2026 Felix Manu · Growth Marketing · Stockholm</footer>
+</main>
+</body>
+</html>
