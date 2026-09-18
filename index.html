@@ -594,6 +594,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="data.html">Data report</a>
+      <a href="gigradar.html">Gig Radar</a>
     </nav>
     <a href="#contact" class="nav-cta">Contact ↗</a>
     <button class="burger" id="burger" aria-label="Open menu">
@@ -607,6 +608,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#work">Work</a>
   <a href="#about">About</a>
   <a href="data.html">Data report</a>
+  <a href="gigradar.html">Gig Radar</a>
   <a href="#contact">Contact</a>
 </div>
 
@@ -733,6 +735,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <span class="go">Open report &#8599;</span>
       </a>
+
+      <a href="gigradar.html" class="work-next reveal" id="caseGigLink">
+        <span class="num">03</span>
+        <div>
+          <h3>Gig Radar Stockholm</h3>
+          <p>Scraped concert data combined with live music API data to explore artist discovery signals and create a stronger foundation for marketing decisions.</p>
+        </div>
+        <span class="go">Open case &#8599;</span>
+      </a>
     </div>
   </section>
 
@@ -849,6 +860,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     caseLink.addEventListener('click', () => {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'case_open', case_name: 'heat_stockholm_marathon' });
+    });
+  }
+
+  const gigLink = document.getElementById('caseGigLink');
+  if (gigLink) {
+    gigLink.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'case_open',
+        case_name: 'gig_radar_stockholm'
+      });
     });
   }
 

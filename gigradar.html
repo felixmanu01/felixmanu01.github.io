@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gig Radar Stockholm | Felix Manu</title>
+
+<meta
+  name="description"
+  content="Gig Radar Stockholm combines scraped concert data with live music API data to explore artist discovery signals and support smarter marketing decisions."
+>
+
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W64MKMXJ');
+</script>
+<!-- End Google Tag Manager -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+:root{
+  --bg:#0D0E0A;
+  --surface:#15160F;
+  --surface2:#1D1F14;
+  --ink:#F4F1E4;
+  --dim:rgba(244,241,228,.65);
+  --faint:rgba(244,241,228,.35);
+  --accent:#F6C445;
+  --accentInk:#15140A;
+  --line:rgba(244,241,228,.12);
+  --lineStrong:rgba(244,241,228,.24);
+  --max:1240px;
+  --pad:clamp(20px,5vw,64px);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.5;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding-left:var(--pad);
+  padding-right:var(--pad);
+}
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  height:76px;
+  background:rgba(13,14,10,.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+
+.navInner{
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.logo{
+  font-family:'Anton',sans-serif;
+  font-size:1.15rem;
+  letter-spacing:.04em;
+}
+
+.back{
+  border:1px solid var(--lineStrong);
+  padding:.7rem 1.1rem;
+  font-size:.84rem;
+  font-weight:700;
+  transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+
+.back:hover{
+  background:var(--accent);
+  color:var(--accentInk);
+  border-color:var(--accent);
+}
+
+.hero{
+  padding:120px 0 82px;
+}
+
+.eyebrow{
+  margin-bottom:1.3rem;
+  color:var(--accent);
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+h1,h2,h3{
+  font-family:'Anton',sans-serif;
+  font-weight:400;
+  line-height:.98;
+  text-transform:uppercase;
+}
+
+h1{
+  max-width:9ch;
+  font-size:clamp(3.8rem,9vw,7.4rem);
+}
+
+.heroText{
+  max-width:64ch;
+  margin-top:1.8rem;
+  color:var(--dim);
+  font-size:1.05rem;
+}
+
+.heroActions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin-top:2.2rem;
+}
+
+.runButton{
+  padding:1rem 1.4rem;
+  border:0;
+  background:var(--accent);
+  color:var(--accentInk);
+  font-weight:800;
+  cursor:pointer;
+  transition:transform .2s ease;
+}
+
+.runButton:hover{
+  transform:translateY(-2px);
+}
+
+.runButton:disabled{
+  opacity:.45;
+  cursor:not-allowed;
+  transform:none;
+}
+
+.status{
+  color:var(--faint);
+  font-size:.88rem;
+}
+
+.pipeline{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:4.2rem;
+  border:1px solid var(--line);
+}
+
+.pipeline article{
+  min-height:220px;
+  padding:1.7rem;
+  border-right:1px solid var(--line);
+}
+
+.pipeline article:last-child{
+  border-right:0;
+}
+
+.stepNumber{
+  color:var(--accent);
+  font-size:.8rem;
+  font-weight:800;
+}
+
+.pipeline h3{
+  margin-top:2.3rem;
+  margin-bottom:.9rem;
+  font-size:1.35rem;
+}
+
+.pipeline p{
+  color:var(--dim);
+  font-size:.92rem;
+}
+
+.section{
+  padding:100px 0;
+  border-top:1px solid var(--line);
+}
+
+.sectionHead{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:2rem;
+  margin-bottom:2.3rem;
+}
+
+.sectionHead h2{
+  font-size:clamp(2.4rem,5vw,4.2rem);
+}
+
+.sectionHead p{
+  max-width:54ch;
+  color:var(--dim);
+}
+
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  margin-bottom:1.5rem;
+  border:1px solid var(--line);
+}
+
+.metric{
+  padding:1.5rem;
+  border-right:1px solid var(--line);
+}
+
+.metric:last-child{
+  border-right:0;
+}
+
+.metricValue{
+  color:var(--accent);
+  font-family:'Anton',sans-serif;
+  font-size:2.4rem;
+}
+
+.metricLabel{
+  color:var(--faint);
+  font-size:.76rem;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.errorBox{
+  display:none;
+  margin-bottom:1rem;
+  padding:1rem;
+  border:1px solid rgba(255,120,120,.35);
+  color:#ffb8b8;
+}
+
+.tableWrap{
+  overflow:auto;
+  border:1px solid var(--line);
+}
+
+table{
+  width:100%;
+  min-width:1000px;
+  border-collapse:collapse;
+}
+
+th,td{
+  padding:1rem;
+  border-bottom:1px solid var(--line);
+  text-align:left;
+  vertical-align:top;
+}
+
+th{
+  color:var(--faint);
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+td{
+  color:var(--dim);
+  font-size:.9rem;
+}
+
+td strong{
+  color:var(--ink);
+}
+
+.score{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:48px;
+  padding:.35rem .55rem;
+  border:1px solid var(--lineStrong);
+  color:var(--accent);
+  font-weight:800;
+}
+
+.note{
+  max-width:84ch;
+  margin-top:1rem;
+  color:var(--faint);
+  font-size:.84rem;
+}
+
+.methodGrid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+
+.methodCard{
+  padding:2rem;
+  background:var(--bg);
+}
+
+.methodCard h3{
+  margin-bottom:.9rem;
+  font-size:1.4rem;
+}
+
+.methodCard p{
+  color:var(--dim);
+  font-size:.94rem;
+}
+
+.codeLine{
+  overflow:auto;
+  margin-top:1rem;
+  padding:1rem;
+  background:var(--surface);
+  color:var(--accent);
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.8rem;
+}
+
+footer{
+  padding:3rem 0;
+  border-top:1px solid var(--line);
+  color:var(--faint);
+  font-size:.84rem;
+}
+
+@media(max-width:850px){
+  .pipeline,
+  .metrics,
+  .methodGrid{
+    grid-template-columns:1fr;
+  }
+
+  .pipeline article,
+  .metric{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .sectionHead{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-W64MKMXJ"
+    height="0"
+    width="0"
+    style="display:none;visibility:hidden">
+  </iframe>
+</noscript>
+
+<header class="nav">
+  <div class="container navInner">
+    <a class="logo" href="index.html">FELIX MANU</a>
+    <a class="back" href="index.html#work">Back to work ↗</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+
+    <div class="eyebrow">Case 03 · Data and API Experiment</div>
+
+    <h1>Gig Radar Stockholm.</h1>
+
+    <p class="heroText">
+      Gig Radar combines scraped concert data from Debaser with live music data from two external APIs.
+      The project explores how different data sources can be combined to identify artist discovery signals
+      and create a stronger foundation for marketing decisions.
+    </p>
+
+    <div class="heroActions">
+      <button class="runButton" id="runAnalysis">Run live analysis</button>
+      <span class="status" id="status">Ready to analyse the first eight events</span>
+    </div>
+
+    <div class="pipeline">
+
+      <article>
+        <span class="stepNumber">01</span>
+        <h3>Concert data</h3>
+        <p>
+          Upcoming shows are loaded from my own Debaser scraping result with artist, date, venue and genre.
+        </p>
+      </article>
+
+      <article>
+        <span class="stepNumber">02</span>
+        <h3>MusicBrainz</h3>
+        <p>
+          Each artist is searched through MusicBrainz to collect a live match signal and artist information.
+        </p>
+      </article>
+
+      <article>
+        <span class="stepNumber">03</span>
+        <h3>iTunes Search</h3>
+        <p>
+          A second live lookup checks whether the artist can also be identified in the iTunes music catalogue.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="sectionHead">
+      <div>
+        <div class="eyebrow">Live analysis</div>
+        <h2>Artist signals.</h2>
+      </div>
+
+      <p>
+        The table starts with scraped concert data and enriches each artist with information returned by two live music services.
+      </p>
+    </div>
+
+    <div class="errorBox" id="errorBox"></div>
+
+    <div class="metrics">
+
+      <div class="metric">
+        <div class="metricValue" id="eventsMetric">0</div>
+        <div class="metricLabel">Events analysed</div>
+      </div>
+
+      <div class="metric">
+        <div class="metricValue" id="mbMetric">0</div>
+        <div class="metricLabel">MusicBrainz matches</div>
+      </div>
+
+      <div class="metric">
+        <div class="metricValue" id="itunesMetric">0</div>
+        <div class="metricLabel">iTunes matches</div>
+      </div>
+
+      <div class="metric">
+        <div class="metricValue" id="scoreMetric">0</div>
+        <div class="metricLabel">Average research score</div>
+      </div>
+
+    </div>
+
+    <div class="tableWrap">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Artist</th>
+            <th>Venue</th>
+            <th>Genre</th>
+            <th>MusicBrainz</th>
+            <th>iTunes</th>
+            <th>Research score</th>
+          </tr>
+        </thead>
+
+        <tbody id="resultsBody">
+          <tr>
+            <td colspan="7">Press Run live analysis to start.</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <p class="note">
+      The research score is an experimental signal created for this case.
+      A higher value means the artist was less consistently identified across the two external services.
+      It is intended to prioritise further research rather than predict ticket sales or campaign performance.
+    </p>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="sectionHead">
+      <div>
+        <div class="eyebrow">Method</div>
+        <h2>How it works.</h2>
+      </div>
+    </div>
+
+    <div class="methodGrid">
+
+      <article class="methodCard">
+        <h3>Scraped source</h3>
+        <p>
+          A Node script collects public concert information from Debaser and saves the result as a text file inside the portfolio project.
+        </p>
+        <div class="codeLine">scraping/scraped_data.txt</div>
+      </article>
+
+      <article class="methodCard">
+        <h3>API mashup</h3>
+        <p>
+          Artist names from the scraped dataset are searched through MusicBrainz and iTunes.
+          The results are then combined with the original concert information in the browser.
+        </p>
+        <div class="codeLine">Debaser data + MusicBrainz + iTunes</div>
+      </article>
+
+      <article class="methodCard">
+        <h3>Business question</h3>
+        <p>
+          The experiment explores whether external discovery signals can make a large concert list easier to prioritise before deeper audience and campaign research begins.
+        </p>
+      </article>
+
+      <article class="methodCard">
+        <h3>Measurement</h3>
+        <p>
+          The page sends custom events to the data layer when an analysis starts and when it finishes.
+          These events can be configured manually in Google Tag Manager and analysed in GA4.
+        </p>
+        <div class="codeLine">gig_radar_run · gig_radar_complete</div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Felix Manu · Growth Marketing · Stockholm
+  </div>
+</footer>
+
+<script>
+
+const runButton = document.getElementById("runAnalysis");
+const statusEl = document.getElementById("status");
+const errorBox = document.getElementById("errorBox");
+const resultsBody = document.getElementById("resultsBody");
+
+const eventsMetric = document.getElementById("eventsMetric");
+const mbMetric = document.getElementById("mbMetric");
+const itunesMetric = document.getElementById("itunesMetric");
+const scoreMetric = document.getElementById("scoreMetric");
+
+function sleep(ms){
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function mainArtistName(value){
+  return value
+    .split("SUPPORT:")[0]
+    .split("support:")[0]
+    .trim();
+}
+
+function parseScrapedText(text){
+
+  const blocks = text.split(/\n(?=EVENT \d+)/g);
+  const events = [];
+
+  for(const block of blocks){
+
+    if(!block.trim().startsWith("EVENT")){
+      continue;
+    }
+
+    const getValue = label => {
+      const pattern = new RegExp("^" + label + ":\\s*(.+)$", "mi");
+      const match = block.match(pattern);
+      return match ? match[1].trim() : "";
+    };
+
+    const artist = getValue("Artist");
+
+    if(artist){
+      events.push({
+        date:getValue("Date"),
+        artist:artist,
+        queryArtist:mainArtistName(artist),
+        venue:getValue("Venue"),
+        genre:getValue("Genre")
+      });
+    }
+  }
+
+  return events;
+}
+
+async function searchMusicBrainz(artist){
+
+  const query = encodeURIComponent('artist:"' + artist + '"');
+
+  const url =
+    "https://musicbrainz.org/ws/2/artist/?query=" +
+    query +
+    "&fmt=json&limit=1";
+
+  const response = await fetch(url,{
+    headers:{
+      "Accept":"application/json"
+    }
+  });
+
+  if(!response.ok){
+    throw new Error("MusicBrainz returned status " + response.status);
+  }
+
+  const data = await response.json();
+
+  const hit =
+    data.artists && data.artists.length
+      ? data.artists[0]
+      : null;
+
+  return{
+    found:Boolean(hit),
+    score:hit ? Number(hit.score || 0) : 0,
+    name:hit ? hit.name : "",
+    country:hit ? hit.country || "" : ""
+  };
+}
+
+function searchITunes(artist){
+
+  return new Promise((resolve,reject) => {
+
+    const callbackName =
+      "itunesCallback" +
+      Date.now() +
+      Math.floor(Math.random() * 100000);
+
+    const script = document.createElement("script");
+
+    const timeout = setTimeout(() => {
+      cleanup();
+      reject(new Error("iTunes request timed out"));
+    },10000);
+
+    function cleanup(){
+      clearTimeout(timeout);
+      delete window[callbackName];
+      script.remove();
+    }
+
+    window[callbackName] = data => {
+
+      cleanup();
+
+      const hit =
+        data.results && data.results.length
+          ? data.results[0]
+          : null;
+
+      resolve({
+        found:Boolean(hit),
+        resultCount:Number(data.resultCount || 0),
+        name:hit
+          ? hit.artistName || hit.collectionName || ""
+          : ""
+      });
+    };
+
+    const term = encodeURIComponent(artist);
+
+    script.src =
+      "https://itunes.apple.com/search?term=" +
+      term +
+      "&country=se&media=music&entity=musicArtist&limit=1&callback=" +
+      callbackName;
+
+    script.onerror = () => {
+      cleanup();
+      reject(new Error("iTunes request failed"));
+    };
+
+    document.body.appendChild(script);
+  });
+}
+
+function researchScore(musicBrainz,itunes){
+
+  const musicBrainzStrength =
+    musicBrainz.found
+      ? musicBrainz.score
+      : 0;
+
+  const itunesStrength =
+    itunes.found
+      ? 100
+      : 0;
+
+  const combinedStrength =
+    musicBrainzStrength * 0.6 +
+    itunesStrength * 0.4;
+
+  return Math.max(
+    0,
+    Math.min(
+      100,
+      Math.round(100 - combinedStrength)
+    )
+  );
+}
+
+function escapeHtml(value){
+
+  return String(value)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+function renderRows(rows){
+
+  resultsBody.innerHTML = "";
+
+  rows.forEach(row => {
+
+    const tr = document.createElement("tr");
+
+    tr.innerHTML = `
+      <td>${escapeHtml(row.date)}</td>
+
+      <td>
+        <strong>${escapeHtml(row.artist)}</strong>
+      </td>
+
+      <td>${escapeHtml(row.venue)}</td>
+
+      <td>
+        ${escapeHtml(row.genre || "Not listed")}
+      </td>
+
+      <td>
+        ${
+          row.musicBrainz.found
+            ? escapeHtml(row.musicBrainz.name) + " · " + row.musicBrainz.score
+            : "No match"
+        }
+      </td>
+
+      <td>
+        ${
+          row.itunes.found
+            ? escapeHtml(row.itunes.name || "Match found")
+            : "No match"
+        }
+      </td>
+
+      <td>
+        <span class="score">${row.researchScore}</span>
+      </td>
+    `;
+
+    resultsBody.appendChild(tr);
+  });
+}
+
+async function runAnalysis(){
+
+  runButton.disabled = true;
+
+  errorBox.style.display = "none";
+
+  statusEl.textContent = "Loading concert data";
+
+  window.dataLayer = window.dataLayer || [];
+
+  window.dataLayer.push({
+    event:"gig_radar_run",
+    source:"debaser_scrape"
+  });
+
+  try{
+
+    const localResponse =
+      await fetch(
+        "scraping/scraped_data.txt",
+        {cache:"no-store"}
+      );
+
+    if(!localResponse.ok){
+      throw new Error(
+        "Could not load scraping/scraped_data.txt"
+      );
+    }
+
+    const text =
+      await localResponse.text();
+
+    const scrapedEvents =
+      parseScrapedText(text);
+
+    if(!scrapedEvents.length){
+      throw new Error(
+        "No events could be read from scraped_data.txt"
+      );
+    }
+
+    const sample =
+      scrapedEvents.slice(0,8);
+
+    const enriched = [];
+
+    for(
+      let i = 0;
+      i < sample.length;
+      i++
+    ){
+
+      const event = sample[i];
+
+      statusEl.textContent =
+        "Analysing " +
+        (i + 1) +
+        " of " +
+        sample.length +
+        " · " +
+        event.queryArtist;
+
+      let musicBrainz = {
+        found:false,
+        score:0,
+        name:"",
+        country:""
+      };
+
+      let itunes = {
+        found:false,
+        resultCount:0,
+        name:""
+      };
+
+      try{
+        musicBrainz =
+          await searchMusicBrainz(
+            event.queryArtist
+          );
+      }catch(error){
+        console.warn(
+          "MusicBrainz request failed",
+          event.queryArtist,
+          error
+        );
+      }
+
+      try{
+        itunes =
+          await searchITunes(
+            event.queryArtist
+          );
+      }catch(error){
+        console.warn(
+          "iTunes request failed",
+          event.queryArtist,
+          error
+        );
+      }
+
+      const score =
+        researchScore(
+          musicBrainz,
+          itunes
+        );
+
+      enriched.push({
+        ...event,
+        musicBrainz:musicBrainz,
+        itunes:itunes,
+        researchScore:score
+      });
+
+      renderRows(enriched);
+
+      eventsMetric.textContent =
+        enriched.length;
+
+      mbMetric.textContent =
+        enriched.filter(
+          item => item.musicBrainz.found
+        ).length;
+
+      itunesMetric.textContent =
+        enriched.filter(
+          item => item.itunes.found
+        ).length;
+
+      scoreMetric.textContent =
+        Math.round(
+          enriched.reduce(
+            (sum,item) =>
+              sum + item.researchScore,
+            0
+          ) / enriched.length
+        );
+
+      if(i < sample.length - 1){
+        await sleep(1100);
+      }
+    }
+
+    statusEl.textContent =
+      "Analysis complete";
+
+    window.dataLayer.push({
+      event:"gig_radar_complete",
+      event_count:enriched.length,
+      musicbrainz_matches:
+        enriched.filter(
+          item => item.musicBrainz.found
+        ).length,
+      itunes_matches:
+        enriched.filter(
+          item => item.itunes.found
+        ).length
+    });
+
+  }catch(error){
+
+    errorBox.textContent =
+      error.message;
+
+    errorBox.style.display =
+      "block";
+
+    statusEl.textContent =
+      "Analysis stopped";
+
+    console.error(error);
+
+  }finally{
+
+    runButton.disabled =
+      false;
+  }
+}
+
+runButton.addEventListener(
+  "click",
+  runAnalysis
+);
+
+</script>
+
+</body>
+</html>
