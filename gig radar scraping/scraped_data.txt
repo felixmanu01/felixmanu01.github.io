@@ -1,0 +1,186 @@
+DEBASER CONCERT SCRAPING
+
+Source: https://debaser.se/konserter
+Data retrieved: 2026-09-18
+Fields: date, artist, venue, genre
+Number of events in this sample: 30
+
+EVENT 1
+Date: 2026-09-18
+Artist: Velveteen Queen
+Venue: Debaser Nova
+Genre: Rock
+
+EVENT 2
+Date: 2026-09-19
+Artist: Satan Takes A Holiday SUPPORT: The Gristle
+Venue: Debaser Nova
+Genre: Rock
+
+EVENT 3
+Date: 2026-09-19
+Artist: The Lemon Twigs
+Venue: Debaser Strand
+Genre: Powerpop
+
+EVENT 4
+Date: 2026-09-21
+Artist: Mulaa Joans SUPPORT: Orlando
+Venue: Debaser Nova
+Genre: Not listed
+
+EVENT 5
+Date: 2026-09-22
+Artist: The Amity Affliction SUPPORT: Silent Planet + Varials + Orthodox
+Venue: Debaser Strand
+Genre: Metalcore
+
+EVENT 6
+Date: 2026-09-23
+Artist: The Longest Johns
+Venue: Debaser Strand
+Genre: Folk
+
+EVENT 7
+Date: 2026-09-25
+Artist: The Courettes SUPPORT: Reverend Beat Man & Milan Slick
+Venue: Debaser Nova
+Genre: rock'n'roll
+
+EVENT 8
+Date: 2026-09-26
+Artist: Riga Tiger
+Venue: Debaser Nova
+Genre: Pop
+
+EVENT 9
+Date: 2026-09-26
+Artist: Rootvälta
+Venue: Debaser Strand
+Genre: reggae
+
+EVENT 10
+Date: 2026-09-29
+Artist: Jared James Nichols
+Venue: Debaser Nova
+Genre: Rock
+
+EVENT 11
+Date: 2026-09-30
+Artist: Hoodoo Gurus
+Venue: Debaser Strand
+Genre: Rock
+
+EVENT 12
+Date: 2026-09-30
+Artist: David Myhr (The Merrymakers)
+Venue: Debaser Nova
+Genre: Not listed
+
+EVENT 13
+Date: 2026-10-02
+Artist: Black Sea Dahu
+Venue: Debaser Nova
+Genre: Indiefolk
+
+EVENT 14
+Date: 2026-10-02
+Artist: Vesterinen Yhtyeineen
+Venue: Debaser Strand
+Genre: Not listed
+
+EVENT 15
+Date: 2026-10-03
+Artist: Sean Koch
+Venue: Debaser Nova
+Genre: Indiefolk
+
+EVENT 16
+Date: 2026-10-03
+Artist: Aterciopelados
+Venue: Debaser Strand
+Genre: Rock
+
+EVENT 17
+Date: 2026-10-04
+Artist: Girl Group
+Venue: Debaser Nova
+Genre: Not listed
+
+EVENT 18
+Date: 2026-10-06
+Artist: Hot Property
+Venue: Debaser Nova
+Genre: Rock
+
+EVENT 19
+Date: 2026-10-09
+Artist: Donovan Woods
+Venue: Debaser Nova
+Genre: Not listed
+
+EVENT 20
+Date: 2026-10-09
+Artist: The Magic Numbers
+Venue: Debaser Strand
+Genre: Indie
+
+EVENT 21
+Date: 2026-10-10
+Artist: The Delines
+Venue: Debaser Nova
+Genre: Roots
+
+EVENT 22
+Date: 2026-10-10
+Artist: Matt Maeson
+Venue: Debaser Strand
+Genre: Alternativ pop
+
+EVENT 23
+Date: 2026-10-11
+Artist: Kate Clover
+Venue: Debaser Nova
+Genre: Punkrock
+
+EVENT 24
+Date: 2026-10-12
+Artist: Charlie Jeer
+Venue: Debaser Nova
+Genre: Not listed
+
+EVENT 25
+Date: 2026-10-13
+Artist: Marko Hietala
+Venue: Debaser Nova
+Genre: Metal
+
+EVENT 26
+Date: 2026-10-14
+Artist: The Deep Dark Woods
+Venue: Debaser Nova
+Genre: Folk, roots
+
+EVENT 27
+Date: 2026-10-15
+Artist: HARTMANN | BLACK PAISLEY
+Venue: Debaser Nova
+Genre: Rock
+
+EVENT 28
+Date: 2026-10-16
+Artist: Grave SUPPORT: Disarray + Imperishable
+Venue: Debaser Strand
+Genre: death metal
+
+EVENT 29
+Date: 2026-10-17
+Artist: Tennessee Tears
+Venue: Debaser Nova
+Genre: Country
+
+EVENT 30
+Date: 2026-10-17
+Artist: Dizzee Rascal
+Venue: Debaser Strand
+Genre: grime/hiphop

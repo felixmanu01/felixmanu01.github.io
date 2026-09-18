@@ -736,8 +736,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="go">Open report &#8599;</span>
       </a>
 
-      <a href="gigradar.html" class="work-next reveal" id="caseGigLink">
+      <a href="scraping/" class="work-next reveal" id="caseScrapingLink">
         <span class="num">03</span>
+        <div>
+          <h3>Debaser web scraping</h3>
+          <p>A Node.js scraping exercise that collects public concert listings from Debaser and saves the result as a text file.</p>
+        </div>
+        <span class="go">Open scraping &#8599;</span>
+      </a>
+
+      <a href="gigradar.html" class="work-next reveal" id="caseGigLink">
+        <span class="num">04</span>
         <div>
           <h3>Gig Radar Stockholm</h3>
           <p>Scraped concert data combined with live music API data to explore artist discovery signals and create a stronger foundation for marketing decisions.</p>
@@ -860,6 +869,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     caseLink.addEventListener('click', () => {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'case_open', case_name: 'heat_stockholm_marathon' });
+    });
+  }
+
+  const scrapingLink = document.getElementById('caseScrapingLink');
+  if (scrapingLink) {
+    scrapingLink.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'case_open',
+        case_name: 'debaser_scraping'
+      });
     });
   }
 

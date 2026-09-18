@@ -1,0 +1,110 @@
+const axios = require("axios");
+const cheerio = require("cheerio");
+const fs = require("fs");
+
+const pageUrl = "https://debaser.se/konserter";
+
+async function scrapeDebaser() {
+  console.log("Starting Debaser scraper");
+
+  const response = await axios.get(pageUrl, {
+    headers: {
+      "User-Agent": "Mozilla/5.0"
+    },
+    timeout: 15000
+  });
+
+  const $ = cheerio.load(response.data);
+  const rows = [];
+  const seen = new Set();
+
+  $('a[href*="/events/"]').each((index, element) => {
+    const href = $(element).attr("href");
+    const rawText = $(element).text().replace(/\s+/g, " ").trim();
+
+    if (!href || !rawText || !rawText.includes("CONCERT")) {
+      return;
+    }
+
+    const fullUrl = new URL(href, pageUrl).href;
+
+    if (seen.has(fullUrl)) {
+      return;
+    }
+
+    seen.add(fullUrl);
+
+    const match = rawText.match(
+      /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(\d{1,2})\s+([A-Za-z]{3})\s+(\d{4})\s+(.+?)\s+CONCERT\s+(Debaser\s+(?:Nova|Strand|Pontonen))(?:\s+(.+))?$/i
+    );
+
+    if (match) {
+      rows.push({
+        date: `${match[4]}-${monthNumber(match[3])}-${String(match[2]).padStart(2, "0")}`,
+        artist: match[5].trim(),
+        venue: match[6].trim(),
+        genre: (match[7] || "").trim(),
+        url: fullUrl
+      });
+    } else {
+      rows.push({
+        date: "",
+        artist: rawText,
+        venue: "",
+        genre: "",
+        url: fullUrl
+      });
+    }
+  });
+
+  rows.sort((a, b) => a.date.localeCompare(b.date));
+
+  const output = [];
+
+  output.push("DEBASER CONCERT SCRAPING");
+  output.push("");
+  output.push("Source: " + pageUrl);
+  output.push("Scraped at: " + new Date().toISOString());
+  output.push("Number of unique concert events: " + rows.length);
+  output.push("");
+
+  rows.forEach((row, index) => {
+    output.push("EVENT " + (index + 1));
+    output.push("Date: " + row.date);
+    output.push("Artist: " + row.artist);
+    output.push("Venue: " + row.venue);
+    output.push("Genre: " + (row.genre || "Not listed"));
+    output.push("URL: " + row.url);
+    output.push("");
+  });
+
+  fs.writeFileSync("scraped_data.txt", output.join("\n"), "utf8");
+
+  console.log("Done");
+  console.log("Saved " + rows.length + " events to scraped_data.txt");
+}
+
+function monthNumber(month) {
+  const months = {
+    Jan: "01",
+    Feb: "02",
+    Mar: "03",
+    Apr: "04",
+    May: "05",
+    Jun: "06",
+    Jul: "07",
+    Aug: "08",
+    Sep: "09",
+    Oct: "10",
+    Nov: "11",
+    Dec: "12"
+  };
+
+  return months[month] || "00";
+}
+
+scrapeDebaser().catch(error => {
+  console.error("Scraping failed");
+  console.error(error.message);
+  process.exitCode = 1;
+});

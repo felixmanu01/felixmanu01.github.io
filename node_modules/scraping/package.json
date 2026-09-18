@@ -1,0 +1,13 @@
+{
+  "name": "felix-debaser-scraping",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Student project for scraping public concert listings from Debaser",
+  "main": "scrape_debaser.js",
+  "scripts": {
+    "scrape": "node scrape_debaser.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

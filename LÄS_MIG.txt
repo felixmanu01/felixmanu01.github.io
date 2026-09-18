@@ -1,0 +1,13 @@
+DETTA PAKET INNEHÅLLER
+
+1. En uppdaterad index.html där Debaser web scraping och Gig Radar är två separata case.
+
+2. En färdig scraping mapp som kan läggas direkt bredvid index.html.
+
+3. Ett Node.js script som hämtar publika eventlänkar från Debasers konsertsida.
+
+4. script.txt som läraren kan öppna direkt på GitHub Pages.
+
+5. scraped_data.txt som skrivs över när du kör scriptet.
+
+Din befintliga data.html och gigradar.html ska ligga kvar precis som de gör nu.
