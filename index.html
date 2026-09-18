@@ -753,6 +753,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <span class="go">Open case &#8599;</span>
       </a>
+
+      <a href="api_mashup.html" class="work-next reveal" id="caseApiMashupLink">
+        <span class="num">05</span>
+        <div>
+          <h3>Gig Radar API Mashup</h3>
+          <p>A paper prototype showing how concert data and artist data from two APIs can be combined into one discovery experience.</p>
+        </div>
+        <span class="go">Open prototype &#8599;</span>
+      </a>
     </div>
   </section>
 
@@ -879,6 +888,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       window.dataLayer.push({
         event: 'case_open',
         case_name: 'debaser_scraping'
+      });
+    });
+  }
+
+  const apiMashupLink = document.getElementById('caseApiMashupLink');
+  if (apiMashupLink) {
+    apiMashupLink.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'case_open',
+        case_name: 'gig_radar_api_mashup'
       });
     });
   }
