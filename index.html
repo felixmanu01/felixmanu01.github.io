@@ -319,6 +319,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   /* ---------- EXPERTISE ---------- */
+  /* Ingen rörelse här, korten ligger still */
   .expertise-grid{
     display:grid; grid-template-columns:repeat(2,1fr);
     gap:1px; background:var(--line);
@@ -329,9 +330,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding:2.6rem;
     display:flex; flex-direction:column;
     min-height:230px;
-    transition:background .25s ease;
   }
-  .expertise-card:hover{background:var(--surface);}
   .expertise-card .num{
     font-size:.82rem; font-weight:700; color:var(--ink-faint);
     margin-bottom:auto;
@@ -344,9 +343,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .expertise-card .arrow{
     margin-top:1.4rem; color:var(--accent); font-weight:700;
-    transition:transform .25s ease;
   }
-  .expertise-card:hover .arrow{transform:translate(4px,-4px);}
 
   /* ---------- WORK ---------- */
   .work-featured{
@@ -373,83 +370,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .work-featured-body .meta{color:var(--ink-dim); font-size:.85rem;}
 
   /* ---------- CASE CARDS ---------- */
+  /* Casen ligger som rader. Vid hover ritas en gul linje ut i toppen,
+     bakgrunden tänds svagt och raden glider in en aning. */
   .work-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:1.3rem;
+    grid-template-columns:1fr;
+    gap:0;
   }
   .case-card{
     position:relative;
-    display:flex; flex-direction:column;
-    padding:2.1rem 2rem 1.8rem;
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    overflow:hidden;
-    isolation:isolate;
-    transition:transform .35s cubic-bezier(.16,.8,.28,1),
-               border-color .3s ease,
-               background .3s ease,
-               box-shadow .35s ease;
+    display:grid;
+    grid-template-columns:170px minmax(0,1fr);
+    grid-template-areas:
+      "meta title"
+      "meta description"
+      "meta action";
+    align-items:start;
+    column-gap:clamp(2rem,5vw,5rem);
+    row-gap:.8rem;
+    padding:2.2rem 0;
+    background:transparent;
+    border-bottom:1px solid var(--line);
+    transition:background .35s ease,
+               padding .4s cubic-bezier(.16,.8,.28,1);
   }
+  .case-card:first-child{border-top:1px solid var(--line);}
   /* Glödande linje som ritas ut i toppen vid hover */
   .case-card::before{
-    content:''; position:absolute; top:0; left:0; right:0; height:3px;
+    content:''; position:absolute; top:0; left:0; right:0; height:2px;
     background:var(--accent);
     transform:scaleX(0); transform-origin:left;
-    transition:transform .5s cubic-bezier(.16,.8,.28,1);
-  }
-  /* Mjuk ljusgloria i hörnet */
-  .case-card::after{
-    content:''; position:absolute; top:-40%; right:-30%;
-    width:280px; height:280px; border-radius:50%;
-    background:radial-gradient(circle, rgba(246,196,69,.18), rgba(246,196,69,0) 70%);
-    opacity:0; transition:opacity .45s ease;
-    z-index:-1; pointer-events:none;
-  }
-  .case-card:hover{
-    transform:translateY(-5px);
-    border-color:var(--line-strong);
-    background:var(--surface-2);
-    box-shadow:0 18px 40px rgba(0,0,0,.35);
+    transition:transform .55s cubic-bezier(.16,.8,.28,1);
   }
   .case-card:hover::before{transform:scaleX(1);}
-  .case-card:hover::after{opacity:1;}
+  .case-card:hover{
+    background:rgba(244,241,228,.022);
+    padding-left:1.2rem;
+    padding-right:1.2rem;
+  }
 
   .case-top{
-    display:flex; align-items:center; justify-content:space-between;
-    gap:1rem; margin-bottom:1.8rem;
+    grid-area:meta;
+    display:flex; flex-direction:column;
+    align-items:flex-start; gap:.8rem;
+    margin:0;
   }
   .case-card .num{
     font-family:'Anton',sans-serif;
-    font-size:2.6rem; line-height:1;
+    font-size:1.05rem; line-height:1;
     color:var(--accent);
-    opacity:.3;
-    transition:opacity .3s ease, transform .3s ease;
+    margin:0;
   }
-  .case-card:hover .num{opacity:1; transform:translateY(-2px);}
   .case-card .chip{
+    display:inline-block;
     border:1px solid var(--line-strong);
     border-radius:100px;
     padding:.38rem .85rem;
     font-size:.68rem; font-weight:700;
     letter-spacing:.12em; text-transform:uppercase;
     color:var(--ink-faint);
-    white-space:nowrap;
     transition:color .25s ease, border-color .25s ease;
   }
   .case-card:hover .chip{color:var(--ink); border-color:var(--accent);}
   .case-card h3{
-    font-size:1.5rem; line-height:1.05;
-    margin-bottom:.8rem;
+    grid-area:title;
+    min-width:0;
+    font-size:clamp(1.7rem,3vw,2.6rem);
+    line-height:1.02;
+    margin:0;
   }
   .case-card p{
-    color:var(--ink-dim); font-size:.93rem; line-height:1.6;
-    max-width:42ch; margin-bottom:1.8rem;
+    grid-area:description;
+    min-width:0;
+    color:var(--ink-dim); font-size:.95rem; line-height:1.65;
+    max-width:60ch; margin:0;
   }
   .case-card .go{
-    margin-top:auto;
+    grid-area:action;
+    margin-top:.35rem;
     display:inline-flex; align-items:center; gap:.5em;
+    width:max-content;
     font-size:.78rem; font-weight:700;
     letter-spacing:.1em; text-transform:uppercase;
     color:var(--ink);
@@ -468,11 +468,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .process-item{position:relative; z-index:1; padding-right:1.6rem;}
   .process-item .num-circle{
-    width:44px; height:44px; border-radius:50%;
+    width:44px; height:44px;
+    border-radius:0;
     background:var(--bg); border:1px solid var(--line-strong);
     display:flex; align-items:center; justify-content:center;
     font-size:.82rem; font-weight:700; color:var(--accent);
     margin-bottom:1.6rem;
+    position:relative;
+    overflow:hidden;
+  }
+  /* Gul kil i nedre hörnet */
+  .process-item .num-circle::after{
+    content:''; position:absolute; inset:auto -12px -12px auto;
+    width:24px; height:24px; background:var(--accent); opacity:.14;
+    transform:rotate(45deg);
   }
   .process-item h3{font-size:1.25rem; margin-bottom:.7rem;}
   .process-item p{color:var(--ink-dim); font-size:.9rem; max-width:30ch;}
@@ -618,6 +627,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       transition-duration:.001ms !important;
     }
     .chart-dot{display:none;}
+    .case-card::before{transform:scaleX(1) !important;}
   }
 
   @media (max-width:980px){
@@ -629,6 +639,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .process-row::before{display:none;}
     .approach-row{grid-template-columns:1fr 1fr; row-gap:1.6rem;}
     .approach-row div:nth-child(2){border-right:none;}
+    .case-card{
+      grid-template-columns:135px minmax(0,1fr);
+      column-gap:2rem;
+    }
   }
 
   @media (max-width:760px){
@@ -636,10 +650,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .burger{display:block;}
     .hero{padding-top:150px;}
     .section{padding:90px var(--pad);}
-    .work-grid{grid-template-columns:1fr;}
-    .case-card{padding:1.8rem 1.6rem 1.5rem;}
     .work-media-grid{grid-template-columns:1fr;}
     .section-head{grid-template-columns:1fr;}
+    .case-card{
+      grid-template-columns:1fr;
+      grid-template-areas:
+        "meta"
+        "title"
+        "description"
+        "action";
+      row-gap:.85rem;
+      padding:1.7rem 0;
+    }
+    .case-card:hover{padding-left:0; padding-right:0;}
+    .case-top{
+      flex-direction:row;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      margin-bottom:.2rem;
+    }
   }
 </style>
 </head>
@@ -658,8 +688,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#services">Expertise</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="data.html">Data report</a>
-      <a href="gigradar.html">Gig Radar</a>
+     
     </nav>
     <a href="#contact" class="nav-cta">Contact ↗</a>
     <button class="burger" id="burger" aria-label="Open menu">
@@ -739,11 +768,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2>Expertise.</h2>
         </div>
       </div>
-      <div class="expertise-grid stagger">
+      <div class="expertise-grid">
         <div class="expertise-card">
           <span class="num">01</span>
           <h3>Paid Social</h3>
-          <p>Planning, launching and optimizing performance-driven campaigns across social platforms, from targeting and creative testing to measurement.</p>
+          <p>Planning, launching and optimizing performance focused campaigns across social platforms, from targeting and creative testing to measurement.</p>
           <span class="arrow">↗</span>
         </div>
         <div class="expertise-card">
@@ -782,7 +811,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="work-featured-body">
           <span class="num">01</span>
           <h3>Kungliga Operan</h3>
-          <p class="brief">Working in a team of four, the brief was to make the case for why opera and ballet still matter. The Royal Opera's own audience data pointed to the real problem: a third of Swedes aged 18-84 want to visit but never do. The barrier isn't price, it's perception. We built the campaign concept <strong>"Gåshud för 65 kr"</strong> ("Goosebumps for 65 SEK"), translating the physical sensations of live performance (a racing pulse, dilated pupils, goosebumps) into a five-poster outdoor series, each pairing a macro shot of the body's reaction with the actual ticket price. We planned the rollout across Stockholm's everyday neighborhoods, not just the city center, to make the point that the experience belongs to everyone.</p>
+          <p class="brief">Working in a team of four, the brief was to make the case for why opera and ballet still matter. The Royal Opera's own audience data pointed to the real problem: a third of Swedes aged 18 to 84 want to visit but never do. The barrier isn't price, it's perception. We built the campaign concept <strong>"Gåshud för 65 kr"</strong> ("Goosebumps for 65 SEK"), translating the physical sensations of live performance (a racing pulse, dilated pupils, goosebumps) into a series of five outdoor posters, each pairing a macro shot of the body's reaction with the actual ticket price. We planned the rollout across Stockholm's everyday neighborhoods, not just the city center, to make the point that the experience belongs to everyone.</p>
           <span class="tags">Audience Insight · Campaign Concept · OOH</span>
           <span class="meta">Strategic Marketing · Team Project · 2026</span>
         </div>
@@ -896,8 +925,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span>Meta Ads</span>
         <span>Google Ads</span>
         <span>GA4</span>
+        <span>Google Tag Manager</span>
         <span>SEO</span>
-        <span>A/B Testing</span>
       </div>
     </div>
   </section>
@@ -910,7 +939,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="lede">Growth marketing sits somewhere between creativity, psychology, strategy and numbers. That's exactly why I like it.</p>
         <div class="body-text">
           <p>I'm Felix Manu, a Growth Marketer based in Stockholm, currently studying Growth Marketing at Berghs School of Communication and focused on understanding why people discover, engage with and convert through digital experiences.</p>
-          <p>My approach combines creative thinking with analytical decision-making. The objective isn't simply to make marketing look good, it's to understand why something performs and how it can perform better.</p>
+          <p>My approach combines creative thinking with analytical decision making. The objective isn't simply to make marketing look good, it's to understand why something performs and how it can perform better.</p>
           <p>My main areas of focus are Paid Social, SEO, Performance Marketing, Analytics and Conversion Optimization.</p>
         </div>
       </div>
