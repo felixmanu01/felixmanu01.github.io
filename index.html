@@ -170,16 +170,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .status-row .pill{
     display:inline-flex; align-items:center; gap:.5em;
   }
-  .dot{
-    width:7px; height:7px; border-radius:50%; background:var(--accent);
-    box-shadow:0 0 0 0 rgba(246,196,69,.6);
-    animation:pulse 2.2s ease-out infinite;
-  }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(246,196,69,.45);}
-    70%{box-shadow:0 0 0 9px rgba(246,196,69,0);}
-    100%{box-shadow:0 0 0 0 rgba(246,196,69,0);}
-  }
 
   .hero-grid{
     display:grid; grid-template-columns:1.35fr .9fr; gap:3rem;
@@ -688,7 +678,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#services">Expertise</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
-     
+
     </nav>
     <a href="#contact" class="nav-cta">Contact ↗</a>
     <button class="burger" id="burger" aria-label="Open menu">
@@ -710,7 +700,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section id="top" class="hero">
     <div class="status-row">
-      <span class="pill"><span class="dot"></span> Available for opportunities</span>
+      <span class="pill">Available for opportunities</span>
       <span class="pill">Stockholm · Sweden</span>
       <span class="pill">Growth Marketer</span>
     </div>
