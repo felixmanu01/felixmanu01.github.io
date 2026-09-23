@@ -447,6 +447,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .case-card .go .arr{color:var(--accent); transition:transform .25s ease;}
   .case-card:hover .go .arr{transform:translate(4px,-4px);}
 
+  /* ---------- CASE FILTER ---------- */
+  /* Filterknappar högst upp i Work. Klick filtrerar grupperna nedan. */
+  .case-filter{
+    display:flex; flex-wrap:wrap; gap:.6rem;
+    margin-bottom:3.4rem;
+  }
+  .case-filter button{
+    border:1px solid var(--line-strong);
+    border-radius:100px;
+    padding:.62rem 1.2rem;
+    font-size:.74rem; font-weight:700;
+    letter-spacing:.11em; text-transform:uppercase;
+    color:var(--ink-faint);
+    transition:color .25s ease, border-color .25s ease, background .25s ease, transform .25s ease;
+  }
+  .case-filter button:hover{color:var(--ink); border-color:var(--ink); transform:translateY(-2px);}
+  .case-filter button.active{
+    background:var(--accent); border-color:var(--accent); color:var(--accent-ink);
+  }
+  .case-filter button .count{opacity:.55; margin-left:.45em; font-weight:700;}
+
+  /* ---------- CASE GROUPS ---------- */
+  .case-group{
+    margin-bottom:4.4rem;
+    transition:opacity .35s ease, transform .35s cubic-bezier(.16,.8,.28,1);
+  }
+  .case-group:last-child{margin-bottom:0;}
+  .case-group.is-hidden{display:none;}
+  .case-group.is-fading{opacity:0; transform:translateY(10px);}
+
+  .group-head{
+    display:flex; align-items:center; gap:1rem;
+    margin-bottom:1.4rem;
+  }
+  .group-head .g-num{
+    font-size:.74rem; font-weight:700; letter-spacing:.12em;
+    color:var(--accent);
+  }
+  .group-head h3{
+    font-size:clamp(1.25rem,2.4vw,1.8rem);
+    white-space:nowrap;
+  }
+  .group-head .g-line{flex:1; height:1px; background:var(--line);}
+  .group-head .g-count{
+    font-size:.72rem; font-weight:600; letter-spacing:.11em;
+    text-transform:uppercase; color:var(--ink-faint);
+    white-space:nowrap;
+  }
+  .group-note{
+    color:var(--ink-dim); font-size:.9rem;
+    max-width:52ch; margin-bottom:1.8rem;
+  }
+  .js .reveal .g-line{
+    transform:scaleX(0); transform-origin:left;
+    transition:transform .9s cubic-bezier(.16,.8,.28,1) .15s;
+  }
+  .js .reveal.in .g-line{transform:scaleX(1);}
+
   /* ---------- PROCESS ---------- */
   .process-row{
     display:grid; grid-template-columns:repeat(4,1fr); gap:0;
@@ -797,72 +855,141 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="section-lede">Currently studying Growth Marketing at Berghs School of Communication. This portfolio grows case by case.</p>
       </div>
 
-      <div class="work-featured reveal">
-        <div class="work-featured-body">
-          <span class="num">01</span>
-          <h3>Kungliga Operan</h3>
-          <p class="brief">The brief was to make the case for why opera and ballet still matter. The Royal Opera's own audience data pointed to the real problem: a third of Swedes aged 18 to 84 want to visit but never do. The barrier isn't price, it's perception. We built the campaign concept <strong>"Gåshud för 65 kr"</strong> ("Goosebumps for 65 SEK"), translating the physical sensations of live performance (a racing pulse, dilated pupils, goosebumps) into a series of five outdoor posters, each pairing a macro shot of the body's reaction with the actual ticket price. We planned the rollout across Stockholm's everyday neighborhoods, not just the city center, to make the point that the experience belongs to everyone.</p>
-          <span class="tags">Audience Insight · Campaign Concept · OOH</span>
-          <span class="meta">Strategic Marketing · Team Project · 2026</span>
+      <!-- FILTER: styr grupperna nedan. data-filter matchar data-group. -->
+      <div class="case-filter reveal" id="caseFilter">
+        <button type="button" class="active" data-filter="all">All work</button>
+        <button type="button" data-filter="campaign">Campaign and strategy</button>
+        <button type="button" data-filter="data">Data and analytics</button>
+        <button type="button" data-filter="tech">Scraping and API</button>
+      </div>
+
+      <!-- ============================================================
+           GRUPP 1: KAMPANJ OCH STRATEGI
+           ============================================================ -->
+      <div class="case-group" data-group="campaign">
+        <div class="group-head reveal">
+          <span class="g-num">01</span>
+          <h3>Campaign and strategy</h3>
+          <span class="g-line"></span>
+          <span class="g-count">2 cases</span>
         </div>
-        <div class="work-media-grid">
-          <div style="background-image:url('Case/images/operan-1.jpg');"></div>
-          <div style="background-image:url('Case/images/operan-2.jpg');"></div>
+        <p class="group-note">Audience insight turned into campaign concepts, messaging and channel plans.</p>
+
+        <div class="work-featured reveal">
+          <div class="work-featured-body">
+            <span class="num">01</span>
+            <h3>Kungliga Operan</h3>
+            <p class="brief">The brief was to make the case for why opera and ballet still matter. The Royal Opera's own audience data pointed to the real problem: a third of Swedes aged 18 to 84 want to visit but never do. The barrier isn't price, it's perception. We built the campaign concept <strong>"G&aring;shud f&ouml;r 65 kr"</strong> ("Goosebumps for 65 SEK"), translating the physical sensations of live performance (a racing pulse, dilated pupils, goosebumps) into a series of five outdoor posters, each pairing a macro shot of the body's reaction with the actual ticket price. We planned the rollout across Stockholm's everyday neighborhoods, not just the city center, to make the point that the experience belongs to everyone.</p>
+            <span class="tags">Audience Insight &middot; Campaign Concept &middot; OOH</span>
+            <span class="meta">Strategic Marketing &middot; Team Project &middot; 2026</span>
+          </div>
+          <div class="work-media-grid">
+            <div style="background-image:url('Case/images/operan-1.jpg');"></div>
+            <div style="background-image:url('Case/images/operan-2.jpg');"></div>
+          </div>
+        </div>
+
+        <div class="work-grid stagger">
+          <a href="content_plan.html" class="case-card" id="caseContentPlanLink" data-case="stockholm_marathon_content_plan">
+            <div class="case-top">
+              <span class="num">02</span>
+              <span class="chip">Content strategy</span>
+            </div>
+            <h3>Stockholm Marathon Content Plan</h3>
+            <p>Turning one data insight into a consistent story for LinkedIn, short video, press and web.</p>
+            <span class="go">Open content plan <span class="arr">&#8599;</span></span>
+          </a>
         </div>
       </div>
 
-      <div class="work-grid stagger">
+      <!-- ============================================================
+           GRUPP 2: DATA OCH ANALYS
+           ============================================================ -->
+      <div class="case-group" data-group="data">
+        <div class="group-head reveal">
+          <span class="g-num">02</span>
+          <h3>Data and analytics</h3>
+          <span class="g-line"></span>
+          <span class="g-count">1 case</span>
+        </div>
+        <p class="group-note">Collecting, cleaning and reading data to find the insight behind the numbers.</p>
 
-        <a href="data.html" class="case-card" id="caseDataLink">
-          <div class="case-top">
-            <span class="num">02</span>
-            <span class="chip">Data analysis</span>
-          </div>
-          <h3>Heat and Stockholm Marathon</h3>
-          <p>A self collected dataset on drop out rates in one of Europe's warmest big city marathons.</p>
-          <span class="go">Open report <span class="arr">&#8599;</span></span>
-        </a>
+        <div class="work-grid stagger">
+          <a href="data.html" class="case-card" id="caseDataLink" data-case="heat_stockholm_marathon">
+            <div class="case-top">
+              <span class="num">01</span>
+              <span class="chip">Data analysis</span>
+            </div>
+            <h3>Heat and Stockholm Marathon</h3>
+            <p>A self collected dataset on drop out rates in one of Europe's warmest big city marathons.</p>
+            <span class="go">Open report <span class="arr">&#8599;</span></span>
+          </a>
+        </div>
+      </div>
 
-        <a href="scraping/" class="case-card" id="caseScrapingLink">
-          <div class="case-top">
-            <span class="num">03</span>
-            <span class="chip">Web scraping</span>
-          </div>
-          <h3>Debaser web scraping</h3>
-          <p>A Node.js exercise that collects public concert listings from Debaser and saves the result as a text file.</p>
-          <span class="go">Open scraping <span class="arr">&#8599;</span></span>
-        </a>
+      <!-- ============================================================
+           GRUPP 3: SCRAPING OCH API
+           ============================================================ -->
+      <div class="case-group" data-group="tech">
+        <div class="group-head reveal">
+          <span class="g-num">03</span>
+          <h3>Scraping and API</h3>
+          <span class="g-line"></span>
+          <span class="g-count">3 cases</span>
+        </div>
+        <p class="group-note">Building my own data sources with Node.js and public APIs, then turning them into something usable.</p>
 
-        <a href="gigradar.html" class="case-card" id="caseGigLink">
-          <div class="case-top">
-            <span class="num">04</span>
-            <span class="chip">Data and API</span>
-          </div>
-          <h3>Gig Radar Stockholm</h3>
-          <p>Scraped concert data combined with live music API data to explore artist discovery signals and build a stronger foundation for marketing decisions.</p>
-          <span class="go">Open case <span class="arr">&#8599;</span></span>
-        </a>
+        <div class="work-grid stagger">
+          <a href="scraping/" class="case-card" id="caseScrapingLink" data-case="debaser_scraping">
+            <div class="case-top">
+              <span class="num">01</span>
+              <span class="chip">Web scraping</span>
+            </div>
+            <h3>Debaser web scraping</h3>
+            <p>A Node.js exercise that collects public concert listings from Debaser and saves the result as a text file.</p>
+            <span class="go">Open scraping <span class="arr">&#8599;</span></span>
+          </a>
 
-        <a href="api_mashup.html" class="case-card" id="caseApiMashupLink">
-          <div class="case-top">
-            <span class="num">05</span>
-            <span class="chip">Prototype</span>
-          </div>
-          <h3>Gig Radar API Mashup</h3>
-          <p>A paper prototype showing how concert data and artist data from two APIs can be combined into one discovery experience.</p>
-          <span class="go">Open prototype <span class="arr">&#8599;</span></span>
-        </a>
+          <a href="gigradar.html" class="case-card" id="caseGigLink" data-case="gig_radar_stockholm">
+            <div class="case-top">
+              <span class="num">02</span>
+              <span class="chip">Data and API</span>
+            </div>
+            <h3>Gig Radar Stockholm</h3>
+            <p>Scraped concert data combined with live music API data to explore artist discovery signals and build a stronger foundation for marketing decisions.</p>
+            <span class="go">Open case <span class="arr">&#8599;</span></span>
+          </a>
 
-        <a href="content_plan.html" class="case-card" id="caseContentPlanLink">
-          <div class="case-top">
-            <span class="num">06</span>
-            <span class="chip">Content strategy</span>
-          </div>
-          <h3>Stockholm Marathon Content Plan</h3>
-          <p>Turning one data insight into a consistent story for LinkedIn, short video, press and web.</p>
-          <span class="go">Open content plan <span class="arr">&#8599;</span></span>
-        </a>
+          <a href="api_mashup.html" class="case-card" id="caseApiMashupLink" data-case="gig_radar_api_mashup">
+            <div class="case-top">
+              <span class="num">03</span>
+              <span class="chip">Prototype</span>
+            </div>
+            <h3>Gig Radar API Mashup</h3>
+            <p>A paper prototype showing how concert data and artist data from two APIs can be combined into one discovery experience.</p>
+            <span class="go">Open prototype <span class="arr">&#8599;</span></span>
+          </a>
+        </div>
+      </div>
 
+      <!-- ============================================================
+           MALL: kopiera blocket nedan n&auml;r du l&auml;gger till ett nytt case.
+           Klistra in det i r&auml;tt grupp, inne i <div class="work-grid stagger">.
+           data-case blir case_name i GTM. H&ouml;j numret i .num.
+
+           <a href="FILNAMN.html" class="case-card" data-case="kort_namn_med_understreck">
+             <div class="case-top">
+               <span class="num">04</span>
+               <span class="chip">Kategori</span>
+             </div>
+             <h3>Rubrik p&aring; caset</h3>
+             <p>En eller tv&aring; meningar om vad du gjorde och vad det gav.</p>
+             <span class="go">Open case <span class="arr">&#8599;</span></span>
+           </a>
+
+           Ny grupp? Kopiera hela <div class="case-group" data-group="NAMN"> och
+           l&auml;gg till en knapp med samma data-filter i .case-filter.
+           ============================================================ -->
       </div>
     </div>
   </section>
@@ -974,56 +1101,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     panel.classList.remove('open');
   }));
 
-  // dataLayer event när någon öppnar datarapporten
-  const caseLink = document.getElementById('caseDataLink');
-  if (caseLink) {
-    caseLink.addEventListener('click', () => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'case_open', case_name: 'heat_stockholm_marathon' });
-    });
-  }
-
-  const scrapingLink = document.getElementById('caseScrapingLink');
-  if (scrapingLink) {
-    scrapingLink.addEventListener('click', () => {
+  // dataLayer event när någon öppnar ett case.
+  // En enda lyssnare för alla case. data-case blir case_name i GTM.
+  document.querySelectorAll('.case-card[data-case]').forEach(card => {
+    card.addEventListener('click', () => {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: 'case_open',
-        case_name: 'debaser_scraping'
+        case_name: card.dataset.case,
+        case_group: card.closest('.case-group') ? card.closest('.case-group').dataset.group : 'ungrouped'
       });
     });
-  }
+  });
 
-  const apiMashupLink = document.getElementById('caseApiMashupLink');
-  if (apiMashupLink) {
-    apiMashupLink.addEventListener('click', () => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'case_open',
-        case_name: 'gig_radar_api_mashup'
+  // Filtrering av casegrupper
+  const filterBar = document.getElementById('caseFilter');
+  const caseGroups = document.querySelectorAll('.case-group');
+
+  if (filterBar) {
+    // Räknar antal case per grupp och skriver ut det i knapparna
+    filterBar.querySelectorAll('button').forEach(btn => {
+      const target = btn.dataset.filter;
+      let total = 0;
+      caseGroups.forEach(group => {
+        if (target === 'all' || group.dataset.group === target) {
+          total += group.querySelectorAll('.case-card, .work-featured').length;
+        }
       });
+      const count = document.createElement('span');
+      count.className = 'count';
+      count.textContent = total;
+      btn.appendChild(count);
     });
-  }
 
-  const contentPlanLink = document.getElementById('caseContentPlanLink');
-  if (contentPlanLink) {
-    contentPlanLink.addEventListener('click', () => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'case_open',
-        case_name: 'stockholm_marathon_content_plan'
-      });
-    });
-  }
+    filterBar.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
 
-  const gigLink = document.getElementById('caseGigLink');
-  if (gigLink) {
-    gigLink.addEventListener('click', () => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'case_open',
-        case_name: 'gig_radar_stockholm'
+      const target = btn.dataset.filter;
+
+      filterBar.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      caseGroups.forEach(group => {
+        const show = (target === 'all' || group.dataset.group === target);
+
+        if (show) {
+          group.classList.remove('is-hidden');
+          // Liten fördröjning så att övergången hinner starta
+          requestAnimationFrame(() => group.classList.remove('is-fading'));
+        } else {
+          group.classList.add('is-fading');
+          setTimeout(() => {
+            if (group.classList.contains('is-fading')) group.classList.add('is-hidden');
+          }, 320);
+        }
       });
+
+      // Eget event till GTM så du kan mäta vilka kategorier folk filtrerar på
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'case_filter', filter_name: target });
     });
   }
 
