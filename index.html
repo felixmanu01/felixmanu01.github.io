@@ -574,6 +574,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background-color:var(--surface-2);
     background-size:cover; background-position:center;
   }
+  .work-media-grid.ads-4{grid-template-columns:repeat(4,1fr);}
+  .work-media-grid.ads-4 div{aspect-ratio:2/3; background-size:contain; background-repeat:no-repeat;}
+  @media (max-width:980px){
+    .work-media-grid.ads-4{grid-template-columns:1fr 1fr;}
+  }
 
   /* ---------- CONTACT ---------- */
   .contact{
@@ -858,9 +863,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- FILTER: styr grupperna nedan. data-filter matchar data-group. -->
       <div class="case-filter reveal" id="caseFilter">
         <button type="button" class="active" data-filter="all">All work</button>
+        <button type="button" data-filter="paid">Paid media</button>
         <button type="button" data-filter="campaign">Campaign and strategy</button>
         <button type="button" data-filter="data">Data and analytics</button>
         <button type="button" data-filter="tech">Scraping and API</button>
+      </div>
+
+      <div class="case-group" data-group="paid">
+        <div class="group-head reveal">
+          <span class="g-num">01</span>
+          <h3>Paid media</h3>
+          <span class="g-line"></span>
+          <span class="g-count">1 case</span>
+        </div>
+        <p class="group-note">Audience strategy, funnel structure and creative built to drive purchases.</p>
+
+        <div class="work-featured reveal">
+          <div class="work-featured-body">
+            <span class="num">01</span>
+            <h3>Aroma Roast</h3>
+            <p class="brief">Aroma Roast sells decaf coffee. The brand was talking broadly to women aged 30 to 40, with no reason for anyone to act. We pointed the whole campaign at one specific moment instead: <strong>pregnancy</strong>, when coffee disappears from the morning routine overnight and the ritual is still wanted. Targeting 28 to 35 year olds, we built a full funnel on Meta with one job per stage, from recognition to purchase. <strong>All photography shot and produced by me.</strong> The campaign drove real sales and brought in more than it spent.</p>
+            <span class="tags">Paid Social &middot; Performance Marketing</span>
+          </div>
+          <div class="work-media-grid ads-4">
+            <div style="background-image:url('Case/images/aroma-3.jpg');"></div>
+            <div style="background-image:url('Case/images/aroma-5.jpg');"></div>
+            <div style="background-image:url('Case/images/aroma-7.jpg');"></div>
+            <div style="background-image:url('Case/images/aroma-1.jpg');"></div>
+          </div>
+        </div>
       </div>
 
       <!-- ============================================================
@@ -868,7 +899,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
            ============================================================ -->
       <div class="case-group" data-group="campaign">
         <div class="group-head reveal">
-          <span class="g-num">01</span>
+          <span class="g-num">02</span>
           <h3>Campaign and strategy</h3>
           <span class="g-line"></span>
           <span class="g-count">2 cases</span>
@@ -907,7 +938,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
            ============================================================ -->
       <div class="case-group" data-group="data">
         <div class="group-head reveal">
-          <span class="g-num">02</span>
+          <span class="g-num">03</span>
           <h3>Data and analytics</h3>
           <span class="g-line"></span>
           <span class="g-count">1 case</span>
@@ -932,7 +963,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
            ============================================================ -->
       <div class="case-group" data-group="tech">
         <div class="group-head reveal">
-          <span class="g-num">03</span>
+          <span class="g-num">04</span>
           <h3>Scraping and API</h3>
           <span class="g-line"></span>
           <span class="g-count">3 cases</span>
