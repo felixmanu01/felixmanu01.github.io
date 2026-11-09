@@ -2,598 +2,159 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gig Radar Stockholm | Felix Manu</title>
-
-<meta
-  name="description"
-  content="Gig Radar Stockholm combines scraped concert data with live music API data to explore artist discovery signals and support smarter marketing decisions."
->
-
 <!-- Google Tag Manager -->
-<script>
-(function(w,d,s,l,i){
-  w[l]=w[l]||[];
-  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-  var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),
-      dl=l!='dataLayer'?'&l='+l:'';
-  j.async=true;
-  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-  f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W64MKMXJ');
-</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W64MKMXJ');</script>
 <!-- End Google Tag Manager -->
-
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gig Radar Stockholm | Felix Manu</title>
+<meta name="description" content="Gig Radar Stockholm combines scraped concert data with live music API data to find artist discovery signals and support smarter marketing decisions.">
+<meta name="theme-color" content="#E6E2E4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2321546F'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='800' fill='%23F4F2F3' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet"
->
-
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 <style>
-:root{
-  --bg:#0D0E0A;
-  --surface:#15160F;
-  --surface2:#1D1F14;
-  --ink:#F4F1E4;
-  --dim:rgba(244,241,228,.65);
-  --faint:rgba(244,241,228,.35);
-  --accent:#F6C445;
-  --accentInk:#15140A;
-  --line:rgba(244,241,228,.12);
-  --lineStrong:rgba(244,241,228,.24);
-  --max:1240px;
-  --pad:clamp(20px,5vw,64px);
-}
+  .run-row{margin-top:2.2rem;}
+  #runAnalysis:disabled{opacity:.45; cursor:not-allowed; background:var(--ink); border-color:var(--ink);}
+  .status{font-size:.92rem; color:var(--ink-2); display:inline-flex; align-items:center; gap:.55rem;}
+  .status::before{content:''; width:8px; height:8px; border-radius:50%; background:var(--line-2);}
+  .run-row.running .status::before{background:var(--denim); animation:pulse 1s ease-in-out infinite;}
+  @keyframes pulse{50%{opacity:.3;}}
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:var(--bg);
-  color:var(--ink);
-  font-family:'Inter',system-ui,sans-serif;
-  line-height:1.5;
-  overflow-x:hidden;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button{
-  font:inherit;
-}
-
-.container{
-  max-width:var(--max);
-  margin:0 auto;
-  padding-left:var(--pad);
-  padding-right:var(--pad);
-}
-
-.nav{
-  position:sticky;
-  top:0;
-  z-index:50;
-  height:76px;
-  background:rgba(13,14,10,.88);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
-}
-
-.navInner{
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-}
-
-.logo{
-  font-family:'Anton',sans-serif;
-  font-size:1.15rem;
-  letter-spacing:.04em;
-}
-
-.back{
-  border:1px solid var(--lineStrong);
-  padding:.7rem 1.1rem;
-  font-size:.84rem;
-  font-weight:700;
-  transition:background .2s ease,color .2s ease,border-color .2s ease;
-}
-
-.back:hover{
-  background:var(--accent);
-  color:var(--accentInk);
-  border-color:var(--accent);
-}
-
-.hero{
-  padding:120px 0 82px;
-}
-
-.eyebrow{
-  margin-bottom:1.3rem;
-  color:var(--accent);
-  font-size:.78rem;
-  font-weight:800;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-}
-
-h1,h2,h3{
-  font-family:'Anton',sans-serif;
-  font-weight:400;
-  line-height:.98;
-  text-transform:uppercase;
-}
-
-h1{
-  max-width:9ch;
-  font-size:clamp(3.8rem,9vw,7.4rem);
-}
-
-.heroText{
-  max-width:64ch;
-  margin-top:1.8rem;
-  color:var(--dim);
-  font-size:1.05rem;
-}
-
-.heroActions{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:1rem;
-  margin-top:2.2rem;
-}
-
-.runButton{
-  padding:1rem 1.4rem;
-  border:0;
-  background:var(--accent);
-  color:var(--accentInk);
-  font-weight:800;
-  cursor:pointer;
-  transition:transform .2s ease;
-}
-
-.runButton:hover{
-  transform:translateY(-2px);
-}
-
-.runButton:disabled{
-  opacity:.45;
-  cursor:not-allowed;
-  transform:none;
-}
-
-.status{
-  color:var(--faint);
-  font-size:.88rem;
-}
-
-.pipeline{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  margin-top:4.2rem;
-  border:1px solid var(--line);
-}
-
-.pipeline article{
-  min-height:220px;
-  padding:1.7rem;
-  border-right:1px solid var(--line);
-}
-
-.pipeline article:last-child{
-  border-right:0;
-}
-
-.stepNumber{
-  color:var(--accent);
-  font-size:.8rem;
-  font-weight:800;
-}
-
-.pipeline h3{
-  margin-top:2.3rem;
-  margin-bottom:.9rem;
-  font-size:1.35rem;
-}
-
-.pipeline p{
-  color:var(--dim);
-  font-size:.92rem;
-}
-
-.section{
-  padding:100px 0;
-  border-top:1px solid var(--line);
-}
-
-.sectionHead{
-  display:flex;
-  align-items:end;
-  justify-content:space-between;
-  gap:2rem;
-  margin-bottom:2.3rem;
-}
-
-.sectionHead h2{
-  font-size:clamp(2.4rem,5vw,4.2rem);
-}
-
-.sectionHead p{
-  max-width:54ch;
-  color:var(--dim);
-}
-
-.metrics{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  margin-bottom:1.5rem;
-  border:1px solid var(--line);
-}
-
-.metric{
-  padding:1.5rem;
-  border-right:1px solid var(--line);
-}
-
-.metric:last-child{
-  border-right:0;
-}
-
-.metricValue{
-  color:var(--accent);
-  font-family:'Anton',sans-serif;
-  font-size:2.4rem;
-}
-
-.metricLabel{
-  color:var(--faint);
-  font-size:.76rem;
-  letter-spacing:.09em;
-  text-transform:uppercase;
-}
-
-.errorBox{
-  display:none;
-  margin-bottom:1rem;
-  padding:1rem;
-  border:1px solid rgba(255,120,120,.35);
-  color:#ffb8b8;
-}
-
-.tableWrap{
-  overflow:auto;
-  border:1px solid var(--line);
-}
-
-table{
-  width:100%;
-  min-width:1000px;
-  border-collapse:collapse;
-}
-
-th,td{
-  padding:1rem;
-  border-bottom:1px solid var(--line);
-  text-align:left;
-  vertical-align:top;
-}
-
-th{
-  color:var(--faint);
-  font-size:.72rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-td{
-  color:var(--dim);
-  font-size:.9rem;
-}
-
-td strong{
-  color:var(--ink);
-}
-
-.score{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:48px;
-  padding:.35rem .55rem;
-  border:1px solid var(--lineStrong);
-  color:var(--accent);
-  font-weight:800;
-}
-
-.note{
-  max-width:84ch;
-  margin-top:1rem;
-  color:var(--faint);
-  font-size:.84rem;
-}
-
-.methodGrid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:1px;
-  background:var(--line);
-  border:1px solid var(--line);
-}
-
-.methodCard{
-  padding:2rem;
-  background:var(--bg);
-}
-
-.methodCard h3{
-  margin-bottom:.9rem;
-  font-size:1.4rem;
-}
-
-.methodCard p{
-  color:var(--dim);
-  font-size:.94rem;
-}
-
-.codeLine{
-  overflow:auto;
-  margin-top:1rem;
-  padding:1rem;
-  background:var(--surface);
-  color:var(--accent);
-  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-size:.8rem;
-}
-
-footer{
-  padding:3rem 0;
-  border-top:1px solid var(--line);
-  color:var(--faint);
-  font-size:.84rem;
-}
-
-@media(max-width:850px){
-  .pipeline,
-  .metrics,
-  .methodGrid{
-    grid-template-columns:1fr;
+  .metrics{display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line-2); border-bottom:1px solid var(--line); margin-bottom:1.6rem;}
+  .metric{padding:1.4rem 1.4rem 1.4rem 0;}
+  .metric + .metric{padding-left:1.4rem; border-left:1px solid var(--line);}
+  .metric-value{font-stretch:125%; font-weight:800; letter-spacing:-.03em; font-size:clamp(2rem,4vw,3rem); line-height:1; color:var(--denim);}
+  .metric-label{font-size:.88rem; color:var(--ink-2); margin-top:.4rem;}
+  .error-box{display:none; margin-bottom:1rem; padding:1rem 1.2rem; border:1px solid #B5452F; color:#8A2E1C; background:rgba(181,69,47,.07); border-radius:6px;}
+  .score{display:inline-grid; place-items:center; min-width:46px; padding:.3rem .5rem; border-radius:999px; background:var(--denim-tint); color:var(--denim); font-weight:800;}
+  .table-wrap table{min-width:960px;}
+  @media (max-width:760px){
+    .metrics{grid-template-columns:1fr 1fr;}
+    .metric:nth-child(3){padding-left:0; border-left:0;}
+    .metric:nth-child(n+3){border-top:1px solid var(--line);}
   }
-
-  .pipeline article,
-  .metric{
-    border-right:0;
-    border-bottom:1px solid var(--line);
-  }
-
-  .sectionHead{
-    align-items:flex-start;
-    flex-direction:column;
-  }
-}
 </style>
 </head>
-
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W64MKMXJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-<noscript>
-  <iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-W64MKMXJ"
-    height="0"
-    width="0"
-    style="display:none;visibility:hidden">
-  </iframe>
-</noscript>
-
-<header class="nav">
-  <div class="container navInner">
-    <a class="logo" href="index.html">FELIX MANU</a>
-    <a class="back" href="index.html#work">Back to work ↗</a>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Felix Manu</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+    </nav>
+    <a href="index.html#contact" class="btn btn-primary nav-cta">Get in touch</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel"><span></span><span></span></button>
   </div>
 </header>
+<div class="mobile-panel" id="mobilePanel">
+  <a href="index.html#work">Work</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#contact">Contact</a>
+</div>
 
-<main>
+<main class="case-main container">
 
-<section class="hero">
-  <div class="container">
-
-    <div class="eyebrow">Case 03 · Data and API Experiment</div>
-
+  <div class="case-head enter">
+    <p class="case-kicker"><a href="index.html#work" class="text-link small">Back to all work</a></p>
     <h1>Gig Radar Stockholm.</h1>
-
-    <p class="heroText">
-      Gig Radar combines scraped concert data from Debaser with live music data from two external APIs.
-      The project explores how different data sources can be combined to identify artist discovery signals
-      and create a stronger foundation for marketing decisions.
-    </p>
-
-    <div class="heroActions">
-      <button class="runButton" id="runAnalysis">Run live analysis</button>
+    <p class="lede">Gig Radar combines concert data I scraped from Debaser with live music data from two external APIs. The project explores how separate data sources can be combined to find artist discovery signals and give marketing decisions a stronger foundation.</p>
+    <div class="actions run-row" id="runRow">
+      <button class="btn btn-primary" id="runAnalysis">Run live analysis</button>
       <span class="status" id="status">Ready to analyse the first eight events</span>
     </div>
-
-    <div class="pipeline">
-
-      <article>
-        <span class="stepNumber">01</span>
-        <h3>Concert data</h3>
-        <p>
-          Upcoming shows are loaded from my own Debaser scraping result with artist, date, venue and genre.
-        </p>
-      </article>
-
-      <article>
-        <span class="stepNumber">02</span>
-        <h3>MusicBrainz</h3>
-        <p>
-          Each artist is searched through MusicBrainz to collect a live match signal and artist information.
-        </p>
-      </article>
-
-      <article>
-        <span class="stepNumber">03</span>
-        <h3>iTunes Search</h3>
-        <p>
-          A second live lookup checks whether the artist can also be identified in the iTunes music catalogue.
-        </p>
-      </article>
-
-    </div>
-
   </div>
-</section>
 
-<section class="section">
-  <div class="container">
-
-    <div class="sectionHead">
-      <div>
-        <div class="eyebrow">Live analysis</div>
-        <h2>Artist signals.</h2>
-      </div>
-
-      <p>
-        The table starts with scraped concert data and enriches each artist with information returned by two live music services.
-      </p>
+  <section class="block">
+    <h2>The pipeline</h2>
+    <div class="flow-steps" style="--n:3">
+      <div><strong>Concert data</strong><p>Upcoming shows are loaded from my own Debaser scraping result, with artist, date, venue and genre.</p></div>
+      <div><strong>MusicBrainz</strong><p>Each artist is searched in MusicBrainz to collect a live match signal and artist information.</p></div>
+      <div><strong>iTunes Search</strong><p>A second live lookup checks whether the artist can also be found in the iTunes music catalogue.</p></div>
     </div>
+  </section>
 
-    <div class="errorBox" id="errorBox"></div>
+  <section class="block">
+    <h2>Artist signals</h2>
+    <p class="muted">The table starts with the scraped concert data and adds what the two live music services return for each artist.</p>
+
+    <div class="error-box" id="errorBox" role="alert"></div>
 
     <div class="metrics">
-
-      <div class="metric">
-        <div class="metricValue" id="eventsMetric">0</div>
-        <div class="metricLabel">Events analysed</div>
-      </div>
-
-      <div class="metric">
-        <div class="metricValue" id="mbMetric">0</div>
-        <div class="metricLabel">MusicBrainz matches</div>
-      </div>
-
-      <div class="metric">
-        <div class="metricValue" id="itunesMetric">0</div>
-        <div class="metricLabel">iTunes matches</div>
-      </div>
-
-      <div class="metric">
-        <div class="metricValue" id="scoreMetric">0</div>
-        <div class="metricLabel">Average research score</div>
-      </div>
-
+      <div class="metric"><div class="metric-value" id="eventsMetric">0</div><div class="metric-label">Events analysed</div></div>
+      <div class="metric"><div class="metric-value" id="mbMetric">0</div><div class="metric-label">MusicBrainz matches</div></div>
+      <div class="metric"><div class="metric-value" id="itunesMetric">0</div><div class="metric-label">iTunes matches</div></div>
+      <div class="metric"><div class="metric-value" id="scoreMetric">0</div><div class="metric-label">Average research score</div></div>
     </div>
 
-    <div class="tableWrap">
-
+    <div class="table-wrap">
       <table>
-
         <thead>
-          <tr>
-            <th>Date</th>
-            <th>Artist</th>
-            <th>Venue</th>
-            <th>Genre</th>
-            <th>MusicBrainz</th>
-            <th>iTunes</th>
-            <th>Research score</th>
-          </tr>
+          <tr><th>Date</th><th>Artist</th><th>Venue</th><th>Genre</th><th>MusicBrainz</th><th>iTunes</th><th>Research score</th></tr>
         </thead>
-
         <tbody id="resultsBody">
-          <tr>
-            <td colspan="7">Press Run live analysis to start.</td>
-          </tr>
+          <tr><td colspan="7">Press "Run live analysis" to start.</td></tr>
         </tbody>
-
       </table>
-
     </div>
 
-    <p class="note">
-      The research score is an experimental signal created for this case.
-      A higher value means the artist was less consistently identified across the two external services.
-      It is intended to prioritise further research rather than predict ticket sales or campaign performance.
-    </p>
+    <p class="notes">The research score is an experimental signal made for this case. A higher value means the artist was less consistently identified across the two services. It's meant to show which artists need more research first, and it doesn't predict ticket sales or campaign performance.</p>
+  </section>
 
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-
-    <div class="sectionHead">
-      <div>
-        <div class="eyebrow">Method</div>
-        <h2>How it works.</h2>
-      </div>
-    </div>
-
-    <div class="methodGrid">
-
-      <article class="methodCard">
+  <section class="block">
+    <h2>How it works</h2>
+    <div class="grid-2">
+      <article class="card">
         <h3>Scraped source</h3>
-        <p>
-          A Node script collects public concert information from Debaser and saves the result as a text file inside the portfolio project.
-        </p>
-        <div class="codeLine">scraping/scraped_data.txt</div>
+        <p>A Node script collects public concert information from Debaser and saves the result as a text file inside the portfolio project.</p>
+        <code class="code">scraping/scraped_data.txt</code>
       </article>
-
-      <article class="methodCard">
+      <article class="card">
         <h3>API mashup</h3>
-        <p>
-          Artist names from the scraped dataset are searched through MusicBrainz and iTunes.
-          The results are then combined with the original concert information in the browser.
-        </p>
-        <div class="codeLine">Debaser data + MusicBrainz + iTunes</div>
+        <p>Artist names from the scraped dataset are searched in MusicBrainz and iTunes. The results are then combined with the original concert information in the browser.</p>
+        <code class="code">Debaser data + MusicBrainz + iTunes</code>
       </article>
-
-      <article class="methodCard">
+      <article class="card">
         <h3>Business question</h3>
-        <p>
-          The experiment explores whether external discovery signals can make a large concert list easier to prioritise before deeper audience and campaign research begins.
-        </p>
+        <p>Can outside discovery signals make a long concert list easier to prioritise before deeper audience and campaign research begins?</p>
       </article>
-
-      <article class="methodCard">
+      <article class="card">
         <h3>Measurement</h3>
-        <p>
-          The page sends custom events to the data layer when an analysis starts and when it finishes.
-          These events can be configured manually in Google Tag Manager and analysed in GA4.
-        </p>
-        <div class="codeLine">gig_radar_run · gig_radar_complete</div>
+        <p>The page sends custom events to the dataLayer when an analysis starts and when it finishes. They are set up as triggers in Google Tag Manager and analysed in GA4.</p>
+        <code class="code">gig_radar_run, gig_radar_complete</code>
       </article>
-
     </div>
+  </section>
 
-  </div>
-</section>
-
+  <a href="api_mashup.html" class="case-next">
+    <span class="small">Next case</span>
+    <span class="display">Gig Radar API mashup <span class="arr">&rarr;</span></span>
+  </a>
 </main>
 
-<footer>
-  <div class="container">
-    © 2026 Felix Manu · Growth Marketing · Stockholm
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 Felix Manu, Growth Marketer, Stockholm</span>
+    <nav aria-label="Footer">
+      <a href="https://www.linkedin.com/in/felixmanuirankunda/" target="_blank" rel="noopener" data-track="contact_click" data-track-location="footer" data-track-type="linkedin">LinkedIn</a>
+      <a href="index.html#work">All work</a>
+    </nav>
   </div>
 </footer>
 
+<script src="assets/site.js"></script>
 <script>
 
 const runButton = document.getElementById("runAnalysis");
@@ -800,7 +361,7 @@ function renderRows(rows){
       <td>
         ${
           row.musicBrainz.found
-            ? escapeHtml(row.musicBrainz.name) + " · " + row.musicBrainz.score
+            ? escapeHtml(row.musicBrainz.name) + " (" + row.musicBrainz.score + ")"
             : "No match"
         }
       </td>
@@ -825,6 +386,7 @@ function renderRows(rows){
 async function runAnalysis(){
 
   runButton.disabled = true;
+  document.getElementById("runRow").classList.add("running");
 
   errorBox.style.display = "none";
 
@@ -881,7 +443,7 @@ async function runAnalysis(){
         (i + 1) +
         " of " +
         sample.length +
-        " · " +
+        ": " +
         event.queryArtist;
 
       let musicBrainz = {
@@ -998,6 +560,7 @@ async function runAnalysis(){
 
     runButton.disabled =
       false;
+    document.getElementById("runRow").classList.remove("running");
   }
 }
 

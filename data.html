@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <!-- Google Tag Manager -->
@@ -9,114 +9,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-W64MKMXJ');</script>
 <!-- End Google Tag Manager -->
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Värmen och Stockholm Marathon | Felix Manu</title>
-<meta name="description" content="Andelen löpare som bryter Stockholm Marathon nästan fördubblas under varma upplagor. Egen datainsamling från arrangörens historik och svensk nyhetsrapportering.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230D0E0A'/%3E%3Ctext x='32' y='43' font-family='Georgia' font-size='34' font-weight='700' fill='%23F6C445' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<title>Heat and the Stockholm Marathon | Felix Manu</title>
+<meta name="description" content="The share of runners who drop out of the Stockholm Marathon nearly doubles in hot years. A self-collected dataset from the organiser's records and Swedish news coverage.">
+<meta name="theme-color" content="#E6E2E4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2321546F'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='800' fill='%23F4F2F3' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0D0E0A; --surface:#15160F; --ink:#F4F1E4;
-    --ink-dim:rgba(244,241,228,.64); --ink-faint:rgba(244,241,228,.34);
-    --accent:#F6C445; --accent-ink:#15140A;
-    --line:rgba(244,241,228,.12); --line-strong:rgba(244,241,228,.24);
-    --maxw:1240px; --pad:clamp(20px,5vw,64px); --radius:3px;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{background:var(--bg); color:var(--ink); font-family:'Inter',system-ui,sans-serif;
-    font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased;}
-  ::selection{background:var(--accent); color:var(--accent-ink);}
-  a{color:inherit; text-decoration:none;}
-  :focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
-  h1,h2,h3{font-family:'Anton',sans-serif; font-weight:400; letter-spacing:.005em;
-    line-height:.98; text-transform:uppercase;}
-
-  header.nav{position:fixed; top:0; left:0; right:0; z-index:100;
-    background:rgba(13,14,10,.72); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
-  .nav-inner{max-width:var(--maxw); margin:0 auto; padding:0 var(--pad);
-    display:flex; align-items:center; justify-content:space-between; height:76px;}
-  .logo{font-family:'Anton',sans-serif; font-size:1.15rem; letter-spacing:.04em;}
-  .logo sup{color:var(--accent); font-size:.6em;}
-  .nav-back{font-size:.86rem; font-weight:600; color:var(--ink-dim);}
-  .nav-back:hover{color:var(--ink);}
-
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:150px var(--pad) 90px;}
-  .kicker{font-size:.82rem; font-weight:600; color:var(--ink-faint); margin-bottom:1.4rem;}
-  h1{font-size:clamp(2.4rem,6vw,4.6rem); max-width:16ch; line-height:1.08; margin-bottom:1.6rem;}
-  .standfirst{font-size:1.12rem; color:var(--ink-dim); max-width:62ch;}
-
-  .question{border-left:2px solid var(--accent); padding:.4rem 0 .4rem 1.8rem; margin:2.8rem 0 0;}
-  .question h2{font-size:1.35rem; margin-bottom:1rem;}
-  .question .main{font-size:1.12rem; color:var(--ink); max-width:60ch; margin-bottom:1.4rem;}
-  .question ol{margin:0 0 1.4rem 1.2rem; color:var(--ink-dim); font-size:.96rem; max-width:60ch;}
-  .question ol li{margin-bottom:.5rem;}
-  .question .hypo{color:var(--ink-dim); font-size:.96rem; max-width:60ch;}
-  .question .hypo b{color:var(--ink); font-weight:700;}
-
-  .headline-figure{display:flex; align-items:baseline; gap:1.2rem; flex-wrap:wrap;
-    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-    padding:2.4rem 0; margin:3.2rem 0 4rem;}
-  .headline-figure .value{font-family:'Anton',sans-serif; font-size:clamp(3rem,10vw,6rem);
-    color:var(--accent); line-height:.9;}
-  .headline-figure .caption{color:var(--ink-dim); max-width:36ch; font-size:.98rem;}
-
-  .chart-block{margin:0 0 4.5rem;}
-  .chart-block h2{font-size:clamp(1.5rem,3vw,2.2rem); margin-bottom:.9rem;}
-  .chart-block .explain{color:var(--ink-dim); max-width:64ch; margin-bottom:1.8rem; font-size:.98rem;}
-  .canvas-holder{background:var(--surface); border:1px solid var(--line);
-    padding:1.6rem; height:clamp(320px,52vh,460px);}
-  .source{display:flex; flex-wrap:wrap; gap:.5rem 2rem; font-size:.82rem; color:var(--ink-faint);
-    border-bottom:1px solid var(--line); padding:1rem 0;}
-  .source b{color:var(--ink-dim); font-weight:600;}
-
-  .table-wrap{overflow-x:auto; border:1px solid var(--line); background:var(--surface);}
-  table{border-collapse:collapse; width:100%; min-width:680px; font-size:.9rem;}
-  th,td{padding:.85rem 1rem; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap;}
-  th{color:var(--ink-faint); font-weight:600; font-size:.78rem; letter-spacing:.06em;}
-  td{color:var(--ink-dim);}
-  td.year{color:var(--ink); font-weight:700;}
-  td.hot{color:var(--accent); font-weight:700;}
-  tbody tr:last-child td{border-bottom:none;}
-
-  .method{background:var(--surface); border:1px solid var(--line); padding:2.4rem; margin-top:1rem;}
-  .method h2{font-size:1.5rem; margin-bottom:1.4rem;}
-  .method dl{display:grid; grid-template-columns:minmax(130px,190px) 1fr; gap:1rem 2rem;}
-  .method dt{color:var(--ink-faint); font-size:.88rem;}
-  .method dd{color:var(--ink-dim); font-size:.94rem; max-width:64ch;}
-  .method .warn{margin-top:2rem; padding-top:1.6rem; border-top:1px solid var(--line);
-    color:var(--ink-dim); font-size:.94rem; max-width:64ch;}
-  .method .warn strong{color:var(--ink); font-weight:700;}
-
-  .sources{margin-top:4.5rem;}
-  .sources h2{font-size:1.5rem; margin-bottom:.6rem;}
-  .sources .lede{color:var(--ink-dim); font-size:.94rem; margin-bottom:1.8rem;}
-  .sources ol{list-style:none; counter-reset:src;}
-  .sources li{border-top:1px solid var(--line); padding:1.1rem 0; font-size:.92rem; color:var(--ink-dim);}
-  .sources li:last-child{border-bottom:1px solid var(--line);}
-  .sources .tag{color:var(--accent); font-weight:700; margin-right:.6rem;}
-  .sources a{color:var(--ink); border-bottom:1px solid var(--line-strong); overflow-wrap:anywhere;}
-  .sources a:hover{color:var(--accent); border-color:var(--accent);}
-  .sources .what{display:block; margin-top:.4rem; color:var(--ink-faint); font-size:.88rem; max-width:72ch;}
-
-  .notes{margin-top:2.4rem; font-size:.88rem; color:var(--ink-faint); max-width:70ch;}
-  .notes p{margin-bottom:.7rem;}
-
-  footer{border-top:1px solid var(--line); padding:3rem var(--pad);}
-  .footer-inner{max-width:var(--maxw); margin:0 auto; font-size:.85rem; color:var(--ink-faint);}
-
-  @media (max-width:760px){
-    .wrap{padding-top:120px;}
-    .method{padding:1.6rem;}
-    .method dl{grid-template-columns:1fr; gap:.3rem;}
-    .method dd{margin-bottom:.9rem;}
-  }
-  @media (prefers-reduced-motion:reduce){
-    *,*::before,*::after{animation-duration:.001ms !important; transition-duration:.001ms !important;}
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -124,155 +26,185 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<header class="nav">
+<header class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">FELIX MANU<sup>&reg;</sup></a>
-    <a href="index.html" class="nav-back">Tillbaka till portfolion</a>
+    <a href="index.html" class="logo">Felix Manu</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+    </nav>
+    <a href="index.html#contact" class="btn btn-primary nav-cta">Get in touch</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel"><span></span><span></span></button>
   </div>
 </header>
+<div class="mobile-panel" id="mobilePanel">
+  <a href="index.html#work">Work</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#contact">Contact</a>
+</div>
 
-<main class="wrap">
+<main class="case-main container">
 
-  <p class="kicker">Egen datainsamling &middot; Stockholm Marathon 2018 till 2025</p>
-  <h1>Värmen avgör vem som kommer i mål.</h1>
-  <p class="standfirst">Stockholm Marathon startar klockan 12.00 på en lördag i slutet av maj, alltså mitt under dygnets varmaste timmar. Det skiljer loppet från London, New York och Paris som går tidigt på söndagsmorgnar. Sex upplagor med bekräftade deltagarsiffror visar vad den starttiden kostar i avbrutna lopp.</p>
-
-  <section class="question">
-    <h2>Frågeställning</h2>
-    <p class="main">Hur mycket ökar andelen löpare som bryter Stockholm Marathon under varma upplagor jämfört med svala, och hur många fler löpare handlar det om i absoluta tal?</p>
-    <ol>
-      <li>Hur stor andel av de startande fullföljer inte, år för år?</li>
-      <li>Hur samvarierar den andelen med hur varm upplagan var?</li>
-      <li>Hur många fler löpare stannar på banan ett varmt år än ett svalt, räknat på ett startfält av dagens storlek?</li>
-    </ol>
-    <p class="hypo"><b>Hypotes.</b> Andelen som bryter stiger med temperaturen på loppdagen. <b>Så här kan hypotesen falla.</b> Om de varma åren inte skiljer ut sig, eller om skillnaden försvinner när startfältets storlek och banändringen 2023 vägs in, så håller den inte och det redovisas som ett resultat i sig.</p>
-  </section>
-
-  <div class="headline-figure">
-    <span class="value" id="extraRunners">&mdash;</span>
-    <p class="caption">fler löpare kommer inte i mål under en varm upplaga än under en sval, räknat på ett startfält av dagens storlek. <span id="rangeNote"></span></p>
+  <div class="case-head enter">
+    <p class="case-kicker"><a href="index.html#work" class="text-link small">Back to all work</a></p>
+    <h1>Heat decides who makes it to the finish.</h1>
+    <p class="lede">The Stockholm Marathon starts at 12:00 on a Saturday in late May or early June, right in the warmest hours of the day. London, New York and Paris start early on Sunday mornings. Six editions with confirmed participant numbers show what that start time costs in runners who don't finish.</p>
+    <dl class="case-meta">
+      <div><dt>Type</dt><dd>Data analysis</dd></div>
+      <div><dt>Data</dt><dd>Self-collected</dd></div>
+      <div><dt>Period</dt><dd>2018 to 2025</dd></div>
+      <div><dt>Editions</dt><dd>6</dd></div>
+    </dl>
   </div>
 
-  <section class="chart-block">
-    <h2>Andel som bröt, år för år</h2>
-    <p class="explain">Staplarna visar hur stor andel av de startande som inte kom i mål. Guldmarkerade år är de upplagor som arrangören eller nyhetsrapporteringen beskriver som varma. Startfälten har vuxit från cirka tiotusen till närmare tjugotusen löpare under perioden, så jämför andelen och inte antalet.</p>
-    <div class="canvas-holder"><canvas id="bars"></canvas></div>
-    <div class="source">
-      <span><b>Källa</b> K1 till K6, se källförteckningen</span>
-      <span><b>Tidsperiod</b> 2018 till 2025, sex genomförda upplagor</span>
-      <span><b>Enhet</b> procent av startande</span>
+  <section class="block">
+    <div class="callout">
+      <span class="label">Research question</span>
+      <p class="big">How much does the dropout rate rise in hot years compared with cool ones, and how many more runners is that?</p>
+      <ol>
+        <li>What share of starters don't finish, year by year?</li>
+        <li>How does that share vary with how hot the race was?</li>
+        <li>How many more runners stop in a hot year than in a cool one, for a field of today's size?</li>
+      </ol>
+      <p><b>Hypothesis.</b> The dropout rate rises with the temperature on race day. <b>How it could fail.</b> If the hot years don't stand out, or the difference disappears once field size and the 2023 course change are taken into account, the hypothesis doesn't hold, and that is reported as a result in itself.</p>
     </div>
   </section>
 
-  <section class="chart-block">
-    <h2>Varma upplagor mot svala</h2>
-    <p class="explain">Samma data grupperad. Till höger ligger de två upplagor i loppets historia som hittills haft högst andel avbrutna lopp, 1982 och 2007, båda beskrivna som varma år. Den siffran är hämtad som ett golvvärde ur rapporteringen, alltså över 13 procent, och ritas därför som just 13.</p>
-    <div class="canvas-holder"><canvas id="groups"></canvas></div>
-    <div class="source">
-      <span><b>Källa</b> K1 till K6 samt K2 för 1982 och 2007</span>
-      <span><b>Tidsperiod</b> 2018 till 2025, plus två historiska år</span>
-      <span><b>Enhet</b> procent av startande</span>
+  <section class="block">
+    <div class="stat-row">
+      <span class="value" id="extraRunners">&hellip;</span>
+      <p class="caption">more runners don't finish in a hot edition than in a cool one, for a field of today's size. <span id="rangeNote"></span></p>
     </div>
   </section>
 
-  <section class="chart-block">
-    <h2>Underlaget i sin helhet</h2>
-    <p class="explain">Varje siffra i tabellen kommer från arrangören själv eller från nyhetsrapportering samma dag. Andelen som bröt är uträknad som startande minus i mål, delat med startande.</p>
+  <section class="block">
+    <h2>Dropout rate, year by year</h2>
+    <p class="muted">The bars show the share of starters who didn't finish. Highlighted years are the editions the organiser or news coverage describes as hot. The field grew from about ten thousand to almost twenty thousand runners over the period, so compare the share, not the count.</p>
+    <div class="figure"><div class="canvas-holder"><canvas id="bars" aria-label="Bar chart of dropout rate per year"></canvas></div></div>
+    <div class="fig-source">
+      <span><b>Source</b> K1 to K6, see the source list</span>
+      <span><b>Period</b> 2018 to 2025, six editions held</span>
+      <span><b>Unit</b> percent of starters</span>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Hot editions against cool ones</h2>
+    <p class="muted">The same data, grouped. On the right are the two editions in the race's history with the highest dropout rates so far, 1982 and 2007, both described as hot years. That figure comes from news coverage as a floor value, over 13 percent, so it is drawn as exactly 13.</p>
+    <div class="figure"><div class="canvas-holder"><canvas id="groups" aria-label="Bar chart comparing hot and cool editions"></canvas></div></div>
+    <div class="fig-source">
+      <span><b>Source</b> K1 to K6, plus K2 for 1982 and 2007</span>
+      <span><b>Period</b> 2018 to 2025, plus two historic years</span>
+      <span><b>Unit</b> percent of starters</span>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>The full dataset</h2>
+    <p class="muted">Every number in the table comes from the organiser or from same-day news coverage. Dropout rate is starters minus finishers, divided by starters.</p>
     <div class="table-wrap">
       <table>
         <thead>
-          <tr>
-            <th>År</th><th>Datum</th><th>Startande</th><th>I mål</th><th>Bröt</th>
-            <th>Andel</th><th>Väder enligt källan</th><th>Källa</th>
-          </tr>
+          <tr><th>Year</th><th>Date</th><th>Starters</th><th>Finishers</th><th>Dropped out</th><th>Rate</th><th>Weather per source</th><th>Source</th></tr>
         </thead>
         <tbody id="tbody"></tbody>
       </table>
     </div>
   </section>
 
-  <section class="method">
-    <h2>Så ska datan läsas</h2>
-    <dl>
-      <dt>Urval</dt>
-      <dd>Sex genomförda upplagor med publicerade siffror på både startande och fullföljande. 2020 genomfördes inte. 2021 flyttades till 9 oktober och är utelämnat eftersom ett oktoberlopp inte går att jämföra med ett majlopp.</dd>
-
-      <dt>Mått</dt>
-      <dd>Andel och inte antal, eftersom startfältet nästan fördubblats under perioden. Ett rekordår kan ha fler avbrutna lopp i absoluta tal och ändå ha den lägsta andelen, vilket är precis vad som händer 2025.</dd>
-
-      <dt>Väderuppgift</dt>
-      <dd>Beskrivningar hämtade ur arrangörens historik och ur nyhetsrapporteringen. De är formulerade olika mellan åren och går inte att räkna på. Mätta temperaturer från SMHI ska ersätta dem, vilket är nästa steg i arbetet.</dd>
-
-      <dt>Indelningen varm</dt>
-      <dd>Ett år räknas som varmt när källan uttryckligen beskriver det som varmt, soligt eller som en värmebölja. Indelningen är gjord av mig och är det svagaste ledet i analysen.</dd>
-    </dl>
-    <p class="warn"><strong>Det här visar ett samband, inte en orsak.</strong> Resultatlistorna registrerar att en löpare brutit, aldrig varför. Ingen avbruten löpare märks som värmerelaterad, så det går inte att peka ut vilka enskilda löpare värmen fällde. Banan ändrades inför 2023 och startfältets sammansättning varierar mellan åren. Slutsatsen gäller skillnaden mellan upplagor, inte enskilda fall.</p>
-  </section>
-
-  <section class="sources">
-    <h2>Källor</h2>
-    <p class="lede">Samtliga hämtade 2026-09-15. Arrangörens egna uppgifter är förstahandskälla för deltagarsiffror. Nyhetsrapportering samma dag innehåller preliminära tal, vilket förklarar varför 2024 förekommer med två olika startsiffror.</p>
-    <ol>
-      <li><span class="tag">K1</span><a href="https://stockholmmarathon.se/start/historik/" target="_blank" rel="noopener">Stockholm Marathon, officiell historik</a>
-        <span class="what">Tävlingsdag, startande, fullföljande, väderbeskrivning och vinnartider för 2019, 2021, 2022 och 2023. Även att loppet 2021 flyttades till oktober och att banan ändrades inför 2023.</span></li>
-      <li><span class="tag">K2</span><a href="https://www.marathon.se/asics-stockholm-marathon/asics-stockholm-marathon-2018/14640-lopare-klarade-solskensmaran" target="_blank" rel="noopener">Marathon.se, rapportering från loppet 2018</a>
-        <span class="what">Startande och fullföljande 2018, att 1 089 löpare inte tog sig i mål, att sju löpare fördes till sjukhus varav fem för uttorkning, samt att över 13 procent bröt under de varma åren 1982 och 2007.</span></li>
-      <li><span class="tag">K3</span><a href="https://www.marathon.se/nyheter/adidas-stockholm-marathon-slar-alla-rekord" target="_blank" rel="noopener">Marathon.se, rapportering från loppet 2025</a>
-        <span class="what">19 431 startande och 18 865 i mål, rekord i båda fallen, inga allvarliga sjukdomsfall.</span></li>
-      <li><span class="tag">K4</span><a href="https://www.svt.se/nyheter/lokalt/stockholm/tusentals-lopare-springer-stockholm-marathon-i-supervarme" target="_blank" rel="noopener">SVT Nyheter, från loppet 2018</a>
-        <span class="what">Att ovanligt många bröt, sjukvårdens bild under loppdagen och jämförelsen mellan cirka sju procent 2018 och över 13 procent under de två värsta åren.</span></li>
-      <li><span class="tag">K5</span><a href="https://www.svt.se/sport/friidrott/stockholm-marathon-2024-svt-liverapporterar" target="_blank" rel="noopener">SVT Sport, liverapport från loppet 2024</a>
-        <span class="what">18 396 startande, drygt 17 000 i mål, omkring femton personer förda med ambulans till sjukhus, samt att loppet startar klockan 12.00.</span></li>
-      <li><span class="tag">K6</span><a href="https://www.svt.se/nyheter/lokalt/stockholm/darfor-gar-stockholm-marathon-under-de-varmaste-timmarna-pa-dygnet" target="_blank" rel="noopener">SVT Nyheter, om loppets starttid</a>
-        <span class="what">18 300 startande och 17 002 i mål 2024, att sju till åtta procent bröt, samt arrangörens motivering till varför loppet går mitt på dagen.</span></li>
-      <li><span class="tag">K7</span><a href="https://en.wikipedia.org/wiki/Stockholm_Marathon" target="_blank" rel="noopener">Wikipedia, artikeln om Stockholm Marathon</a>
-        <span class="what">Lördagsstart till skillnad från de flesta storstadsmaraton, temperaturer omkring 30 grader lokalt 2018, inställt 2020 och flyttat 2021. Andrahandskälla, används bara som bakgrund.</span></li>
-      <li><span class="tag">K8</span><a href="https://opendata-download-metobs.smhi.se/" target="_blank" rel="noopener">SMHI Open Data, meteorologiska observationer</a>
-        <span class="what">Källa för mätta temperaturer. Ingår inte i den här versionen och är nästa steg i arbetet.</span></li>
-    </ol>
-
-    <div class="notes">
-      <p><b>Avvikelse 2018.</b> Källan anger 14 640 i mål och samtidigt 1 089 som bröt av 15 755 startande. De två uppgifterna skiljer sig med 26 löpare. Sidan räknar på 14 640 i mål.</p>
-      <p><b>Avvikelse 2024.</b> SVT anger 18 396 startande i liverapporten och 18 300 i uppföljningen dagen efter. Sidan räknar på 18 396 och 17 002 i mål.</p>
-      <p><b>Nästa steg.</b> Mätta temperaturer från SMHI för varje loppdag, vilket gör det möjligt att byta gruppindelningen mot ett punktdiagram och räkna fram hur många procentenheter fler som bryter per grad.</p>
+  <section class="block">
+    <div class="panel">
+      <h2>How to read the data</h2>
+      <dl class="defs">
+        <dt>Sample</dt>
+        <dd>Six editions with published numbers for both starters and finishers. 2020 was cancelled. 2021 was moved to 9 October and is left out, since an October race can't be compared with a race in late spring.</dd>
+        <dt>Measure</dt>
+        <dd>Share rather than count, since the field almost doubled over the period. A record year can have more dropouts in absolute numbers and still the lowest rate, which is exactly what happens in 2025.</dd>
+        <dt>Weather data</dt>
+        <dd>Descriptions taken from the organiser's history and from news coverage. They are worded differently from year to year and can't be calculated with. Measured temperatures from SMHI will replace them, which is the next step.</dd>
+        <dt>Hot or cool</dt>
+        <dd>A year counts as hot when the source explicitly describes it as hot, sunny or a heatwave. I made this classification myself, and it is the weakest link in the analysis.</dd>
+      </dl>
+      <p class="warn"><strong>This shows a correlation, not a cause.</strong> Results lists record that a runner dropped out, never why. No dropout is marked as heat related, so it isn't possible to say which individual runners the heat stopped. The course changed before 2023, and the make-up of the field varies between years. The conclusion applies to differences between editions, not to individual runners.</p>
     </div>
   </section>
 
+  <section class="block">
+    <h2>Sources</h2>
+    <p class="muted">All retrieved 2026-09-15. The organiser's own figures are the primary source for participant numbers. Same-day news coverage contains preliminary figures, which is why 2024 appears with two different starter counts.</p>
+    <ol class="source-list">
+      <li><span class="ref">K1</span><a href="https://stockholmmarathon.se/start/historik/" target="_blank" rel="noopener">Stockholm Marathon, official history</a>
+        <span class="what">Race day, starters, finishers, weather description and winning times for 2019, 2021, 2022 and 2023. Also that the 2021 race was moved to October and that the course changed before 2023.</span></li>
+      <li><span class="ref">K2</span><a href="https://www.marathon.se/asics-stockholm-marathon/asics-stockholm-marathon-2018/14640-lopare-klarade-solskensmaran" target="_blank" rel="noopener">Marathon.se, coverage of the 2018 race</a>
+        <span class="what">Starters and finishers in 2018, that 1,089 runners didn't finish, that seven runners were taken to hospital (five for dehydration), and that over 13 percent dropped out in the hot years 1982 and 2007.</span></li>
+      <li><span class="ref">K3</span><a href="https://www.marathon.se/nyheter/adidas-stockholm-marathon-slar-alla-rekord" target="_blank" rel="noopener">Marathon.se, coverage of the 2025 race</a>
+        <span class="what">19,431 starters and 18,865 finishers, a record for both, and no serious medical cases.</span></li>
+      <li><span class="ref">K4</span><a href="https://www.svt.se/nyheter/lokalt/stockholm/tusentals-lopare-springer-stockholm-marathon-i-supervarme" target="_blank" rel="noopener">SVT Nyheter, from the 2018 race</a>
+        <span class="what">That unusually many runners dropped out, the medical picture on race day, and the comparison between about seven percent in 2018 and over 13 percent in the two worst years.</span></li>
+      <li><span class="ref">K5</span><a href="https://www.svt.se/sport/friidrott/stockholm-marathon-2024-svt-liverapporterar" target="_blank" rel="noopener">SVT Sport, live report from the 2024 race</a>
+        <span class="what">18,396 starters, just over 17,000 finishers, around fifteen people taken to hospital by ambulance, and that the race starts at 12:00.</span></li>
+      <li><span class="ref">K6</span><a href="https://www.svt.se/nyheter/lokalt/stockholm/darfor-gar-stockholm-marathon-under-de-varmaste-timmarna-pa-dygnet" target="_blank" rel="noopener">SVT Nyheter, on the race's start time</a>
+        <span class="what">18,300 starters and 17,002 finishers in 2024, that seven to eight percent dropped out, and the organiser's reasons for running the race at midday.</span></li>
+      <li><span class="ref">K7</span><a href="https://en.wikipedia.org/wiki/Stockholm_Marathon" target="_blank" rel="noopener">Wikipedia, Stockholm Marathon</a>
+        <span class="what">Saturday start unlike most big city marathons, temperatures around 30&deg;C locally in 2018, cancelled in 2020 and moved in 2021. Secondary source, used only as background.</span></li>
+      <li><span class="ref">K8</span><a href="https://opendata-download-metobs.smhi.se/" target="_blank" rel="noopener">SMHI Open Data, meteorological observations</a>
+        <span class="what">Source for measured temperatures. Not part of this version; it is the next step.</span></li>
+    </ol>
+
+    <div class="notes">
+      <p><b>Discrepancy in 2018.</b> The source gives 14,640 finishers and also 1,089 dropouts out of 15,755 starters. The two figures differ by 26 runners. This page uses 14,640 finishers.</p>
+      <p><b>Discrepancy in 2024.</b> SVT gives 18,396 starters in the live report and 18,300 in the follow-up the day after. This page uses 18,396 starters and 17,002 finishers.</p>
+      <p><b>Next step.</b> Measured SMHI temperatures for each race day. That makes it possible to replace the grouping with a scatter plot and calculate how many more percentage points drop out per degree.</p>
+    </div>
+  </section>
+
+  <a href="content_plan.html" class="case-next">
+    <span class="small">Next case</span>
+    <span class="display">Stockholm Marathon content plan <span class="arr">&rarr;</span></span>
+  </a>
 </main>
 
-<footer>
-  <div class="footer-inner">&copy; 2026 Felix Manu &middot; Growth Marketing &middot; Stockholm</div>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 Felix Manu, Growth Marketer, Stockholm</span>
+    <nav aria-label="Footer">
+      <a href="https://www.linkedin.com/in/felixmanuirankunda/" target="_blank" rel="noopener" data-track="contact_click" data-track-location="footer" data-track-type="linkedin">LinkedIn</a>
+      <a href="index.html#work">All work</a>
+    </nav>
+  </div>
 </footer>
 
+<script src="assets/site.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
-const INK = '#F4F1E4';
-const DIM = 'rgba(244,241,228,.64)';
-const FAINT = 'rgba(244,241,228,.34)';
-const LINE = 'rgba(244,241,228,.12)';
-const QUIET = 'rgba(244,241,228,.28)';
-const ACCENT = '#F6C445';
+const INK = '#121621';
+const DIM = 'rgba(18,22,33,.72)';
+const FAINT = 'rgba(18,22,33,.52)';
+const LINE = 'rgba(18,22,33,.10)';
+const QUIET = 'rgba(18,22,33,.20)';
+const ACCENT = '#21546F';
 
 if (window.Chart) {
   Chart.defaults.color = DIM;
-  Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+  Chart.defaults.font.family = "'Archivo', system-ui, sans-serif";
+  Chart.defaults.font.size = 13;
   Chart.defaults.borderColor = LINE;
 }
 
-// Verifierade uppgifter. Kallorna star i kolumnen src och i kallforteckningen.
+// Verified figures. Sources are in the src column and in the source list.
 const RACES = [
   { year:2018, date:'2018-06-02', starters:15755, finishers:14640, hot:true,
-    weather:'Supervärme, omkring 25 grader, upp mot 30 lokalt', src:'K2, K4, K7' },
+    weather:'Extreme heat, around 25°C, up to 30°C locally', src:'K2, K4, K7' },
   { year:2019, date:'2019-06-01', starters:12852, finishers:12351, hot:false,
-    weather:'14 grader, växlande moln, delvis regn', src:'K1' },
+    weather:'14°C, mixed clouds, some rain', src:'K1' },
   { year:2022, date:'2022-06-04', starters:10169, finishers:9504, hot:true,
-    weather:'Upp till 20 grader, soligt', src:'K1' },
+    weather:'Up to 20°C, sunny', src:'K1' },
   { year:2023, date:'2023-06-03', starters:13284, finishers:12745, hot:true,
-    weather:'20 till 25 grader, soligt', src:'K1' },
+    weather:'20 to 25°C, sunny', src:'K1' },
   { year:2024, date:'2024-06-01', starters:18396, finishers:17002, hot:true,
-    weather:'Värmebölja, prognos 28 grader', src:'K5, K6' },
+    weather:'Heatwave, forecast 28°C', src:'K5, K6' },
   { year:2025, date:'2025-05-31', starters:19431, finishers:18865, hot:false,
-    weather:'Ingen väderuppgift i källorna', src:'K3' }
+    weather:'No weather data in the sources', src:'K3' }
 ];
 
 RACES.forEach(r => {
@@ -281,39 +213,38 @@ RACES.forEach(r => {
 });
 
 const FIELD_TODAY = 19000;
-const HISTORIC_FLOOR = 13; // 1982 och 2007, angivet som over 13 procent i K2
+const HISTORIC_FLOOR = 13; // 1982 and 2007, given as over 13 percent in K2
 
 const mean = a => a.reduce((x, y) => x + y, 0) / a.length;
 const hotMean = mean(RACES.filter(r => r.hot).map(r => r.share));
 const coolMean = mean(RACES.filter(r => !r.hot).map(r => r.share));
 const extra = Math.round(FIELD_TODAY * (hotMean - coolMean) / 100 / 10) * 10;
 
-const fmt = n => n.toLocaleString('sv-SE');
+const fmt = n => n.toLocaleString('en-US');
 
 document.getElementById('extraRunners').textContent = '+' + fmt(extra);
 document.getElementById('rangeNote').textContent =
-  'Varma upplagor ' + hotMean.toFixed(1).replace('.', ',') +
-  ' procent mot svala ' + coolMean.toFixed(1).replace('.', ',') +
-  ' procent, sex upplagor 2018 till 2025.';
+  'Hot editions ' + hotMean.toFixed(1) + ' percent against cool ' + coolMean.toFixed(1) +
+  ' percent, six editions from 2018 to 2025.';
 
 const tbody = document.getElementById('tbody');
 RACES.forEach(r => {
   const tr = document.createElement('tr');
   tr.innerHTML =
-    '<td class="year">' + r.year + '</td>' +
+    '<td class="strong">' + r.year + '</td>' +
     '<td>' + r.date + '</td>' +
     '<td>' + fmt(r.starters) + '</td>' +
     '<td>' + fmt(r.finishers) + '</td>' +
     '<td>' + fmt(r.dnf) + '</td>' +
-    '<td class="' + (r.hot ? 'hot' : '') + '">' + r.share.toFixed(1).replace('.', ',') + ' %</td>' +
+    '<td class="' + (r.hot ? 'hot' : 'strong') + '">' + r.share.toFixed(1) + '%</td>' +
     '<td>' + r.weather + '</td>' +
     '<td>' + r.src + '</td>';
   tbody.appendChild(tr);
 });
 
 const tooltipStyle = {
-  backgroundColor: '#15160F', borderColor: LINE, borderWidth: 1,
-  titleColor: INK, bodyColor: DIM
+  backgroundColor: INK, borderWidth: 0, padding: 12,
+  titleColor: '#F8F6F7', bodyColor: 'rgba(248,246,247,.82)', cornerRadius: 6
 };
 
 if (window.Chart) {
@@ -322,25 +253,27 @@ if (window.Chart) {
     data: {
       labels: RACES.map(r => r.year),
       datasets: [{
-        label: 'Andel som bröt',
+        label: 'Dropout rate',
         data: RACES.map(r => +r.share.toFixed(1)),
-        backgroundColor: RACES.map(r => r.hot ? ACCENT : QUIET)
+        backgroundColor: RACES.map(r => r.hot ? ACCENT : QUIET),
+        borderRadius: 3
       }]
     },
     options: {
       maintainAspectRatio: false,
       scales: {
-        y: { title: { display: true, text: 'Procent av startande', color: FAINT },
-             grid: { color: LINE }, ticks: { callback: v => v + ' %' } },
+        y: { title: { display: true, text: 'Percent of starters', color: FAINT },
+             grid: { color: LINE }, border: { display: false }, ticks: { callback: v => v + '%' } },
         x: { grid: { display: false } }
       },
       plugins: {
         legend: { display: false },
         tooltip: Object.assign({}, tooltipStyle, {
           callbacks: {
+            label: ctx => ctx.parsed.y + '% did not finish',
             afterLabel(ctx) {
               const r = RACES[ctx.dataIndex];
-              return fmt(r.dnf) + ' av ' + fmt(r.starters) + ' startande. ' + r.weather;
+              return fmt(r.dnf) + ' of ' + fmt(r.starters) + ' starters. ' + r.weather;
             }
           }
         })
@@ -351,29 +284,31 @@ if (window.Chart) {
   new Chart(document.getElementById('groups'), {
     type: 'bar',
     data: {
-      labels: ['Svala upplagor', 'Varma upplagor', '1982 och 2007'],
+      labels: ['Cool editions', 'Hot editions', '1982 and 2007'],
       datasets: [{
-        label: 'Andel som bröt',
+        label: 'Dropout rate',
         data: [+coolMean.toFixed(1), +hotMean.toFixed(1), HISTORIC_FLOOR],
-        backgroundColor: [QUIET, ACCENT, 'rgba(246,196,69,.45)']
+        backgroundColor: [QUIET, ACCENT, 'rgba(33,84,111,.45)'],
+        borderRadius: 3
       }]
     },
     options: {
       indexAxis: 'y',
       maintainAspectRatio: false,
       scales: {
-        x: { title: { display: true, text: 'Procent av startande', color: FAINT },
-             grid: { color: LINE }, ticks: { callback: v => v + ' %' } },
+        x: { title: { display: true, text: 'Percent of starters', color: FAINT },
+             grid: { color: LINE }, border: { display: false }, ticks: { callback: v => v + '%' } },
         y: { grid: { display: false } }
       },
       plugins: {
         legend: { display: false },
         tooltip: Object.assign({}, tooltipStyle, {
           callbacks: {
+            label: ctx => ctx.parsed.x + '% did not finish',
             afterLabel(ctx) {
-              if (ctx.dataIndex === 2) return 'Källan anger över 13 procent. Stapeln visar golvvärdet.';
+              if (ctx.dataIndex === 2) return 'The source says over 13 percent. The bar shows that floor.';
               const years = RACES.filter(r => r.hot === (ctx.dataIndex === 1)).map(r => r.year);
-              return 'Snitt av ' + years.join(', ');
+              return 'Average of ' + years.join(', ');
             }
           }
         })
@@ -382,6 +317,5 @@ if (window.Chart) {
   });
 }
 </script>
-
 </body>
 </html>
