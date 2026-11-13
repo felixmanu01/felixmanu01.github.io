@@ -26,13 +26,14 @@ near black of the hair. No dark mode.
 | `--paper-3` | #F8F6F7 | Tables, charts, text on dark |
 | `--ink` | #121621 | Text, primary buttons |
 | `--ink-2` | ink at 74% | Body copy, secondary text |
-| `--ink-3` | ink at 58% | Labels, meta. Never for body text |
+| `--ink-3` | ink at 65% | Labels, meta. Never for body text |
 | `--denim` | #21546F | The only accent: links on hover, highlighted data, focus ring |
 | `--denim-deep` | #15344A | Contact band background |
 | `--denim-tint` | denim at 10% | Hover fill on rows |
 | `--line` / `--line-2` | ink at 14% / 28% | Dividers / stronger dividers and outlines |
 
-Contrast: ink on paper 15:1, ink-2 on paper 8:1, paper-3 on denim-deep 11:1.
+Contrast: ink on paper 14:1, ink-2 on paper 6.8:1, ink-3 on paper 5.1:1
+(all text meets WCAG AA), paper-3 on denim-deep 11:1.
 Error color (Gig Radar only): #8A2E1C on a 7% tint.
 
 ## Typography
@@ -57,7 +58,7 @@ Text is left aligned. Nothing is centered except the portrait.
 ## Shape and depth
 
 Radius: 999px for buttons and tags, 6 to 10px for small surfaces, 0 for
-cards, images and tables. No shadows, except the paper prototype sheet.
+cards, images and tables. No shadows.
 
 ## Components
 
@@ -69,7 +70,7 @@ cards, images and tables. No shadows, except the paper prototype sheet.
   line draws in, row tints.
 * Case feature: text plus real campaign images, no numbers unless approved.
 * Case page: back link, title, lede, meta row, blocks, "Next case" link.
-* Nav: logo, three links, one contact button. Burger under 760px.
+* Nav: logo, two links, one contact button. Burger under 760px.
 * Footer: copyright, LinkedIn, back link.
 
 ## Imagery

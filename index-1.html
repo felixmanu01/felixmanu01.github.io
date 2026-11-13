@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W64MKMXJ');</script>
+<!-- End Google Tag Manager -->
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felix Manu | Growth Marketer, Performance Marketing, Stockholm</title>
+<meta name="description" content="Felix Manu is a growth marketer in Stockholm focused on performance marketing: Meta and Google ads, video and photo creative made in-house, and tracking in Google Tag Manager and GA4.">
+<link rel="canonical" href="https://felixmanu01.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Felix Manu | Growth Marketer">
+<meta property="og:description" content="Performance marketing on Meta and Google, with creative and tracking built in-house.">
+<meta property="og:url" content="https://felixmanu01.github.io/">
+<meta property="og:image" content="https://felixmanu01.github.io/Case/images/felix-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#E6E2E4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2321546F'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='800' fill='%23F4F2F3' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="Case/images/felix-portrait.jpg" imagesrcset="Case/images/felix-portrait-small.jpg 700w, Case/images/felix-portrait.jpg 1300w" imagesizes="(max-width:760px) 86vw, 36vw">
+<link rel="stylesheet" href="assets/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Felix Manu",
+  "jobTitle": "Growth Marketer",
+  "description": "Growth marketer in Stockholm focused on performance marketing.",
+  "url": "https://felixmanu01.github.io/",
+  "image": "https://felixmanu01.github.io/Case/images/felix-portrait.jpg",
+  "address": {"@type": "PostalAddress", "addressLocality": "Stockholm", "addressCountry": "SE"},
+  "alumniOf": {"@type": "EducationalOrganization", "name": "Berghs School of Communication"},
+  "knowsAbout": ["Performance marketing", "Paid social", "Meta Ads", "Google Ads", "Video production", "Google Tag Manager", "Google Analytics 4", "SEO", "Songwriting"],
+  "sameAs": ["https://www.linkedin.com/in/felixmanuirankunda/", "https://open.spotify.com/artist/2gXs1tQmQNe5bAUU726Ohd"]
+}
+</script>
+
+<style>
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100svh;
+    padding-top:var(--nav-h);
+    display:grid;
+    grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);
+    column-gap:clamp(1.5rem,4vw,4rem);
+    align-items:end;
+  }
+  .hero-copy{align-self:center; padding:clamp(2rem,6vh,4rem) 0;}
+  .hero-role{
+    font-size:.95rem; font-weight:600; color:var(--ink-2);
+    margin-bottom:clamp(1.2rem,3vh,2rem);
+    animation:enter .9s var(--ease) both;
+  }
+  .hero-title{
+    font-size:clamp(2.3rem,4vw,3.9rem);
+    line-height:.96;
+    letter-spacing:-.03em;
+  }
+  .hero-title .ln{display:block; overflow:hidden; padding-bottom:.06em; margin-bottom:-.06em;}
+  .hero-title .ln > span{display:block; animation:lineUp 1s var(--ease) both;}
+  .hero-title .ln:nth-child(2) > span{animation-delay:.09s;}
+  .hero-title .ln:nth-child(3) > span{animation-delay:.18s;}
+  @keyframes lineUp{from{transform:translateY(105%);}}
+
+  .hero .lede{margin-top:clamp(1.4rem,3vh,2rem); max-width:46ch; animation:enter .9s var(--ease) .35s both;}
+  .hero .actions{margin-top:clamp(1.6rem,4vh,2.4rem); animation:enter .9s var(--ease) .45s both;}
+
+  .hero-portrait{
+    align-self:end; justify-self:end;
+    height:min(calc(100svh - var(--nav-h) - 24px), 880px);
+    aspect-ratio:1300/1540;
+    max-width:100%;
+    animation:portrait 1.4s var(--ease) .1s both;
+  }
+  .hero-portrait img{
+    width:100%; height:100%; object-fit:cover; object-position:top center;
+    /* the photo wall is the page colour, so the edges just dissolve */
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 8%,#000 78%,transparent 100%);
+    -webkit-mask-composite:source-in;
+            mask-image:linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 8%,#000 78%,transparent 100%);
+            mask-composite:intersect;
+  }
+  @keyframes portrait{from{clip-path:inset(100% 0 0 0); transform:translateY(24px);} to{clip-path:inset(0 0 0 0);}}
+
+
+  /* Slow light behind the portrait */
+  .hero{position:relative; isolation:isolate;}
+  .aura{
+    position:absolute; z-index:-1; pointer-events:none;
+    right:clamp(-4rem,-2vw,0rem); top:14%; width:min(46vw,640px); aspect-ratio:1;
+    animation:fadeIn 2s ease .4s both;
+  }
+  .aura::before, .aura::after{
+    content:''; position:absolute; border-radius:50%; filter:blur(60px);
+  }
+  .aura::before{inset:10% 18% 30% 8%; background:rgba(33,84,111,.22); animation:drift 16s ease-in-out infinite alternate;}
+  .aura::after{inset:40% 4% 6% 36%; background:rgba(248,246,247,.9); animation:drift 20s ease-in-out infinite alternate-reverse;}
+  @keyframes drift{
+    0%{transform:translate(0,0) scale(1);}
+    50%{transform:translate(6%,-5%) scale(1.08);}
+    100%{transform:translate(-5%,6%) scale(.96);}
+  }
+  @keyframes fadeIn{from{opacity:0;}}
+  .hero-portrait img{will-change:transform;}
+  @media (max-width:980px){ .aura{right:50%; transform:translateX(50%); top:auto; bottom:4%; width:90vw;} }
+
+  /* Proof strip under the hero */
+  .proof{
+    display:grid; grid-template-columns:.8fr repeat(4,1fr);
+    border-top:1px solid var(--line-2);
+    position:relative;
+  }
+  .proof::before{
+    content:''; position:absolute; left:0; top:-1px; height:2px; width:100%;
+    background:var(--denim); transform-origin:left;
+    animation:draw 1.4s var(--ease) .7s both;
+  }
+  @keyframes draw{from{transform:scaleX(0);}}
+  .proof > *{padding:1.5rem 1.5rem 1.6rem 0;}
+  .proof > * + *{padding-left:1.5rem; border-left:1px solid var(--line);}
+  .proof .label{font-size:.88rem; color:var(--ink-3);}
+  .proof a{transition:background .3s ease;}
+  .proof a:hover{background:var(--denim-tint);}
+  .proof a:hover .num{color:var(--denim);}
+  .proof .num{display:block; font-stretch:125%; font-weight:800; letter-spacing:-.02em; font-size:clamp(1.05rem,1.55vw,1.35rem); line-height:1.1; transition:color .2s ease;}
+  .proof .what{display:block; margin-top:.45rem; font-size:.9rem; color:var(--ink-2);}
+
+  /* ---------- WORK ---------- */
+  .case-filter{display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:clamp(2.4rem,5vw,3.6rem);}
+  .case-filter button{
+    height:42px; padding:0 1.1rem; border-radius:999px;
+    border:1px solid var(--line-2);
+    font-size:.88rem; font-weight:600; color:var(--ink-2);
+    transition:background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+  }
+  .case-filter button:hover{border-color:var(--ink); color:var(--ink);}
+  .case-filter button.active{background:var(--ink); border-color:var(--ink); color:var(--paper-3);}
+  .case-filter .count{margin-left:.45em; opacity:.6; font-weight:700;}
+
+  .case-group{margin-bottom:clamp(3.6rem,7vw,5.5rem); transition:opacity .35s ease, transform .35s var(--ease);}
+  .case-group:last-of-type{margin-bottom:0;}
+  .case-group.is-hidden{display:none;}
+  .case-group.is-fading{opacity:0; transform:translateY(10px);}
+
+  .group-head{display:flex; align-items:baseline; gap:1rem; margin-bottom:.4rem;}
+  .group-head h3{font-size:clamp(1.3rem,2.2vw,1.7rem); white-space:nowrap;}
+  .group-head .g-line{flex:1; height:1px; background:var(--line-2); align-self:center;}
+  .group-head .g-count{font-size:.86rem; color:var(--ink-3); white-space:nowrap;}
+  .group-note{color:var(--ink-2); max-width:56ch; margin-bottom:1.6rem;}
+
+  /* Featured case: text and images side by side */
+  .case-feature{
+    display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+    background:var(--paper-2); border:1px solid var(--line);
+    margin-bottom:1.2rem;
+  }
+  .case-feature .body{padding:clamp(1.6rem,3.4vw,2.8rem); display:flex; flex-direction:column;}
+  .case-feature h4{font-stretch:125%; font-weight:800; letter-spacing:-.025em; font-size:clamp(2rem,4vw,3.2rem); line-height:.98; margin-bottom:1.2rem;}
+  .case-feature .brief{color:var(--ink-2); line-height:1.65; max-width:58ch;}
+  .case-feature .brief strong{color:var(--ink);}
+  .case-feature.stacked{grid-template-columns:1fr;}
+  .case-feature.stacked .body{display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr); gap:1rem clamp(2rem,5vw,4.5rem);}
+  .case-feature.stacked .side{display:flex; flex-direction:column; gap:1.6rem; padding-top:.4rem;}
+  .case-feature.stacked .foot{padding-top:0; margin-top:0; flex-direction:column; align-items:flex-start;}
+  .case-feature.stacked .media.ads{grid-template-columns:repeat(4,1fr);}
+  .case-feature .foot{margin-top:auto; padding-top:1.8rem; display:flex; flex-wrap:wrap; gap:.8rem 1.4rem; align-items:center; justify-content:space-between;}
+  .case-feature .meta{font-size:.88rem; color:var(--ink-3);}
+
+  .media{display:grid; gap:4px; background:var(--paper-2); overflow:hidden;}
+  .media.ads{grid-template-columns:1fr 1fr;}
+  .media.wide{grid-template-rows:1fr 1fr;}
+  .media figure{overflow:hidden; background:var(--paper);}
+  .media img{width:100%; height:100%; object-fit:cover; transition:transform .8s var(--ease);}
+  .media.ads img{aspect-ratio:2/3;}
+  .media.wide img{aspect-ratio:16/9;}
+  .media figure:hover img{transform:scale(1.04);}
+
+  /* Case rows that link to a case page */
+  .case-row{
+    display:grid;
+    grid-template-columns:150px minmax(0,1fr) auto;
+    gap:.4rem clamp(1.5rem,4vw,3rem);
+    align-items:center;
+    padding:1.6rem 0;
+    border-bottom:1px solid var(--line);
+    position:relative;
+    transition:padding .45s var(--ease), background .35s ease;
+  }
+  .case-row:first-child{border-top:1px solid var(--line);}
+  .case-row::before{
+    content:''; position:absolute; left:0; top:-1px; height:2px; width:100%;
+    background:var(--denim); transform:scaleX(0); transform-origin:left;
+    transition:transform .6s var(--ease);
+  }
+  .case-row:hover{background:var(--denim-tint); padding-left:1.2rem; padding-right:1.2rem;}
+  .case-row:hover::before{transform:scaleX(1);}
+  .case-row .tag{justify-self:start;}
+  .case-row h4{font-stretch:125%; font-weight:800; letter-spacing:-.02em; font-size:clamp(1.3rem,2.4vw,1.9rem); line-height:1.05;}
+  .case-row p{color:var(--ink-2); font-size:.96rem; margin-top:.35rem; max-width:62ch;}
+  .case-row .go{font-weight:700; font-size:.92rem; white-space:nowrap; display:inline-flex; align-items:center; gap:.4em;}
+  .case-row .go .arr{transition:transform .3s var(--ease); color:var(--denim);}
+  .case-row:hover .go .arr{transform:translate(3px,-3px);}
+
+  /* Creative: music case with the Spotify player in place of images */
+  .media.player{display:flex; align-items:center; padding:clamp(1.2rem,2.6vw,2rem); background:var(--paper-2); border-left:1px solid var(--line);}
+  .media.player iframe{display:block; width:100%; height:352px; border:0; border-radius:12px; background:var(--paper);}
+
+  /* ---------- ABOUT ---------- */
+  .about{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.9fr); gap:clamp(2.4rem,6vw,6rem); align-items:start;}
+  .about h2{margin-bottom:1.6rem;}
+  .about .lede{color:var(--ink); margin-bottom:1.6rem; max-width:40ch; font-size:clamp(1.15rem,1.7vw,1.35rem); line-height:1.45;}
+  .about .body p{color:var(--ink-2); margin-bottom:1.1rem; max-width:56ch;}
+  .facts{border-top:1px solid var(--line-2);}
+  .facts div{display:grid; grid-template-columns:120px 1fr; gap:1rem; padding:1.05rem 0; border-bottom:1px solid var(--line);}
+  .facts dt{color:var(--ink-3); font-size:.92rem;}
+  .facts dd{font-weight:700;}
+  .facts dd span{display:block; font-weight:500; color:var(--ink-2); font-size:.92rem;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--denim-deep); color:var(--paper-3); padding:clamp(90px,13vw,170px) 0;}
+  .contact h2{font-size:clamp(3.2rem,11vw,9rem); letter-spacing:-.04em; line-height:.9;}
+  .contact .lede{color:rgba(244,242,243,.78); margin:1.6rem 0 2.4rem; max-width:44ch;}
+  .contact-email{
+    display:inline-block;
+    font-stretch:112%; font-weight:700;
+    font-size:clamp(1.05rem,3.2vw,2.1rem);
+    letter-spacing:-.01em;
+    overflow-wrap:anywhere;
+    padding-bottom:.35rem;
+    background:linear-gradient(currentColor,currentColor) left bottom/100% 2px no-repeat;
+    transition:background-size .45s var(--ease), opacity .2s ease;
+  }
+  .contact-email:hover{background-size:30% 2px;}
+  .contact .actions{margin-top:2.4rem;}
+  .contact .btn{border-color:rgba(244,242,243,.5); color:var(--paper-3);}
+  .contact .btn:hover{background:var(--paper-3); color:var(--denim-deep); border-color:var(--paper-3);}
+  .contact ::selection{background:var(--paper-3); color:var(--denim-deep);}
+  .contact :focus-visible{outline-color:var(--paper-3);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:980px){
+    .hero{grid-template-columns:minmax(0,1fr); min-height:auto; padding-top:calc(var(--nav-h) + 2rem);}
+    .hero-copy{padding-bottom:1rem;}
+    .hero-portrait{height:auto; width:min(100%,460px); justify-self:center;}
+    .proof{grid-template-columns:1fr 1fr;}
+    .proof .label{grid-column:1 / -1; padding-bottom:.4rem;}
+    .proof > *:nth-child(2), .proof > *:nth-child(4){padding-left:0; border-left:0;}
+    .proof > *:nth-child(n+4){border-top:1px solid var(--line);}
+    .case-feature{grid-template-columns:minmax(0,1fr);}
+    .case-feature.stacked .body{grid-template-columns:minmax(0,1fr);}
+    .case-feature.stacked .media.ads{grid-template-columns:repeat(2,1fr);}
+    .media.player{border-left:0; border-top:1px solid var(--line);}
+    .about{grid-template-columns:1fr;}
+  }
+  @media (max-width:760px){
+    .proof{grid-template-columns:1fr;}
+    .proof > *{padding:1.1rem 0 !important; border-left:0 !important;}
+    .proof > * + *{border-top:1px solid var(--line);}
+    .group-head h3{white-space:normal;}
+    .group-head .g-line{min-width:1.5rem;}
+    .case-row{grid-template-columns:1fr; padding:1.4rem 0;}
+    .case-row:hover{padding-left:0; padding-right:0; background:none;}
+    .facts div{grid-template-columns:100px 1fr;}
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W64MKMXJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">Felix Manu</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary nav-cta">Get in touch</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#work">Work</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero container" id="top">
+    <div class="hero-copy">
+      <p class="hero-role">Felix Manu, Stockholm</p>
+      <h1 class="hero-title">
+        <span class="ln"><span>Growth marketer</span></span>
+        <span class="ln"><span>focused on performance</span></span>
+        <span class="ln"><span>marketing.</span></span>
+      </h1>
+      <p class="lede">I plan and run paid campaigns on Meta and Google, shoot and edit the ads myself, and set up the tracking that shows what drives sales.</p>
+      <div class="actions">
+        <a href="#work" class="btn btn-primary">See my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="aura" aria-hidden="true"></div>
+    <figure class="hero-portrait">
+      <img src="Case/images/felix-portrait.jpg"
+           srcset="Case/images/felix-portrait-small.jpg 700w, Case/images/felix-portrait.jpg 1300w"
+           sizes="(max-width:760px) 86vw, 36vw"
+           width="1300" height="1540"
+           alt="Felix Manu, Growth Marketer"
+           fetchpriority="high">
+    </figure>
+  </section>
+
+  <div class="container">
+    <div class="proof">
+      <p class="label">Featured cases</p>
+      <a href="#work" data-filter-link="paid"><span class="num">Aroma Roast</span><span class="what">Paid social on Meta</span></a>
+      <a href="#work" data-filter-link="paid"><span class="num">Own Shopify store</span><span class="what">E-commerce and Meta ads</span></a>
+      <a href="#work" data-filter-link="campaign"><span class="num">Kungliga Operan</span><span class="what">Campaign concept</span></a>
+      <a href="gigradar.html"><span class="num">Gig Radar Stockholm</span><span class="what">Data and API</span></a>
+    </div>
+  </div>
+
+  <!-- ============ WORK ============ -->
+  <section id="work" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-split>Selected work</h2>
+        <p class="lede">Paid campaigns, e-commerce, campaign strategy, data projects and music. Filter by the kind of work you're hiring for.</p>
+      </div>
+
+      <!-- FILTER: data-filter matches data-group on each .case-group -->
+      <div class="case-filter" id="caseFilter" role="group" aria-label="Filter cases">
+        <button type="button" class="active" data-filter="all" aria-pressed="true">All work</button>
+        <button type="button" data-filter="paid" aria-pressed="false">Paid media and e-commerce</button>
+        <button type="button" data-filter="campaign" aria-pressed="false">Campaign and strategy</button>
+        <button type="button" data-filter="data" aria-pressed="false">Data and API</button>
+        <button type="button" data-filter="creative" aria-pressed="false">Creative</button>
+      </div>
+
+      <!-- ===== PAID MEDIA ===== -->
+      <div class="case-group" data-group="paid">
+        <div class="group-head">
+          <h3>Paid media and e-commerce</h3><span class="g-line"></span><span class="g-count">2 cases</span>
+        </div>
+        <p class="group-note">Audience strategy, funnel structure and creative built to drive purchases.</p>
+
+        <article class="case-feature stacked">
+          <div class="body">
+            <div>
+            <h4>Aroma Roast</h4>
+            <p class="brief">Aroma Roast sells decaf coffee. The brand was talking broadly to women aged 30 to 40, with no reason for anyone to act. We pointed the whole campaign at one moment instead: <strong>pregnancy</strong>, when coffee disappears from the morning routine overnight and the ritual is still missed. Targeting 28 to 35 year olds, we built a full funnel on Meta with one job per stage, from recognition to purchase. <strong>I shot and produced all of the photography.</strong> The campaign drove real sales and brought in more than it spent.</p>
+            </div>
+            <div class="side">
+            <div class="foot">
+              <div class="tags"><span class="tag">Meta Ads</span><span class="tag">Full funnel</span><span class="tag">Photography</span></div>
+              <span class="meta">Team project, 2026</span>
+            </div>
+            </div>
+          </div>
+          <div class="media ads">
+            <figure><img src="Case/images/aroma-3.jpg" alt="Aroma Roast ad: pregnant woman holding a bag of Everyday decaf" loading="lazy" width="802" height="1200"></figure>
+            <figure><img src="Case/images/aroma-5.jpg" alt="Aroma Roast ad: making coffee in the kitchen" loading="lazy" width="802" height="1200"></figure>
+            <figure><img src="Case/images/aroma-7.jpg" alt="Aroma Roast ad: two coffee bags on a kitchen counter" loading="lazy" width="802" height="1200"></figure>
+            <figure><img src="Case/images/aroma-1.jpg" alt="Aroma Roast ad: three coffee bags in a bowl" loading="lazy" width="802" height="1200"></figure>
+          </div>
+        </article>
+
+        <article class="case-feature stacked" id="case-ecom">
+          <div class="body">
+            <div>
+            <h4>Own Shopify store</h4>
+            <p class="brief">I built and ran my own e-commerce store on Shopify, selling a smart bedside lamp with sunrise light, wireless charging and a built-in speaker. I set up the store, wrote the product page and FAQ, made the ad creative and drove traffic with <strong>Meta ads</strong>. Running it myself meant owning every step a customer takes, from the first ad they see to checkout.</p>
+            </div>
+            <div class="side">
+            <div class="foot">
+              <div class="tags"><span class="tag">Shopify</span><span class="tag">Meta Ads</span><span class="tag">E-commerce</span><span class="tag">Ad creative</span></div>
+              <span class="meta">Own business</span>
+            </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== CAMPAIGN AND STRATEGY ===== -->
+      <div class="case-group" data-group="campaign">
+        <div class="group-head">
+          <h3>Campaign and strategy</h3><span class="g-line"></span><span class="g-count">1 case</span>
+        </div>
+        <p class="group-note">Audience insight turned into campaign concepts, messaging and channel plans.</p>
+
+        <article class="case-feature">
+          <div class="body">
+            <h4>Kungliga Operan</h4>
+            <p class="brief">The brief was to make the case for why opera and ballet still matter. The Royal Opera's own audience data pointed to the real problem: a third of Swedes aged 18 to 84 want to visit but never do. The barrier was perception more than price. We built the campaign concept <strong>"G&aring;shud f&ouml;r 65 kr"</strong> ("Goosebumps for 65 SEK"), translating the physical sensations of live performance (a racing pulse, dilated pupils, goosebumps) into five outdoor posters, each pairing a macro shot of the body's reaction with the actual ticket price. We planned the rollout across Stockholm's everyday neighbourhoods, not just the city centre, to show that the experience belongs to everyone.</p>
+            <div class="foot">
+              <div class="tags"><span class="tag">Audience insight</span><span class="tag">Campaign concept</span><span class="tag">OOH</span></div>
+              <span class="meta">Team project, 2026</span>
+            </div>
+          </div>
+          <div class="media wide">
+            <figure><img src="Case/images/operan-1.jpg" alt="Five Kungliga Operan posters in a subway station" loading="lazy" width="1606" height="890"></figure>
+            <figure><img src="Case/images/operan-2.jpg" alt="Kungliga Operan poster on a Stockholm square showing 65 kr" loading="lazy" width="1602" height="898"></figure>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== DATA AND API ===== -->
+      <div class="case-group" data-group="data">
+        <div class="group-head">
+          <h3>Data and API</h3><span class="g-line"></span><span class="g-count">1 case</span>
+        </div>
+        <p class="group-note">Collecting my own data, combining it with public APIs and reading it to find the insight behind the numbers.</p>
+
+        <div class="case-list">
+          <a href="gigradar.html" class="case-row" id="caseGigLink" data-case="gig_radar_stockholm">
+            <span class="tag">Data and API</span>
+            <div>
+              <h4>Gig Radar Stockholm</h4>
+              <p>Concert data I collected from Debaser, combined with two live music APIs to show which artists need research first.</p>
+            </div>
+            <span class="go">Open case <span class="arr">&#8599;</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== CREATIVE ===== -->
+      <div class="case-group" data-group="creative">
+        <div class="group-head">
+          <h3>Creative</h3><span class="g-line"></span><span class="g-count">1 case</span>
+        </div>
+        <p class="group-note">Music I've written and performed as a signed artist.</p>
+
+        <article class="case-feature" id="caseMusic">
+          <div class="body">
+            <h4>Recording artist</h4>
+            <p class="brief">I've been a recording artist signed to <strong>Warner Music Sweden</strong>. Writing, performing and promoting my own songs taught me what makes people press play.</p>
+            <p class="brief" style="margin-top:1rem">I participated in Melodifestivalen 2026 with the song <strong lang="sv">Hatar att jag &auml;lskar dig</strong>.</p>
+            <div class="foot">
+              <div class="tags"><span class="tag">Music</span><span class="tag">Songwriting</span><span class="tag">Live performance</span></div>
+              <a href="https://open.spotify.com/artist/2gXs1tQmQNe5bAUU726Ohd" target="_blank" rel="noopener" class="btn btn-ghost" data-track="spotify_click" data-track-location="work" data-track-type="spotify">Listen on Spotify <span class="arr">&#8599;</span></a>
+            </div>
+          </div>
+          <div class="media player">
+            <iframe src="https://open.spotify.com/embed/artist/2gXs1tQmQNe5bAUU726Ohd?utm_source=generator&amp;theme=0" title="Felix Manu on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </article>
+      </div>
+
+      <!-- ============================================================
+           TEMPLATE: copy this block to add a new case.
+           Paste it inside <div class="case-list"> in the right group.
+           data-case becomes case_name in GTM.
+
+           <a href="FILENAME.html" class="case-row" data-case="short_name_with_underscores">
+             <span class="tag">Category</span>
+             <div>
+               <h4>Case title</h4>
+               <p>One or two sentences on what you did and what it led to.</p>
+             </div>
+             <span class="go">Open case <span class="arr">&#8599;</span></span>
+           </a>
+
+           New group? Copy a whole <div class="case-group" data-group="NAME">
+           and add a button with the same data-filter in #caseFilter.
+           ============================================================ -->
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="container about">
+      <div>
+        <h2 data-split>About</h2>
+        <p class="lede">Growth marketing sits between creativity, psychology, strategy and numbers. I like it because one campaign uses all four.</p>
+        <div class="body">
+          <p>I'm Felix Manu, a growth marketer based in Stockholm. My focus is performance marketing: paid social and search, measured all the way to the sale.</p>
+          <p>Before marketing I made content for TikTok and Instagram, so I know what it takes to stop someone mid-scroll. Today I put that to work in ads, and I want to know why one worked and how the next one can do better.</p>
+          <p>I've also run my own e-commerce store on Shopify and marketed it with Meta ads, so I know the whole chain from product page to checkout.</p>
+          <p>My education is in Growth Marketing at Berghs School of Communication, where I've run paid campaigns, built data cases and worked on briefs for brands like Kungliga Operan.</p>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>Based in</dt><dd>Stockholm, Sweden</dd></div>
+        <div><dt>Focus</dt><dd>Performance marketing</dd></div>
+        <div><dt>Education</dt><dd>Growth Marketing<span>Berghs School of Communication</span></dd></div>
+        <div><dt>Skills</dt><dd>Paid social and search<span>E-commerce, video and photo, tracking, SEO</span></dd></div>
+        <div><dt>Platforms</dt><dd>Meta, Google Ads, Shopify<span>Google Tag Manager, GA4</span></dd></div>
+        <div><dt>Creative</dt><dd>DaVinci Resolve<span>Photoshop, Lightroom</span></dd></div>
+        <div><dt>Languages</dt><dd>English, Swedish</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 data-split>Let's grow.</h2>
+      <p class="lede">Email is the quickest way to reach me.</p>
+      <a href="mailto:felix.manu.irankunda@student.berghs.se" class="contact-email" data-track="contact_click" data-track-location="contact" data-track-type="email">felix.manu.irankunda@student.berghs.se</a>
+      <div class="actions">
+        <a href="https://www.linkedin.com/in/felixmanuirankunda/" target="_blank" rel="noopener" class="btn btn-ghost" data-track="contact_click" data-track-location="contact" data-track-type="linkedin">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 Felix Manu, Growth Marketer, Stockholm</span>
+    <nav aria-label="Footer">
+      <a href="https://www.linkedin.com/in/felixmanuirankunda/" target="_blank" rel="noopener" data-track="contact_click" data-track-location="footer" data-track-type="linkedin">LinkedIn</a>
+      <a href="#top">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+  // GTM: one event when someone opens a case. data-case becomes case_name.
+  document.querySelectorAll('.case-row[data-case]').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var group = card.closest('.case-group');
+      window.dataLayer.push({
+        event: 'case_open',
+        case_name: card.dataset.case,
+        case_group: group ? group.dataset.group : 'ungrouped'
+      });
+    });
+  });
+
+  // Portrait drifts a little slower than the page while the hero is in view
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var img = document.querySelector('.hero-portrait img');
+    if (!img) return;
+    var t = false;
+    window.addEventListener('scroll', function () {
+      if (t) return; t = true;
+      requestAnimationFrame(function () {
+        var y = Math.min(window.scrollY, window.innerHeight);
+        img.style.transform = 'translateY(' + (y * 0.12).toFixed(1) + 'px)';
+        t = false;
+      });
+    }, { passive: true });
+  })();
+
+  // Featured cases under the hero: jump to Work with the right filter on
+  document.querySelectorAll('[data-filter-link]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var btn = document.querySelector('#caseFilter button[data-filter="' + a.dataset.filterLink + '"]');
+      if (btn) btn.click();
+    });
+  });
+
+  // Case filter
+  var filterBar = document.getElementById('caseFilter');
+  var caseGroups = document.querySelectorAll('.case-group');
+  if (filterBar) {
+    // Count cases per filter and show the number in each button
+    filterBar.querySelectorAll('button').forEach(function (btn) {
+      var target = btn.dataset.filter, total = 0;
+      caseGroups.forEach(function (g) {
+        if (target === 'all' || g.dataset.group === target) total += g.querySelectorAll('.case-row, .case-feature').length;
+      });
+      var c = document.createElement('span');
+      c.className = 'count'; c.textContent = total;
+      btn.appendChild(c);
+    });
+
+    filterBar.addEventListener('click', function (e) {
+      var btn = e.target.closest('button');
+      if (!btn) return;
+      var target = btn.dataset.filter;
+
+      filterBar.querySelectorAll('button').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+
+      caseGroups.forEach(function (group) {
+        var show = target === 'all' || group.dataset.group === target;
+        if (show) {
+          group.classList.remove('is-hidden');
+          requestAnimationFrame(function () { requestAnimationFrame(function () { group.classList.remove('is-fading'); }); });
+        } else {
+          group.classList.add('is-fading');
+          setTimeout(function () { if (group.classList.contains('is-fading')) group.classList.add('is-hidden'); }, 320);
+        }
+      });
+
+      window.dataLayer.push({ event: 'case_filter', filter_name: target });
+    });
+  }
+</script>
+</body>
+</html>

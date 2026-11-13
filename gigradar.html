@@ -13,6 +13,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gig Radar Stockholm | Felix Manu</title>
 <meta name="description" content="Gig Radar Stockholm combines scraped concert data with live music API data to find artist discovery signals and support smarter marketing decisions.">
+<link rel="canonical" href="https://felixmanu01.github.io/gigradar.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gig Radar Stockholm | Felix Manu">
+<meta property="og:description" content="Concert data collected from Debaser, combined with two live music APIs to show which artists need research first.">
+<meta property="og:url" content="https://felixmanu01.github.io/gigradar.html">
+<meta property="og:image" content="https://felixmanu01.github.io/Case/images/felix-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#E6E2E4">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2321546F'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='800' fill='%23F4F2F3' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="block">
     <h2>The pipeline</h2>
     <div class="flow-steps" style="--n:3">
-      <div><strong>Concert data</strong><p>Upcoming shows are loaded from my own Debaser scraping result, with artist, date, venue and genre.</p></div>
+      <div><strong>Concert data</strong><p>Shows come from concert data I collected from Debaser, with artist, date, venue and genre.</p></div>
       <div><strong>MusicBrainz</strong><p>Each artist is searched in MusicBrainz to collect a live match signal and artist information.</p></div>
       <div><strong>iTunes Search</strong><p>A second live lookup checks whether the artist can also be found in the iTunes music catalogue.</p></div>
     </div>
@@ -119,7 +126,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="card">
         <h3>Scraped source</h3>
         <p>A Node script collects public concert information from Debaser and saves the result as a text file inside the portfolio project.</p>
-        <code class="code">scraping/scraped_data.txt</code>
+        <code class="code">data/debaser_concerts.txt</code>
       </article>
       <article class="card">
         <h3>API mashup</h3>
@@ -138,9 +145,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <a href="api_mashup.html" class="case-next">
-    <span class="small">Next case</span>
-    <span class="display">Gig Radar API mashup <span class="arr">&rarr;</span></span>
+  <a href="index.html#work" class="case-next">
+    <span class="small">More work</span>
+    <span class="display">All selected work <span class="arr">&rarr;</span></span>
   </a>
 </main>
 
@@ -403,13 +410,13 @@ async function runAnalysis(){
 
     const localResponse =
       await fetch(
-        "scraping/scraped_data.txt",
+        "data/debaser_concerts.txt",
         {cache:"no-store"}
       );
 
     if(!localResponse.ok){
       throw new Error(
-        "Could not load scraping/scraped_data.txt"
+        "Could not load data/debaser_concerts.txt"
       );
     }
 
@@ -421,7 +428,7 @@ async function runAnalysis(){
 
     if(!scrapedEvents.length){
       throw new Error(
-        "No events could be read from scraped_data.txt"
+        "No events could be read from debaser_concerts.txt"
       );
     }
 
