@@ -39,8 +39,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "image": "https://felixmanu01.github.io/Case/images/felix-portrait.jpg",
   "address": {"@type": "PostalAddress", "addressLocality": "Stockholm", "addressCountry": "SE"},
   "alumniOf": {"@type": "EducationalOrganization", "name": "Berghs School of Communication"},
-  "knowsAbout": ["Performance marketing", "Paid social", "Meta Ads", "Google Ads", "Video production", "Google Tag Manager", "Google Analytics 4", "SEO"],
-  "sameAs": ["https://www.linkedin.com/in/felixmanuirankunda/"]
+  "knowsAbout": ["Performance marketing", "Paid social", "Meta Ads", "Google Ads", "Video production", "Google Tag Manager", "Google Analytics 4", "SEO", "Songwriting"],
+  "sameAs": ["https://www.linkedin.com/in/felixmanuirankunda/", "https://open.spotify.com/artist/2gXs1tQmQNe5bAUU726Ohd"]
 }
 </script>
 
@@ -210,6 +210,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .case-row .go .arr{transition:transform .3s var(--ease); color:var(--denim);}
   .case-row:hover .go .arr{transform:translate(3px,-3px);}
 
+  /* Creative: music case with the Spotify player in place of images */
+  .media.player{display:flex; align-items:center; padding:clamp(1.2rem,2.6vw,2rem); background:var(--paper-2); border-left:1px solid var(--line);}
+  .media.player iframe{display:block; width:100%; height:352px; border:0; border-radius:12px; background:var(--paper);}
+
   /* ---------- ABOUT ---------- */
   .about{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.9fr); gap:clamp(2.4rem,6vw,6rem); align-items:start;}
   .about h2{margin-bottom:1.6rem;}
@@ -254,6 +258,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .case-feature{grid-template-columns:minmax(0,1fr);}
     .case-feature.stacked .body{grid-template-columns:minmax(0,1fr);}
     .case-feature.stacked .media.ads{grid-template-columns:repeat(2,1fr);}
+    .media.player{border-left:0; border-top:1px solid var(--line);}
     .about{grid-template-columns:1fr;}
   }
   @media (max-width:760px){
@@ -338,7 +343,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
       <div class="section-head">
         <h2 data-split>Selected work</h2>
-        <p class="lede">Paid campaigns, e-commerce, campaign strategy and data projects. Filter by the kind of work you're hiring for.</p>
+        <p class="lede">Paid campaigns, e-commerce, campaign strategy, data projects and music. Filter by the kind of work you're hiring for.</p>
       </div>
 
       <!-- FILTER: data-filter matches data-group on each .case-group -->
@@ -347,6 +352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button type="button" data-filter="paid" aria-pressed="false">Paid media and e-commerce</button>
         <button type="button" data-filter="campaign" aria-pressed="false">Campaign and strategy</button>
         <button type="button" data-filter="data" aria-pressed="false">Data and API</button>
+        <button type="button" data-filter="creative" aria-pressed="false">Creative</button>
       </div>
 
       <!-- ===== PAID MEDIA ===== -->
@@ -433,6 +439,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="go">Open case <span class="arr">&#8599;</span></span>
           </a>
         </div>
+      </div>
+
+      <!-- ===== CREATIVE ===== -->
+      <div class="case-group" data-group="creative">
+        <div class="group-head">
+          <h3>Creative</h3><span class="g-line"></span><span class="g-count">1 case</span>
+        </div>
+        <p class="group-note">Music I've written and performed as a signed artist.</p>
+
+        <article class="case-feature" id="caseMusic">
+          <div class="body">
+            <h4>Recording artist</h4>
+            <p class="brief">I've been a recording artist signed to <strong>Warner Music Sweden</strong>. Writing, performing and promoting my own songs taught me what makes people press play.</p>
+            <p class="brief" style="margin-top:1rem">I participated in Melodifestivalen 2026 with the song <strong lang="sv">Hatar att jag &auml;lskar dig</strong>.</p>
+            <div class="foot">
+              <div class="tags"><span class="tag">Music</span><span class="tag">Songwriting</span><span class="tag">Live performance</span></div>
+              <a href="https://open.spotify.com/artist/2gXs1tQmQNe5bAUU726Ohd" target="_blank" rel="noopener" class="btn btn-ghost" data-track="spotify_click" data-track-location="work" data-track-type="spotify">Listen on Spotify <span class="arr">&#8599;</span></a>
+            </div>
+          </div>
+          <div class="media player">
+            <iframe src="https://open.spotify.com/embed/artist/2gXs1tQmQNe5bAUU726Ohd?utm_source=generator&amp;theme=0" title="Felix Manu on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </article>
       </div>
 
       <!-- ============================================================
